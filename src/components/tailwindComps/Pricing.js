@@ -14,6 +14,7 @@ const ecommercePlans = [
     savings: 240,
     pages: 2,
     link: 'https://buy.stripe.com/00g5kMfuad8Q1X29AJ',
+    yearLink: 'https://buy.stripe.com/fZefZq6XEfgYeJO3cr',
     mainFeatures: [
       { id: 1, value: 'Start selling online NOW' },
       { id: 2, value: 'More customers find you' },
@@ -32,6 +33,7 @@ const ecommercePlans = [
     savings: 660,
     pages: 6,
     link: 'https://buy.stripe.com/6oE28Agye1q831628j',
+    yearLink: 'https://buy.stripe.com/bIY8wYchY5Go59e9AQ',
     mainFeatures: [
       { id: 1, value: 'Revenue directly from site' },
       { id: 2, value: 'Better leads & conversions' },
@@ -54,6 +56,7 @@ const ecommercePlans = [
     savings: 510,
     pages: 5,
     link: 'https://buy.stripe.com/6oEdRifuac4McBGeV4',
+    yearLink: 'https://buy.stripe.com/aEU9B22Hoc4MdFKaEV',
     mainFeatures: [
       { id: 1, value: 'Start selling online NOW' },
       { id: 2, value: 'Fits all business info' },
@@ -76,6 +79,7 @@ const standardPlans = [
     savings: 160,
     pages: 1,
     link: 'https://buy.stripe.com/dR68wY81IecUeJO6ov',
+    yearLink: 'https://buy.stripe.com/dR600sdm20m4fNSfZc',
     mainFeatures: [
       { id: 1, value: 'Start your online presence' },
       { id: 2, value: 'Sell servies directly on site'},
@@ -94,6 +98,7 @@ const standardPlans = [
     savings: 378,
     pages: 5,
     link: 'https://buy.stripe.com/aEUbJaa9Q3yg3164gm',
+    yearLink: 'https://buy.stripe.com/dR68wYa9Q8SAgRWdR2',
     mainFeatures: [
       { id: 1, value: 'Better leads & conversions' },
       { id: 2, value: 'Sell services directly on site' },
@@ -112,6 +117,7 @@ const standardPlans = [
     priceYearly: '1,399',
     savings: 280,
     link: 'https://buy.stripe.com/28o00s0zgfgYatyeV2',
+    yearLink: 'https://buy.stripe.com/fZeaF6eq65Go8lq28l',
     pages: 3,
     mainFeatures: [
       { id: 1, value: 'Start your online presence' },
