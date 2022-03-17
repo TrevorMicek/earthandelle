@@ -178,14 +178,18 @@ export default function Pricing() {
                   </p>
                   <div className="ml-4">
                     <p className={classNames(plan.featured ? 'text-gray-700' : 'text-white', 'text-sm')}>
-                    / month or <br /> ${plan.priceYearly} / year (save ${plan.savings})
+                    / month or <br />
+                    <a href={plan.link} className={classNames(
+                      plan.featured
+                      ? 'underline text-indigo-700 hover:text-indigo-600'
+                      : 'underline text-gray-300 hover:text-gray-400')}>Buy yearly</a> (save ${plan.savings})
                     </p>
                     <p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm')}>
                       Yearly Contracts
                     </p>
                   </div>
                 </div>
-                    <div className=' mx-auto flex flex-row space-x-2'>
+
                 <a
                   href={plan.link ? plan.link : null}
                   onClick={!plan.link ? () => setConfirm(true) : null}
@@ -198,19 +202,7 @@ export default function Pricing() {
                 >
                   Subscribe
                 </a>
-                <a
-                  href={plan.link ? plan.link : null}
-                  onClick={!plan.link ? () => setConfirm(true) : null}
-                  className={classNames(
-                    plan.featured
-                      ? 'bg-indigo-600 text-white hover:bg-indigo-700'
-                      : 'bg-white text-indigo-600 hover:bg-indigo-50',
-                    'mt-6 w-full h-10 inline-block whitespace-nowrap py-2 px-10 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
-                  )}
-                >
-                  Buy Yearly
-                </a>
-                  </div>
+
               </div>
             </div>
             <h4 className="sr-only">Features</h4>
@@ -285,15 +277,17 @@ export default function Pricing() {
             </p>
             <div className="ml-4">
               <p className={classNames(plan.featured ? 'text-gray-700' : 'text-white', 'text-sm')}>
-              / month or <br /> ${plan.priceYearly} / year (save ${plan.savings})
+              / month or <br /> <a href={plan.link} className={classNames(
+                      plan.featured
+                      ? 'underline text-indigo-700 hover:text-indigo-600'
+                      : 'underline text-gray-300 hover:text-gray-400')}>Buy yearly</a> (save ${plan.savings})
               </p>
               <p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm')}>
                 Yearly Contracts
               </p>
             </div>
           </div>
-          <div className=' mx-auto flex flex-row space-x-2'>
-                <a
+               <a
                   href={plan.link ? plan.link : null}
                   onClick={!plan.link ? () => setConfirm(true) : null}
                   className={classNames(
@@ -303,21 +297,10 @@ export default function Pricing() {
                     'mt-6 w-full h-10 inline-block whitespace-nowrap py-2 px-10 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
                   )}
                 >
-                  Subscribe
+                  Buy {plan.title}
                 </a>
-                <a
-                  href={plan.link ? plan.link : null}
-                  onClick={!plan.link ? () => setConfirm(true) : null}
-                  className={classNames(
-                    plan.featured
-                      ? 'bg-indigo-600 text-white hover:bg-indigo-700'
-                      : 'bg-white text-indigo-600 hover:bg-indigo-50',
-                    'mt-6 w-full h-10 inline-block whitespace-nowrap py-2 px-10 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
-                  )}
-                >
-                  Buy Yearly
-                </a>
-                  </div>
+
+
         </div>
       </div>
       <h4 className="sr-only">Features</h4>
