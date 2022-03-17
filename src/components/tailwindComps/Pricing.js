@@ -30,7 +30,7 @@ const ecommercePlans = [
     priceMonthly: 330,
     priceYearly: '3,299',
     savings: 660,
-    pages: 5,
+    pages: 6,
     link: 'https://buy.stripe.com/bIY28A2Hoc4MatyfYZ',
     mainFeatures: [
       { id: 1, value: 'Revenue directly from site' },
@@ -92,7 +92,7 @@ const standardPlans = [
     priceMonthly: 189,
     priceYearly: '1,889',
     savings: 378,
-    pages: 4,
+    pages: 5,
     link: 'https://buy.stripe.com/28odRigyefgYbxC5ko',
     mainFeatures: [
       { id: 1, value: 'Better leads & conversions' },
