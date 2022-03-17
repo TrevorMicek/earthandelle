@@ -60,7 +60,7 @@ export default function Example(props) {
 
 
             {
-              prompt && !props.prompt ? <div className=" relative bottom-32 inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6">
+              prompt && !props.prompt ? <div className=" relative  inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6">
             <form ref={form} onSubmit={onSubmit} className="sm:grid-cols-2 sm:gap-x-8">
 
 

@@ -361,7 +361,7 @@ export default function Pricing() {
             <span className="block lg:inline">all-in-one packages.</span>
           </h1>
           <p className="mt-4 text-xl text-indigo-100">
-            Everything you need, nothing you don't. Pick a plan that best suits your business.
+            Everything you need, nothing you don't. Pick a plan that best suits your business. Click <span onClick={() => setConfirm(true)} className="underline cursor-pointer text-blue-300">here</span> to try our free tier.
           </p>
 
         </div>
