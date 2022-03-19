@@ -132,7 +132,7 @@ export default function Header(props) {
         </Transition>
       </Popover>
 
-        <main className="mt-10 -mb-6 mx-auto max-w-7xl px-4 sm:mt-24">
+        <main className="mt-10 mb-10 mx-auto max-w-7xl px-4 sm:mt-24">
           <div className="text-center">
             <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
               <span className="block xl:inline">{props.title ? Title()[0] : ''}</span>{' '}

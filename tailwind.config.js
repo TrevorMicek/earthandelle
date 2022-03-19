@@ -6,7 +6,8 @@ module.exports = {
     extend: {
         colors: {
           'default': 'rgb(99 102 241)',
-          'bg': 'rgb(10 20 30)'
+          'bg': 'rgb(10 20 30)',
+          'blue': 'rgb(2 132 199)'
     }
     },
   },

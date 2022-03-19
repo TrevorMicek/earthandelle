@@ -28,14 +28,16 @@ const features = [
 const metricsImg = require('../../images/metrics.png')
 export default function FeatureSection() {
   return (
-    <div className="pb-10 pt-16 -mb-8 -mt-20 pr-4 bg-indigo-50" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
+    <div className="pb-10 pt-16 -mb-8 -mt-20 pr-4 relative overflow-hidden bg-indigo-50" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
+<div className="absolute z-0 left-52  opacity-40 transform rotate-90 scale-x-125 before:-skew-x-9 before:rounded-sm after:skew-x-9"  id="app"></div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-base text-default font-semibold tracking-wide uppercase">Affordable and coded by hand</h2>
-          <p className="mt-2 max-w-3xl text-3xl leading-8 font-extrabold tracking-tight text-gray-900 lg:mx-auto">
+          <h2 className="mt-4 text-base text-default font-semibold tracking-wide uppercase">Affordable and coded by hand</h2>
+          <p className="mt-2 relative z-10 max-w-3xl text-3xl leading-8 font-extrabold tracking-tight text-gray-900 lg:mx-auto">
           A New Way of Making Websites
           </p>
-          <p className="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto">
+          <p className="mt-4 relative z-10 max-w-2xl text-xl text-gray-600 lg:mx-auto">
           We are changing how small business web design and development is being done
           with our hand coded websites that we offer as an affordable subscription to businesses like you.
           </p>

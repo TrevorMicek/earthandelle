@@ -41,7 +41,7 @@ export default function Example() {
           <div>
           <h2 className="text-base text-default font-semibold tracking-wide uppercase lg:ml-16">Our Portfolio</h2>
           <p className="mt-2 max-w-3xl text-3xl leading-8 font-extrabold tracking-tight text-gray-900 lg:ml-16">
-          Check out some of our clients websites
+          Check out some of our websites
           </p>
             <p className="mt-5 mb-8 max-w-prose mx-auto text-xl text-gray-500">
               Here are a few examples of our work so you can see firsthand the quality and style of Websites By Trevor.
