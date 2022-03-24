@@ -3,6 +3,7 @@ import React from 'react'
 import { CodeIcon, TagIcon, DatabaseIcon,TerminalIcon, UploadIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
 
 
+import img from '../../images/movingCurve.jpg'
 const features = [
   {
     name: '100% Hand Coded',
@@ -27,9 +28,10 @@ const features = [
 
 const metricsImg = require('../../images/metrics.png')
 export default function FeatureSection() {
+
   return (
     <div className="pb-10 pt-16 -mb-8 -mt-20 pr-4 relative overflow-hidden bg-indigo-50" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
-<div className="absolute z-0 left-52  opacity-40 transform rotate-90 scale-x-125 before:-skew-x-9 before:rounded-sm after:skew-x-9"  id="app"></div>
+<img src={img} className="absolute z-0 top-72 left-24 width-11/12 height-96 opacity-40 transform rotate-90 scale-x-125 before:-skew-x-9 before:rounded-sm after:skew-x-9"  />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
