@@ -90,7 +90,7 @@ const onSubmit = (e) => {
       default:
          /* setURL() */
          setConfirm(true)
-         //emailjs.sendForm('service_arikqvn', 'template_ht51ufi', e.target, 'user_kC0T8kmC4F1GOkt3Q06Q4')
+         emailjs.sendForm('service_arikqvn', 'template_ht51ufi', e.target, 'user_kC0T8kmC4F1GOkt3Q06Q4')
          e.preventDefault()
   }
 }
