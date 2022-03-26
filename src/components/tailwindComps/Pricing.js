@@ -93,7 +93,7 @@ const standardPlans = [
     title: 'Standard',
     featured: true,
     description: 'The best financial services for your thriving business.',
-    priceMonthly: 189,
+    priceMonthly: 179,
     priceYearly: '1,889',
     savings: 378,
     pages: 5,

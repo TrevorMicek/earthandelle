@@ -1,14 +1,25 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Switch } from '@headlessui/react'
 import emailjs from 'emailjs-com';
 
 import Confirm from './Confirmation'
 
+import UseInput from '../../customHooks/useInput'
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Example() {
+  const inputs = ['newName', 'email', 'message']
+  const UseInputComp = () => {
+  for (let i=0;i<inputs.length;i++) {
+
+    return UseInput(inputs[i])
+  }
+}
+const InputComp = UseInputComp().comp
+const submitForm =  UseInputComp().submit
+
   const [agreed, setAgreed] = useState(false)
   const [confirm, setConfirm] = useState(false)
   const [name, setName] = useState('')
@@ -79,7 +90,7 @@ const onSubmit = (e) => {
       default:
          /* setURL() */
          setConfirm(true)
-         emailjs.sendForm('service_arikqvn', 'template_ht51ufi', e.target, 'user_kC0T8kmC4F1GOkt3Q06Q4')
+         //emailjs.sendForm('service_arikqvn', 'template_ht51ufi', e.target, 'user_kC0T8kmC4F1GOkt3Q06Q4')
          e.preventDefault()
   }
 }
@@ -159,7 +170,6 @@ const confirmMessage = ['Thanks for reaching out to Websites By Trevor!', 'We wi
                 />
               </div>
             </div>
-
             <div className="sm:col-span-2">
               <label htmlFor="company" className="block text-sm font-medium text-gray-700">
                 Company
@@ -192,6 +202,7 @@ const confirmMessage = ['Thanks for reaching out to Websites By Trevor!', 'We wi
                 />
               </div>
             </div>
+
             <div className="sm:col-span-2">
               <label htmlFor="phone-number" className="block text-sm font-medium text-gray-700">
                 Phone Number

@@ -31,7 +31,7 @@ export default function FeatureSection() {
 
   return (
     <div className="pb-10 pt-16 -mb-8 -mt-20 pr-4 relative overflow-hidden bg-indigo-50" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
-<img src={img} className="absolute z-0 top-72 left-24 width-11/12 height-96 opacity-40 transform rotate-90 scale-x-125 before:-skew-x-9 before:rounded-sm after:skew-x-9"  />
+      <img src={img} className="absolute z-0 top-72 left-24 width-11/12 height-96 opacity-50 transform rotate-90 scale-x-125 before:-skew-x-9 before:rounded-sm after:skew-x-9"  />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
