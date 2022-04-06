@@ -13,9 +13,16 @@ export default function Example() {
           </p>
           <a
             href="/pricing"
-            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto"
+            className="mt-8 w-80 inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50"
           >
             Browse Our Packages
+          </a>
+          <div className="my-5 text-white">OR</div>
+          <a
+            href={'https://free.websitesbytrevor.com/'}
+            className=" w-80 inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50"
+          >
+            Get a Free Site
           </a>
         </div>
       </div>
