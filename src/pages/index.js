@@ -9,7 +9,7 @@ import Gradient from '../components/commonComps/Gradient'
 const IndexPage = () => {
 
   return (
-  <>hello fuck this shit</>
+  <>hello ahhh</>
   )
 }
 export default IndexPage
