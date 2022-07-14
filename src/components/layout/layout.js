@@ -44,6 +44,7 @@ const Layout = ({children, title, text, pageLayout}) => {
       <div
         style={{
           margin: `0 0`,
+          backgroundColor: 'white'
         }}
       >
 
