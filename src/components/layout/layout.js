@@ -44,14 +44,16 @@ const Layout = ({children, title, text, pageLayout}) => {
       <div
         style={{
           margin: `0 0`,
-          backgroundColor: 'white'
         }}
       >
 
+       <div class="grid">
+        <Header title={title} text={text} />
 
 
-
-        <>hello</>
+        <main style={pageLayout}  class="main">{children}</main>
+        <Footer />
+       </div>
       </div>
 
   )
