@@ -50,6 +50,7 @@ const Layout = ({children, title, text, pageLayout}) => {
        <div class="grid">
 
 
+        <main style={pageLayout}  class="main">{children}</main>
 
        </div>
       </div>
