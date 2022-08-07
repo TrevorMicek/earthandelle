@@ -14,7 +14,7 @@ const IndexPage = () => {
 
     <Supplment />
     <About />
-    <CTA />
+
 
   </Layout>
   )
