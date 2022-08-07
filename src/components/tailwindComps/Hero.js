@@ -81,7 +81,7 @@ export default function HeroComp() {
     <div className="relative overflow-hidden" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
 
       <Popover as="header" className="relative ">
-        <div className="bg-default">
+        <div className="">
 
           <nav
             className="border-2 relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"

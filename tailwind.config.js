@@ -5,9 +5,9 @@ module.exports = {
 
     extend: {
         colors: {
-          'default': 'rgb(99 102 241)',
-          'bg': 'rgb(10 20 30)',
-          'blue': 'rgb(2 132 199)'
+          'default': 'rgb(159, 120, 121)',
+          'secondary': 'rgb(228, 182, 169)',
+          'accent': 'rgb(238, 214, 202)'
     }
     },
   },
