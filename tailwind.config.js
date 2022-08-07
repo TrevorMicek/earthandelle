@@ -7,7 +7,9 @@ module.exports = {
         colors: {
           'default': 'rgb(159, 120, 121)',
           'secondary': 'rgb(228, 182, 169)',
-          'accent': 'rgb(238, 214, 202)'
+          'accent': 'rgb(238, 214, 202)',
+          'light': 'rgb(237, 232, 226)',
+          'button': 'rgb(220, 152, 109)'
     }
     },
   },

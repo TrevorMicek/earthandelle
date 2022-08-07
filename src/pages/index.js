@@ -5,6 +5,8 @@ import SEO from "../components/layout/seo"
 import Supplment from '../components/tailwindComps/FeatureSection'
 import CTA from '../components/tailwindComps/HomeCTA'
 import About from '../components/tailwindComps/Portfolio'
+import FAQ from '../components/tailwindComps/FAQs'
+import Contact from '../components/tailwindComps/Contact'
 import Gradient from '../components/commonComps/Gradient'
 const IndexPage = () => {
 
@@ -14,7 +16,8 @@ const IndexPage = () => {
 
     <Supplment />
     <About />
-
+    <FAQ />
+    <Contact />
 
   </Layout>
   )

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
@@ -11,16 +11,17 @@ import { ShoppingBagIcon } from '@heroicons/react/outline'
 
 
 import headerOne from '../../images/newImages/header1.webp'
+
+import headerTwo from '../../images/newImages/header2.webp'
 import Logo from '../../images/newImages/Logo.png'
 
 const navigation = {
   main: [
     { name: 'Home', href: '/' },
-    { name: 'Product', href: '/product' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Partnerships', href: 'https://partners.websitesbytrevor.com/' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }
+      { name: 'Store', href: '/store' },
+      { name: 'About', href: '/pricing' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Contact', href: '/contact' }
   ],
   social: [
     {
@@ -62,21 +63,27 @@ const navigation = {
 }
 
 export default function HeroComp() {
-  const [confirm, setConfirm] = useState(false)
-  const [email, setEmail] = useState('')
-  const form = useRef()
-  const onSubmit = (e) => {
-    emailjs.sendForm('service_arikqvn', 'template_ht51ufi', e.target, 'user_kC0T8kmC4F1GOkt3Q06Q4')
-       e.preventDefault()
-       console.log('sent')
+ const [header, setHeader] = useState(headerOne)
+ const changeHeader = () =>{
+  if (header === headerOne) {
+    setHeader(headerTwo)
+  } else if (header === headerTwo) {
+    setHeader(headerOne)
   }
-  const handleChange = (e) => {
 
-            setEmail(e.target.value)
+ }
+useEffect(() => {
+  setTimeout(() => {
+    changeHeader()
+  }, 5000)
+}, [])
+useEffect(() => {
+  setTimeout(() => {
+    changeHeader()
+  }, 5000)
+}, [header])
 
-  }
-  const confirmMessage = ['Thanks for choosing Websites By Trevor!', ' We will reach out ASAP to start collaborating on your new free site']
-  return (
+ return (
 
     <div className="relative overflow-hidden" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
 
@@ -158,7 +165,7 @@ export default function HeroComp() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="block px-3 py-2 rounded-md text-base font-medium text-bg hover:text-white hover:bg-indigo-500"
+                      className="block px-3 py-2 rounded-md text-base font-medium text-bg hover:text-white hover:0"
                     >
                       {item.name}
                     </a>
@@ -210,7 +217,7 @@ export default function HeroComp() {
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
                     className="w-full mx-auto lg:absolute lg:inset-y-0 lg:left-0 lg:h-10/12 lg:w-auto lg:max-w-none"
-                    src={headerOne}
+                    src={header}
                     alt="blue technical background image"
                     width="200px"
                     height="100px"

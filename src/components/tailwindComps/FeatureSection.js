@@ -100,7 +100,7 @@ export default function FeatureSection() {
         </p>
         </div>
         <div className="text-center mt-12">
-        <button className="py-3 px-8 text-white font-xs bg-default">
+        <button className="py-3 px-8 text-white font-xs bg-button">
           View all
         </button>
         </div>

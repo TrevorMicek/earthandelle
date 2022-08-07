@@ -33,11 +33,7 @@ const faqs = [
     answer:
       "There are some straightforward ways to boost performance on your site today. The main things being; image optimization, lazy loading styles, images & scripts, limiting number of scripts(plugins), ",
   },
-  {
-    question: "Should I try to do my own website or hire a web developer?",
-    answer:
-      "If you're just starting out, or on a tight budget, building your own with a popular page builder like Shopify, Wordpress, or Wix, is the best way to go. But when you don't have the time, or you need a high quality and fast website, you absolutely need a developer to achieve that. Read more about finding the right dev.",
-  },
+
   {
     question: "What's the cost of a website?",
     answer:
@@ -52,21 +48,21 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <div className="bg-indigo-50" style={{gridColumn:"span 7", gridRowStart:"second", gridRowEnd:"third"}}>
-      <div className="max-w-7xl mx-auto bg-indigo-50  -mt-12 pt-12 pb-8 px-4 sm:py-16 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto divide-y-2 divide-gray-200">
-          <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">Frequently asked questions</h2>
-          <dl className="mt-6 space-y-6 divide-y divide-gray-200">
+    <div className="bg-white" style={{gridColumn:"span 7", gridRowStart:"third", gridRowEnd:"fourth"}}>
+      <div className="max-w-7xl mx-auto  pt-12 pb-8 px-4 sm:py-16 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto ">
+          <h2 className="text-center text-2xl font-serif font-normal text-gray-900 sm:text-4xl">FAQ SECTION</h2>
+          <dl className="mt-6 -space-y-1 divide-y divide-gray-200">
 
             {faqs.map((faq) => (
-              <Disclosure as="div" defaultOpen={faq.open} key={faq.question} className="pt-6">
+              <Disclosure as="div" defaultOpen={faq.open} key={faq.question} className="pt-0">
 
                 {({ open }) => (
                   <>
-                    <dt className="text-lg">
-                      <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-400">
-                        <span className="font-medium text-gray-900">{faq.question}</span>
-                        <span className="ml-6 h-7 flex items-center">
+                    <dt className="text-lg bg-accent mb-3 mx-1 px-4 py-1">
+                      <Disclosure.Button className="text-left w-full flex justify-between text-gray-400">
+                        <span className="font-normal text-gray-900 py-2">{faq.question}</span>
+                        <span className="h-7 flex my-auto items-center text-gray-900">
                           <ChevronDownIcon
                             className={classNames(open ? '-rotate-180' : 'rotate-0', 'h-6 w-6 transform')}
                             aria-hidden="true"
@@ -74,8 +70,8 @@ export default function Example() {
                         </span>
                       </Disclosure.Button>
                     </dt>
-                    <Disclosure.Panel as="dd" className="mt-2 pr-12">
-                      <p className="text-base text-gray-500">{faq.answer}</p>
+                    <Disclosure.Panel as="dd" className="pt-3 -mt-3 mx-1 px-6 pb-1 bg-accent pr-8">
+                      <p className="text-base text-gray-900">{faq.answer}</p>
                     </Disclosure.Panel>
                   </>
                 )}
