@@ -2,7 +2,7 @@ import React from 'react'
 
 import { CodeIcon, TagIcon, DatabaseIcon,TerminalIcon, UploadIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
 
-
+import Product from '../../images/newImages/product.webp'
 import img from '../../images/movingCurve.jpg'
 const benefits = [
   {
@@ -66,39 +66,45 @@ const metricsImg = require('../../images/metrics.png')
 export default function FeatureSection() {
 
   return (
-    <div className=" pb-10 pt-16 -mb-8 -mt-20 pr-4 relative overflow-hidden bg-indigo-50" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
-      <img src={img} className="absolute z-0 top-72 left-24 width-11/12 height-96 opacity-40 transform rotate-90 scale-x-125 before:-skew-x-9 before:rounded-sm after:skew-x-9"  />
+    <div className=" pb-10 pt-9 -mb-8 -mt-20 relative overflow-hidden bg-white" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:text-center">
-          <h2 className="mt-4 text-base text-default font-semibold tracking-wide uppercase">Affordable and coded by hand</h2>
-          <p className="mt-2 relative z-10 max-w-3xl text-3xl leading-8 font-extrabold tracking-tight text-gray-900 lg:mx-auto">
-          A New Way of Making Websites
-          </p>
-          <p className="mt-4 relative z-10 max-w-2xl text-xl text-gray-600 lg:mx-auto">
-          We are changing how small business web design and development is being done
-          with our hand coded websites that we offer as an affordable subscription to businesses like you.
-          </p>
+ <div className="text-center w-full">
+
+          <h2 className="mt-2 mb-7 relative font-serif z-10 text-lg tracking-wide font-thin text-gray-900 lg:mx-auto">
+            FEATURED COLLECTION
+          </h2>
+
         </div>
 
-        <div className="mt-10">
-        <h2 className="mt-5 mb-6 text-base text-default font-semibold tracking-wide uppercase">Benefits</h2>
-          <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-            {benefits.map((benefit) => (
-              <div key={benefit.name} className="relative">
-                <dt>
-                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                    <benefit.icon className="h-6 w-6" aria-hidden="true" />
-                  </div>
-                  <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{benefit.name}</p>
-                </dt>
-                <dd className="mt-2 ml-16 text-base text-gray-600">{benefit.description}</dd>
+        <div className=" lg:m-0 lg:relative">
+                <div className="mx-auto  sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+                  {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
+                  <img
+                    className="w-12/12 mx-auto lg:absolute lg:inset-y-0 lg:left-0 lg:h-10/12 lg:w-auto lg:max-w-none"
+                    src={Product}
+                    alt="blue technical background image"
+                    width="350px"
+                    height="200px"
+                  />
+                </div>
               </div>
-            ))}
-          </dl>
+              <div className="px-6 mx-auto w-full text-left">
+        <p className="max-w-96 mb-1">
+        EARTH & ELLE VEGAN COLLAGEN GUMMIES - NON-GMO BIOTON GUMMIES, VITAMIN A, E, C - PLANT BASED COLLAGEN SUPPLEMENTS FOR HEALTHIER HEAIR, SKIN, NAILS - 60 CHEWS OF ORANGE FLAVORED GUMMIES, MADE IN USA
+        </p>
+        <p className="">
+          <span className="line-through text-gray-400">$25.99 USD</span>
+           <span className="text-gray-400">
+           &nbsp;&nbsp;&nbsp; $17.49 USD
+          </span>
+        </p>
+        </div>
+        <div className="text-center mt-12">
+        <button className="py-3 px-10 text-white font-xs bg-default">
+          View all
+        </button>
         </div>
 
-      </div>
     </div>
   )
 }
