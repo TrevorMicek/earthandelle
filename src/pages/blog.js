@@ -45,7 +45,7 @@ const IndexPage = () => {
     <SEO title="Blog" />
 
 
-      <Router>
+      <Router className=" relative bg-white pt-4 -mb-8 overflow-hidden sm:pt-24 lg:pt-32" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
         <BlogSection path="/blog" />
         <div path="/blog/:id" >blog article</div>
       </Router>

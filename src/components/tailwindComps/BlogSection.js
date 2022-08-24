@@ -272,14 +272,12 @@ const basicPosts = [
     )
 
     return (
-      <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
-        <div className="absolute inset-0">
-          <div className="bg-white h-1/3 sm:h-2/3" />
-        </div>
-        <div className="relative max-w-7xl mx-auto">
+      <div >
+
+        <div className="relative mx-auto">
           <div className="text-center">
-            <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">Trevor's Blog</h2>
-            <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+            <h2 className="text-3xl tracking-tight font-extrabold text-gray-900">Trevor's Blog</h2>
+            <p className="mt-3  mx-auto text-xl text-gray-500 sm:mt-4">
              We have four series that go into the different and unique aspects of a website. Easily find good information on the topics you need or if you're new to it all go for the basics where we only talk in simple terms that are easy to understand.
             </p>
             <span className="relative z-0 inline-flex shadow-sm rounded-md">
@@ -316,7 +314,7 @@ const basicPosts = [
 
 
 
-          <div className="mt-12 max-w-lg mx-auto lg:max-w-none">
+          <div className="mt-12 mx-auto lg:max-w-no w-full">
           <Posts />
           </div>
         </div>

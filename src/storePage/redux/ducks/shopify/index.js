@@ -3,8 +3,8 @@ import Client from "shopify-buy"
 
 
 const client = Client.buildClient({
-storefrontAccessToken: "dd4d4dc146542ba7763305d71d1b3d38",
-domain: "graphql.myshopify.com",
+storefrontAccessToken: "f0848ae76f9d6458407ebb56979d271a",
+domain: "earthandelle.myshopify.com",
  })
 
 const PRODUCTS_FOUND = "shopify/PRODUCTS_FOUND"

@@ -88,7 +88,8 @@ export default (props) => {
 	const rightArrow = '>'
 	const downArrow = '^'
 	return (
-		<Layout title={product.title}>
+		<>
+		<div>{product.title}</div>
 
 		<div >
 		<div id="individualProduct">
@@ -171,7 +172,7 @@ export default (props) => {
 			</div>
 		</div>
 		</div>
-		</Layout>
+		</>
 		)
 
 
