@@ -106,7 +106,7 @@ useEffect(() => {
 
               <div className="h-20 w-full flex items-center justify-end w-full md:w-auto">
               <div className="w-1/12 relative right-2 z-10">
-            <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10" />
+            <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10 md:hidden" />
           </div>
                 <a href="/">
                   <span className="sr-only">Workflow</span>
@@ -119,13 +119,18 @@ useEffect(() => {
                   </Popover.Button>
                 </div>
               </div>
-              <div className="hidden space-x-8 md:flex md:absolute md:right-10">
+
+              <div className="hidden space-x-5 mt-7 md:flex md:absolute md:right-10">
                 {navigation.main.map((item) => (
                   <Link to={item.href} key={item.name} className="text-base font-medium text-white hover:text-indigo-500">
                     {item.name}
                   </Link>
                 ))}
+                <div className=" w-1/12 relative z-10">
+            <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10" />
+          </div>
               </div>
+
             </div>
 
           </nav>
@@ -170,7 +175,9 @@ useEffect(() => {
                       {item.name}
                     </a>
                   ))}
+
                 </div>
+
 
 
               </div>
@@ -180,11 +187,11 @@ useEffect(() => {
       </Popover>
 
       <main>
-        <div className="pt-4 bg-white sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
-          <div className="mx-auto max-w-7xl lg:px-8">
-            <div className="lg:grid lg:grid-cols-2 lg:gap-8">
-              <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
-                <div className="lg:py-24">
+        <div className="pt-4 bg-white sm:pt-16 ">
+          <div className="mx-auto max-w-7xl ">
+            <div className="">
+              <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center ">
+                <div className="">
 
 
 
@@ -195,11 +202,11 @@ useEffect(() => {
 
 
 
-                  <div className=" lg:m-0 lg:relative">
-                <div className="mx-auto max-w-md  sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+                  <div className="">
+                <div className="mx-auto">
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
-                    className="w-44 mx-auto lg:absolute lg:inset-y-0 lg:left-0 lg:h-10/12 lg:w-auto lg:max-w-none"
+                    className="w-44 mx-auto sm:w-56"
                     src={Logo}
                     alt="blue technical background image"
                     width="175px"
@@ -212,11 +219,11 @@ useEffect(() => {
 
                 </div>
               </div>
-              <div className="-mt-2 lg:m-0 lg:relative">
-                <div className="mx-auto w-full sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+              <div className="-mt-2 ">
+                <div className="mx-auto  ">
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
-                    className="w-full mx-auto lg:absolute lg:inset-y-0 lg:left-0 lg:h-10/12 lg:w-auto lg:max-w-none"
+                    className="w-full mx-auto "
                     src={header}
                     alt="blue technical background image"
                     width="200px"

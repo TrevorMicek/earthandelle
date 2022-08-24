@@ -52,7 +52,7 @@ const navigation = {
   export default function Footer() {
     return (
       <footer className="bg-accent" style={{gridColumn: 'span 5'}}>
-        <div className="max-w-7xl mx-auto pt-8 overflow-hidden sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto pt-8 overflow-hidden">
           <nav className="-mx-5 my-2 flex flex-col flex-wrap items-center justify-center" aria-label="Footer">
             {navigation.main.map((item) => (
               <div key={item.name} className="px-2 py-2">
@@ -62,7 +62,7 @@ const navigation = {
               </div>
             ))}
           </nav>
-          <div className="bg-secondary w-full py-3">
+          <div className="bg-secondary py-3 mx-0">
             <img src={logo} width="200px" height="150px" className=" pt-3 mx-auto" />
           <div className="mt-8 flex justify-center space-x-6">
             {navigation.social.map((item) => (

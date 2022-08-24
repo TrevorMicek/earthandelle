@@ -79,11 +79,11 @@ export default function FeatureSection() {
 
         </div>
 
-        <div className=" lg:m-0 lg:relative">
-                <div className="mx-auto  sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+        <div className="">
+                <div className="mx-auto  sm:max-w-2xl sm:px-6 ">
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
-                    className="w-12/12 mx-auto lg:absolute lg:inset-y-0 lg:left-0 lg:h-10/12 lg:w-auto lg:max-w-none"
+                    className="w-12/12 mx-auto "
                     src={Product}
                     alt="blue technical background image"
                     width="350px"
@@ -91,11 +91,11 @@ export default function FeatureSection() {
                   />
                 </div>
               </div>
-              <div className="px-6 mx-auto w-full text-left">
-        <p className="max-w-96 mb-1">
+              <div className=" ">
+        <p className="max-w-96 mb-1 mx-auto sm:w-96">
         EARTH & ELLE VEGAN COLLAGEN GUMMIES - NON-GMO BIOTON GUMMIES, VITAMIN A, E, C - PLANT BASED COLLAGEN SUPPLEMENTS FOR HEALTHIER HEAIR, SKIN, NAILS - 60 CHEWS OF ORANGE FLAVORED GUMMIES, MADE IN USA
         </p>
-        <p className="">
+        <p className="mx-auto text-center">
           <span className="line-through text-gray-400">$25.99 USD</span>
            <span className="text-gray-400">
            &nbsp;&nbsp;&nbsp; $17.49 USD
