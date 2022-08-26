@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { CodeIcon, TagIcon, DatabaseIcon,TerminalIcon, UploadIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
 
@@ -24,6 +24,66 @@ const benefits = [
     icon: TagIcon,
   }
 ]
+const Reviews = () => {
+
+
+  return (
+  <div className="py-2 w-32 flex flex-row items-center justify-center mx-auto">
+ <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" stroke-width="1.5" stroke="currentColor" className="mx-auto h-5 w-5">
+      <defs>
+        <linearGradient id="grad1">
+          <stop offset="50%" stop-color="yellow" />
+          <stop offset="50%" stop-color="yellow" />
+        </linearGradient>
+      </defs>
+      <path fill="url(#grad1)" d="M20.388,10.918L32,12.118l-8.735,7.749L25.914,31.4l-9.893-6.088L6.127,31.4l2.695-11.533L0,12.118
+    l11.547-1.2L16.026,0.6L20.388,10.918z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" stroke-width="1.5" stroke="currentColor" className="mx-auto h-5 w-5">
+      <defs>
+        <linearGradient id="grad2">
+          <stop offset="50%" stop-color="yellow" />
+          <stop offset="50%" stop-color="yellow" />
+        </linearGradient>
+      </defs>
+      <path fill="url(#grad2)" d="M20.388,10.918L32,12.118l-8.735,7.749L25.914,31.4l-9.893-6.088L6.127,31.4l2.695-11.533L0,12.118
+    l11.547-1.2L16.026,0.6L20.388,10.918z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" stroke-width="1.5" stroke="currentColor" className="mx-auto h-5 w-5">
+      <defs>
+        <linearGradient id="grad3">
+          <stop offset="50%" stop-color="yellow" />
+          <stop offset="50%" stop-color="yellow" />
+        </linearGradient>
+      </defs>
+      <path fill="url(#grad3)" d="M20.388,10.918L32,12.118l-8.735,7.749L25.914,31.4l-9.893-6.088L6.127,31.4l2.695-11.533L0,12.118
+    l11.547-1.2L16.026,0.6L20.388,10.918z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" stroke-width="1.5" stroke="currentColor" className="mx-auto h-5 w-5">
+      <defs>
+        <linearGradient id="grad4">
+          <stop offset="50%" stop-color="yellow" />
+          <stop offset="50%" stop-color="yellow" />
+        </linearGradient>
+      </defs>
+      <path fill="url(#grad4)" d="M20.388,10.918L32,12.118l-8.735,7.749L25.914,31.4l-9.893-6.088L6.127,31.4l2.695-11.533L0,12.118
+    l11.547-1.2L16.026,0.6L20.388,10.918z"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" stroke-width="1.5" stroke="currentColor" className="mx-auto h-5 w-5">
+      <defs>
+        <linearGradient id="grad5">
+          <stop offset="50%" stop-color="yellow" />
+          <stop offset="50%" stop-color="white" />
+        </linearGradient>
+      </defs>
+      <path fill="url(#grad5)" d="M20.388,10.918L32,12.118l-8.735,7.749L25.914,31.4l-9.893-6.088L6.127,31.4l2.695-11.533L0,12.118
+    l11.547-1.2L16.026,0.6L20.388,10.918z"/>
+    </svg>
+
+
+</div>
+)
+  }
 /*
 const features = [
   {
@@ -69,9 +129,9 @@ export default function FeatureSection() {
     <div className=" pb-10 pt-9 -mb-8 -mt-20 relative overflow-hidden bg-white" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
 
  <div className="text-center w-full">
-    <div className="mb-8 h-12 bg-button flex flex-row space-x-2 justify-center items-center">
-    <p className="my-auto">enter to win $100 worth of free supplements</p>
-    <button className="bg-secondary rounded-md py-1 px-1 text-sm">Enter Here</button>
+    <div className="mb-8 h-12 bg-button flex flex-col space-x-2 justify-center items-center">
+    <p className="my-auto text-white">Win $100 worth of free supplements!<button className="bg-secondary text-gray-800 rounded-md ml-2 py-1 px-1 text-sm">Enter Here</button></p>
+
     </div>
           <h2 className="mt-2 mb-7 relative font-serif z-10 text-lg tracking-wide font-thin text-gray-900 lg:mx-auto">
             FEATURED COLLECTION
@@ -95,6 +155,10 @@ export default function FeatureSection() {
         <p className="max-w-96 mb-1 mx-auto sm:w-96">
         EARTH & ELLE VEGAN COLLAGEN GUMMIES - NON-GMO BIOTON GUMMIES, VITAMIN A, E, C - PLANT BASED COLLAGEN SUPPLEMENTS FOR HEALTHIER HEAIR, SKIN, NAILS - 60 CHEWS OF ORANGE FLAVORED GUMMIES, MADE IN USA
         </p>
+
+     <Reviews />
+
+
         <p className="mx-auto text-center">
           <span className="line-through text-gray-400">$25.99 USD</span>
            <span className="text-gray-400">
