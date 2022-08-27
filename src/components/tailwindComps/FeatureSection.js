@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
-import { CodeIcon, TagIcon, DatabaseIcon,TerminalIcon, UploadIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
-
+import { CodeIcon, TagIcon, ArrowRightIcon,TerminalIcon, UploadIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
+import { Link } from 'gatsby'
 import Product from '../../images/newImages/product.webp'
 import img from '../../images/movingCurve.jpg'
 const benefits = [
@@ -32,8 +32,8 @@ const Reviews = () => {
  <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" stroke-width="1.5" stroke="currentColor" className="mx-auto h-5 w-5">
       <defs>
         <linearGradient id="grad1">
-          <stop offset="50%" stop-color="yellow" />
-          <stop offset="50%" stop-color="yellow" />
+          <stop offset="50%" stop-color="rgb(251 191 36)" />
+          <stop offset="50%" stop-color="rgb(251 191 36)" />
         </linearGradient>
       </defs>
       <path fill="url(#grad1)" d="M20.388,10.918L32,12.118l-8.735,7.749L25.914,31.4l-9.893-6.088L6.127,31.4l2.695-11.533L0,12.118
@@ -42,8 +42,8 @@ const Reviews = () => {
     <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" stroke-width="1.5" stroke="currentColor" className="mx-auto h-5 w-5">
       <defs>
         <linearGradient id="grad2">
-          <stop offset="50%" stop-color="yellow" />
-          <stop offset="50%" stop-color="yellow" />
+          <stop offset="50%" stop-color="rgb(251 191 36)" />
+          <stop offset="50%" stop-color="rgb(251 191 36)" />
         </linearGradient>
       </defs>
       <path fill="url(#grad2)" d="M20.388,10.918L32,12.118l-8.735,7.749L25.914,31.4l-9.893-6.088L6.127,31.4l2.695-11.533L0,12.118
@@ -52,8 +52,8 @@ const Reviews = () => {
     <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" stroke-width="1.5" stroke="currentColor" className="mx-auto h-5 w-5">
       <defs>
         <linearGradient id="grad3">
-          <stop offset="50%" stop-color="yellow" />
-          <stop offset="50%" stop-color="yellow" />
+          <stop offset="50%" stop-color="rgb(251 191 36)" />
+          <stop offset="50%" stop-color="rgb(251 191 36)" />
         </linearGradient>
       </defs>
       <path fill="url(#grad3)" d="M20.388,10.918L32,12.118l-8.735,7.749L25.914,31.4l-9.893-6.088L6.127,31.4l2.695-11.533L0,12.118
@@ -62,8 +62,8 @@ const Reviews = () => {
     <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" stroke-width="1.5" stroke="currentColor" className="mx-auto h-5 w-5">
       <defs>
         <linearGradient id="grad4">
-          <stop offset="50%" stop-color="yellow" />
-          <stop offset="50%" stop-color="yellow" />
+          <stop offset="50%" stop-color="rgb(251 191 36)" />
+          <stop offset="50%" stop-color="rgb(251 191 36)" />
         </linearGradient>
       </defs>
       <path fill="url(#grad4)" d="M20.388,10.918L32,12.118l-8.735,7.749L25.914,31.4l-9.893-6.088L6.127,31.4l2.695-11.533L0,12.118
@@ -72,7 +72,7 @@ const Reviews = () => {
     <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" stroke-width="1.5" stroke="currentColor" className="mx-auto h-5 w-5">
       <defs>
         <linearGradient id="grad5">
-          <stop offset="50%" stop-color="yellow" />
+          <stop offset="50%" stop-color="rgb(251 191 36)" />
           <stop offset="50%" stop-color="white" />
         </linearGradient>
       </defs>
@@ -152,24 +152,31 @@ export default function FeatureSection() {
                 </div>
               </div>
               <div className=" ">
-        <p className="max-w-96 mb-1 mx-auto sm:w-96">
+        <p className="max-w-96 px-5 mb-3 mx-auto sm:w-96">
         EARTH & ELLE VEGAN COLLAGEN GUMMIES - NON-GMO BIOTON GUMMIES, VITAMIN A, E, C - PLANT BASED COLLAGEN SUPPLEMENTS FOR HEALTHIER HEAIR, SKIN, NAILS - 60 CHEWS OF ORANGE FLAVORED GUMMIES, MADE IN USA
         </p>
 
      <Reviews />
 
 
-        <p className="mx-auto text-center">
+        <p className="mx-auto mt-3 text-center">
           <span className="line-through text-gray-400">$25.99 USD</span>
            <span className="text-gray-400">
            &nbsp;&nbsp;&nbsp; $17.49 USD
           </span>
         </p>
         </div>
-        <div className="text-center mt-12">
-        <button className="py-3 px-8 text-white font-xs bg-button">
-          View all
+        <div className="text-center mt-8 ">
+
+        <button className="py-3 px-4 mx-auto rounded-md  text-white font-xs bg-button">
+        <Link to="/store/products/Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3MTQ5ODMyNDgxMTE=">
+          <div className="flex flex-row space-x-4 justify-center items-center">
+          <p className="my-auto">Shop Now</p>
+          <ArrowRightIcon width="20px" height="20px" />
+          </div>
+          </Link>
         </button>
+
         </div>
 
     </div>

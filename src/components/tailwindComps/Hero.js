@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 
+
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
@@ -19,14 +20,14 @@ const navigation = {
   main: [
     { name: 'Home', href: '/' },
       { name: 'Store', href: '/store' },
-      { name: 'About', href: '/pricing' },
+      { name: 'About', href: '/' },
       { name: 'Blog', href: '/blog' },
-      { name: 'Contact', href: '/contact' }
+      { name: 'Contact', href: '/#contact' }
   ],
   social: [
     {
       name: 'Facebook',
-      href: '#',
+      href: 'https://www.facebook.com/xoearthandelle',
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -39,7 +40,7 @@ const navigation = {
     },
     {
       name: 'Instagram',
-      href: '#',
+      href: 'https://www.instagram.com/xoearthandelle/',
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -105,9 +106,11 @@ useEffect(() => {
             <div className="flex pb-1 flex-1">
 
               <div className="h-20 w-full flex items-center justify-end w-full md:w-auto">
-              <div className="w-1/12 relative right-2 z-10">
+              <div className="w-1/12 relative right-2 z-10 cursor-pointer">
+              <Link to="/store">
             <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10 md:hidden" />
-          </div>
+              </Link>
+            </div>
                 <a href="/">
                   <span className="sr-only">Workflow</span>
 
@@ -126,9 +129,12 @@ useEffect(() => {
                     {item.name}
                   </Link>
                 ))}
-                <div className=" w-1/12 relative z-10">
+                <div className=" w-1/12 relative z-10 cursor-pointer">
+                  <Link to="/store">
             <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10" />
-          </div>
+            </Link>
+            </div>
+
               </div>
 
             </div>
@@ -146,9 +152,9 @@ useEffect(() => {
           leaveTo="opacity-0 scale-95"
         >
           <Popover.Panel focus className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top md:hidden">
-            <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+            <div className="rounded-lg bg-secondary shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div className="h-20 w-auto  pt-4 flex items-center justify-between">
-                <div className="px-0 pt-7">
+                <div className="px-0 pt-7 ">
                   <img
                     className="h-28 w-auto"
                     src={Logo}
@@ -158,19 +164,19 @@ useEffect(() => {
                   />
                 </div>
                 <div className="px-4 -mr-2">
-                  <Popover.Button className="relative bottom-3 bg-white rounded-md p-2 inline-flex items-center justify-center text-indigo-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
+                  <Popover.Button className="relative bottom-3 bg-default rounded-md p-2 inline-flex items-center justify-center text-white hover:bg-default focus:outline-none focus:ring-2 focus:ring-inset focus:ring-default">
                     <span className="sr-only">Close menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
-              <div className="pt-5 pb-6">
-                <div className="px-2 space-y-1">
+              <div className="pt-10 pb-5">
+                <div className="px-2 space-y-0">
                   {navigation.main.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="block px-3 py-2 rounded-md text-base font-medium text-bg hover:text-white hover:0"
+                      className="block px-3 py-2 rounded-md text-base font-medium text-bg hover:text-white hover:bg-default hover:0"
                     >
                       {item.name}
                     </a>
@@ -204,6 +210,7 @@ useEffect(() => {
 
                   <div className="">
                 <div className="mx-auto">
+                  <Link to="/">
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
                     className="w-44 mx-auto sm:w-56"
@@ -212,6 +219,7 @@ useEffect(() => {
                     width="175px"
                     height="100px"
                   />
+                  </Link>
                 </div>
               </div>
 
@@ -220,7 +228,8 @@ useEffect(() => {
                 </div>
               </div>
               <div className="-mt-2 ">
-                <div className="mx-auto  ">
+                <div className="mx-auto  cursor-pointer">
+                  <Link to="/store/products/Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3MTQ5ODMyNDgxMTE=">
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
                     className="w-full mx-auto "
@@ -229,6 +238,7 @@ useEffect(() => {
                     width="200px"
                     height="100px"
                   />
+                  </Link>
                 </div>
               </div>
             </div>
