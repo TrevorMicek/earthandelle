@@ -4,6 +4,7 @@ import { navigate, useMatch } from "@reach/router"
 
 import Layout from '../../components/layout/layout'
 import { useShopify } from "../hooks"
+import { Link } from "gatsby"
 
 
 export default (props) => {
@@ -14,6 +15,7 @@ export default (props) => {
 		openCart,
 		createCheckout,
 		checkoutState,
+		checkoutId,
 		addVariant,
 	} = useShopify()
 
@@ -59,7 +61,7 @@ export default (props) => {
 			const oldItems = JSON.parse(window.localStorage.getItem('cart')) || []
 			oldItems.push(storage)
 			window.localStorage.setItem('cart', JSON.stringify(oldItems))
-			navigate('../')
+
 		} else {
 
 			const lineItemsToAdd = [
@@ -68,6 +70,7 @@ export default (props) => {
 
 
 			const checkoutId = checkoutState.id
+
 			addVariant(checkoutId, lineItemsToAdd)
 		}
 
@@ -79,7 +82,9 @@ export default (props) => {
 
 		// fetchCollection()
 	}, [])
+useEffect(() => {
 
+})
 	useEffect(() => {
 		fetchProduct(id)
 		window.scrollTo(0,0)
@@ -87,6 +92,10 @@ export default (props) => {
 	const leftArrow = '<'
 	const rightArrow = '>'
 	const downArrow = '^'
+	const handleClick = () => {
+
+		window.open(`https://earthandelle.myshopify.com/cart/add?id=42980611948783&quantity=${quantity}`)
+	}
 	return (
 		<>
 		<div>{product.title}</div>
@@ -156,8 +165,11 @@ export default (props) => {
 						className="prodBuy button"
 						onClick={(e) => changeSize(size, quantity)}
 					>
-						Add To Cart
+						<a href={`https://earthandelle.myshopify.com/cart/add?id=42980611948783&quantity=${quantity}`}>
+							buy now
+						</a>
 					</button>
+
 					</div>
 				<div className="Product__info">
 
