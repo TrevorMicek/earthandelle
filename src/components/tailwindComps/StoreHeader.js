@@ -142,7 +142,7 @@ const CartComp = () => (
               <div className="fixed top-16 w-full max-w-sm px-4">
 
     </div>
-    <div className="flex z-30">
+    <div className="">
             <Cart create={props.create} />
             </div>
 
@@ -165,13 +165,14 @@ const CartComp = () => (
                 </div>
               </div>
 
-              <div className="hidden space-x-5 mt-7 md:flex md:mx-auto">
+              <div className="hidden space-x-5 mt-7 relative -left-10 md:flex md:mx-auto">
+
                 {navigation.main.map((item) => (
                   <Link to={item.href} key={item.name} className="text-base font-medium text-white hover:text-indigo-500">
                     {item.name}
                   </Link>
                 ))}
-                <div className=" w-1/12 relative -right-12 z-0 cursor-pointer med:-right-20 lg:-right-24">
+                <div className=" w-1/12 relative -right-20 z-0 cursor-pointer med:-right-24 lg:-right-32">
                   <Link to="/store">
             <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10" />
             </Link>

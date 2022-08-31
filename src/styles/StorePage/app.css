@@ -161,6 +161,7 @@ input, select {
 	position: absolute;
 	top: 0vh;
 	right: 0;
+	z-index: 30;
 	height: 85vh;
 	width: 85vw;
 	background-color: white;

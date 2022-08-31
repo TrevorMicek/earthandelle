@@ -350,13 +350,16 @@ export default (props) => {
 					>
 						Add to cart
 					</button>
-
+					<a href="https://www.amazon.com/gp/aws/cart/add.html?maas=maas_adg_556B4B30975C2FA9446DAC731948BD12_afap_abs&ref_=aa_maas&tag=maas&ASIN.1=B09JVHN443&Quantity.1=1">
 					<button
 						className="mt-3 flex w-full items-center justify-center rounded-md border border-transparent bg-amazon py-3 px-8 text-base font-medium text-black hover:text-gray-700 hover:bg-amazon focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
-						onClick={(e) => changeSize(e, size, quantity)}
+
 					>
-						Buy with Amazon
+
+						Buy with Amazon*
+
 					</button>
+					</a>
 					<p className="text-sm text-gray-800">* save 15% when you buy through Amazon</p>
 
           </div>

@@ -119,7 +119,7 @@ export default (props) => {
 
 					<button className="App__view-cart" onClick={(e) => handleOpen(e)}>
 					<ShoppingCartIcon
-            className="text-accent relative z-30 right-5 top-7 ml-2 mr-2 h-6 w-6 text-orange-300 transition duration-150 ease-in-out group-hover:text-opacity-80 md:-right-0 md:relative med:right-3 lg:right-20 lg:-ml-8"
+            className="text-accent relative z-30 right-8 top-7  mr-2 h-6 w-6 text-orange-300 transition duration-150 ease-in-out group-hover:text-opacity-80 md:-right-0 md:relative med:right-5 lg:right-20 lg:-ml-8"
             aria-hidden="true"
           />
 
