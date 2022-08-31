@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Router } from '@reach/router'
+import React, { useState, useEffect } from 'react'
+import { Router, useMatch } from '@reach/router'
 /* This example requires Tailwind CSS v2.0+ */
 const basicPosts = [
     {
@@ -22,7 +22,7 @@ const basicPosts = [
     },
     {
       title: 'How to use search engine optimization to drive sales',
-      href: '#',
+      href: '/blog/SEO',
       category: { name: 'Video', href: '#' },
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.',
@@ -229,20 +229,20 @@ const basicPosts = [
     const [post, setPost] = useState(basicPosts)
     const Posts = () => ( <>
       {post.map((post) => (
-        <div key={post.title} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+        <div key={post.title} className="bg-secondary flex flex-col rounded-lg shadow-lg overflow-hidden">
           <div className="flex-shrink-0">
             <img className="h-48 w-full object-cover" src={post.imageUrl} alt="" />
           </div>
-          <div className="flex-1 bg-white p-6 flex flex-col justify-between">
-            <div className="flex-1">
-              <p className="text-sm font-medium text-indigo-600">
+          <div className=" bg-white pb-6  flex flex-col justify-between">
+            <div className="flex-1 bg-secondary ">
+              <p className="text-sm mx-6 pt-6 font-medium text-gray-700">
                 <a href={post.category.href} className="hover:underline">
                   {post.category.name}
                 </a>
               </p>
-              <a href={post.href} className="block mt-2">
+              <a href={post.href} className="block mx-6 mt-2">
                 <p className="text-xl font-semibold text-gray-900">{post.title}</p>
-                <p className="mt-3 text-base text-gray-500">{post.description}</p>
+                <p className="mt-3 text-base text-gray-700">{post.description}</p>
               </a>
             </div>
             <div className="mt-6 flex items-center">
@@ -276,7 +276,7 @@ const basicPosts = [
 
         <div className="relative mx-auto">
           <div className="text-center">
-            <h2 className="text-3xl tracking-tight font-extrabold text-gray-900">Trevor's Blog</h2>
+            <h2 className="text-3xl tracking-tight font-extrabold text-gray-900">Paige's Blog</h2>
             <p className="mt-3  mx-auto text-xl text-gray-500 sm:mt-4">
              We have four series that go into the different and unique aspects of a website. Easily find good information on the topics you need or if you're new to it all go for the basics where we only talk in simple terms that are easy to understand.
             </p>

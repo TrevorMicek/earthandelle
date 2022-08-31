@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useState } from "react"
-import Layout from '../components/layout/layout'
 import { Link } from 'gatsby'
 import { Router, Redirect } from '@reach/router'
 import Products from "../storePage/storeComponents/Products"
@@ -7,14 +6,16 @@ import ProductView from "../storePage/storeComponents/Productview"
 import Cart from '../storePage/storeComponents/Cart'
 import createComponent from '../components/commonComps/createCart'
 import HomeButton from '../components/commonComps/storeHeaderButton'
-
+import StoreHeader from '../components/tailwindComps/StoreHeader'
 import { useShopify } from "../storePage/hooks"
 
 import { Provider } from "react-redux"
 
+import "../styles/StorePage/app.css"
 
+import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
-import styles from '../styles/StorePage/wrapper.css'
+import styles from '../styles/StorePage/wrapper.module.css'
 
 import { createStore, combineReducers, applyMiddleware, compose } from "redux"
 import thunk from "redux-thunk"
@@ -73,18 +74,21 @@ const App = () => {
 
     const CartWrapper = () => (
         <div className="homeButtonWrapper">
-    {switchButton()}
+
 
     <Cart create={createCart} title={props.title} homeButton={CartButton} button={getUrl} />
  </div>
     )
-
+    const HeaderWrapper = () => (
+        <StoreHeader create={createCart} />
+    )
+//<Products path="/store" cart={CartWrapper} title={props.title} getTitle={props.getTitle} homeButton={MainHomeButton}  />
     return (
         <>
+
         <Router>
-            <CartWrapper path='/store/cart' />
-			<Products path="/store" title={props.title} getTitle={props.getTitle} homeButton={MainHomeButton}  />
-			<ProductView path='/store/products/:productId' title={props.getTitle} homeButton={ContinueShopping} button={getUrl} />
+
+			<ProductView path='/store' cart={HeaderWrapper} title={props.getTitle} homeButton={ContinueShopping} button={getUrl} />
 
         </Router>
         </>
@@ -106,7 +110,7 @@ return (
 
     <Layout title="Store" text="Our high quality, unique store example that's perfect for small businesses">
     <SEO title="Online Store" />
-    <div className=" relative bg-white pt-4 -mb-8 overflow-hidden sm:pt-24 lg:pt-32" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
+    <div className=" relative bg-white -mt-7 -mb-8 overflow-hidden sm:pt-24 lg:pt-32" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
 	<Provider store={store} >
         <Pages title={pageTitle} getTitle={getTitle} />
 	</Provider>

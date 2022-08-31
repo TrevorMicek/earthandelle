@@ -5,7 +5,7 @@ import logo from '../../images/newImages/Logo.png'
 const navigation = {
     main: [
       { name: 'Home', href: '/' },
-      { name: 'Store', href: '/store' },
+      { name: 'Store', href: '/store/products/Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3MTQ5ODMyNDgxMTE=' },
       { name: 'About', href: '/pricing' },
       { name: 'Blog', href: '/blog' },
       { name: 'Contact', href: '/contact' }

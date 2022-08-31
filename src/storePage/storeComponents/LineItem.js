@@ -1,3 +1,4 @@
+
 import React from "react"
 import { useShopify } from "../hooks"
 
@@ -26,10 +27,12 @@ export default (props) => {
 
 	return (
 		<li className="Line-item">
+
 			{checkoutState.lineItems &&
 				checkoutState.lineItems.map((lineItem, i) => {
 					return (
 						<div key={`${lineItem.title}` + i} className="lineItemDiv">
+
 							<div className="Line-item__img">
 								{lineItem.variant.image ? (
 									<img
@@ -40,10 +43,8 @@ export default (props) => {
 							</div>
 							<div className="Line-item__content">
 								<div className="Line-item__content-row">
-									<div className="Line-item__variant-title">
-										{lineItem.variant.title}
-									</div>
-									<span className="Line-item__title">{lineItem.title}</span>
+
+									<span className="Line-item__title">Earth & Elle Vegan Collagen Gummies</span>
 								</div>
 								<div className="Line-item__content-row">
 									<div className="Line-item__quantity-container">
@@ -76,6 +77,7 @@ export default (props) => {
 									>
 										×
 									</button>
+
 								</div>
 							</div>
 						</div>

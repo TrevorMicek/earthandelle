@@ -3,11 +3,11 @@ import React from 'react';
 
 import MainHeader from '../tailwindComps/Hero'
 import SecondaryHeader from '../tailwindComps/SecondaryHeader'
-
+import StoreHeader from '../tailwindComps/StoreHeader'
 const Header = (props) => {
 
-  const firstTitle = 'Small Business Web Design & Development'
-  const secondaryTitles = ['Product', 'Pricing', 'About', 'Blog', 'Store','Contact']
+  const firstTitle = 'Store'
+  const secondaryTitles = ['Product', 'Pricing', 'About', 'Blog','Contact']
 
 
   const getSecondaryTitle = (curTitle) => {
@@ -30,25 +30,16 @@ const Header = (props) => {
    <SecondaryHeader />
    </section>
   )
-  const StoreHeader = () => (
-    <section class="headerPictureWrapper">
-   <div class="headerBorder">
-   <h1 class="headerTitle">
-   {props.title}
-   </h1>
 
-   </div>
-   </section>
-  )
   const SwitchHeader = () => {
     switch(props.title) {
         case firstTitle:
-          return <MainHeader />
+          return <div></div>
         case secondTitle:
           return <SecondaryHeader title={props.title} text={props.text} />
 
         default:
-          return <StoreHeader />
+          return <MainHeader />
     }
   }
 return (

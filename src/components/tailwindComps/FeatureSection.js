@@ -129,8 +129,10 @@ export default function FeatureSection() {
     <div className=" pb-10 pt-9 -mb-8 -mt-20 relative overflow-hidden bg-white" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
 
  <div className="text-center w-full">
-    <div className="mb-8 h-12 bg-button flex flex-col space-x-2 justify-center items-center">
-    <p className="my-auto text-white">Win $100 worth of free supplements!<button className="bg-secondary text-gray-800 rounded-md ml-2 py-1 px-1 text-sm">Enter Here</button></p>
+    <div className="mb-8 h-12 bg-button flex flex-row space-x-2 justify-around items-center">
+    <p className="my-auto ml-4 w-72 text-left text-white">Enter to win a year supply of our vegan collgen boosting gummies ($240 value)
+    </p>
+    <button className="my-auto whitespace-nowrap ml-4 text-left bg-secondary text-gray-800 rounded-md ml-2 py-1 px-1 text-sm">Enter Here</button>
 
     </div>
           <h2 className="mt-2 mb-7 relative font-serif z-10 text-lg tracking-wide font-thin text-gray-900 lg:mx-auto">
@@ -169,7 +171,7 @@ export default function FeatureSection() {
         <div className="text-center mt-8 ">
 
         <button className="py-3 px-4 mx-auto rounded-md  text-white font-xs bg-button">
-        <Link to="/store/products/Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3MTQ5ODMyNDgxMTE=">
+        <Link to="/store">
           <div className="flex flex-row space-x-4 justify-center items-center">
           <p className="my-auto">Shop Now</p>
           <ArrowRightIcon width="20px" height="20px" />

@@ -9,7 +9,8 @@ module.exports = {
           'secondary': 'rgb(228, 182, 169)',
           'accent': 'rgb(238, 214, 202)',
           'light': 'rgb(237, 232, 226)',
-          'button': 'rgb(220, 152, 109)'
+          'button': 'rgb(220, 152, 109)',
+          'amazon': 'rgba(255,164,28,255)'
     }
     },
   },

@@ -5,8 +5,8 @@ import { navigate, useMatch } from "@reach/router"
 import Layout from '../../components/layout/layout'
 import { useShopify } from "../hooks"
 import { Link } from "gatsby"
-
-
+import { Client } from "shopify-buy"
+import { StarIcon } from "@heroicons/react/solid"
 export default (props) => {
 
 	const {
@@ -17,9 +17,28 @@ export default (props) => {
 		checkoutState,
 		checkoutId,
 		addVariant,
-	} = useShopify()
+		client
 
-	const id = useMatch("/store/products/:productId").productId
+	} = useShopify()
+	const lineItemsToAdd = [
+		{
+		  variantId: 'Z2lkOi8vc2hvcGlmeS9DaGVja291dC82NzQxNzM2YTQwZDk3OGJkMjFmZTM0NGYzNTdhMmYwMj9rZXk9YmI2ZWVmNDA3MDkxODZmZDEyOGIzZjkxZDM0MTVmYTE=',
+		  quantity: 1
+		}
+	  ];
+	  const ArrowSmLeftIcon = () => (
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+</svg>
+
+	  )
+	  const ArrowSmRightIcon = () => (
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+</svg>
+
+	  )
+
 	const defaultSize = product.variants && product.variants[0].id.toString()
 	const [size, setSize] = useState("")
 	const [quantity, setQuantity] = useState(1)
@@ -31,19 +50,83 @@ export default (props) => {
 		if (curImg > 0) {
 		setCurImg(curImg - 1)
 		} else {
-			setCurImg(curImg)
+			setCurImg(curImg + 1)
 		}
 	}
 	const rightImg = () => {
-		if (curImg < 3) {
+		if (curImg < product.images.length - 1) {
 		setCurImg(curImg + 1)
 		} else {
-			setCurImg(curImg)
+			setCurImg(curImg - 1)
 		}
 	}
+	const productInfo = {
+		name: 'Basic Tee 6-Pack',
+		price: '$192',
+		href: '#',
+		breadcrumbs: [
+		  { id: 1, name: 'Men', href: '#' },
+		  { id: 2, name: 'Clothing', href: '#' },
+		],
+		images: [
+		  {
+			src: 'https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg',
+			alt: 'Two each of gray, white, and black shirts laying flat.',
+		  },
+		  {
+			src: 'https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg',
+			alt: 'Model wearing plain black basic tee.',
+		  },
+		  {
+			src: 'https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg',
+			alt: 'Model wearing plain gray basic tee.',
+		  },
+		  {
+			src: 'https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg',
+			alt: 'Model wearing plain white basic tee.',
+		  },
+		],
+		colors: [
+		  { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
+		  { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
+		  { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' },
+		],
+		sizes: [
+		  { name: 'XXS', inStock: false },
+		  { name: 'XS', inStock: true },
+		  { name: 'S', inStock: true },
+		  { name: 'M', inStock: true },
+		  { name: 'L', inStock: true },
+		  { name: 'XL', inStock: true },
+		  { name: '2XL', inStock: true },
+		  { name: '3XL', inStock: true },
+		],
+		description:
+		  'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+		highlights: [
+		  'Hand cut and sewn locally',
+		  'Dyed with our proprietary colors',
+		  'Pre-washed & pre-shrunk',
+		  'Ultra-soft 100% cotton',
+		],
+		details:
+		  'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
+	  }
+	  const reviews = { href: '#', average: 4.5, totalCount: 117 }
 
-	function changeSize(sizeId, quantity) {
+	  function classNames(...classes) {
+		return classes.filter(Boolean).join(' ')
+	  }
+
+
+	function openCheckout(e) {
+		e.preventDefault()
+		// window.open(checkoutState.webUrl) // opens checkout in a new window
+		window.location.replace(checkoutState.webUrl) // opens checkout in same window
+	}
+	function changeSize(e, sizeId, quantity) {
 		window.scrollTo(0,0)
+
 		if (sizeId === "") {
 			sizeId = defaultSize
 			const lineItemsToAdd = [
@@ -57,11 +140,12 @@ export default (props) => {
 				add: lineItemsToAdd,
 				onRefresh: lineItemsOnRefresh
 			}
+			console.log(storage)
 			addVariant(storage.id, storage.add)
 			const oldItems = JSON.parse(window.localStorage.getItem('cart')) || []
 			oldItems.push(storage)
 			window.localStorage.setItem('cart', JSON.stringify(oldItems))
-
+			openCart()
 		} else {
 
 			const lineItemsToAdd = [
@@ -72,7 +156,12 @@ export default (props) => {
 			const checkoutId = checkoutState.id
 
 			addVariant(checkoutId, lineItemsToAdd)
+
+
 		}
+
+
+
 
 	}
 
@@ -82,75 +171,169 @@ export default (props) => {
 
 		// fetchCollection()
 	}, [])
-useEffect(() => {
+	function classNames(...classes) {
+		return classes.filter(Boolean).join(' ')
+	  }
+	const checkoutButton = (e) => {
+		changeSize(size, quantity)
 
-})
+
+			openCheckout(e)
+
+
+
+
+	}
+
 	useEffect(() => {
-		fetchProduct(id)
+		fetchProduct('Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3MTQ5ODMyNDgxMTE=')
 		window.scrollTo(0,0)
-	}, [id])
+	}, [])
+
 	const leftArrow = '<'
 	const rightArrow = '>'
 	const downArrow = '^'
-	const handleClick = () => {
+	const Reviews = () => {
 
-		window.open(`https://earthandelle.myshopify.com/cart/add?id=42980611948783&quantity=${quantity}`)
-	}
+
+		return (
+		<div className=" flex py-3 w-32 flex-row items-center justify-start mx-0">
+	   <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" stroke-width="1.5" stroke="currentColor" className="mx-auto h-5 w-5">
+			<defs>
+			  <linearGradient id="grad1">
+				<stop offset="50%" stop-color="rgb(251 191 36)" />
+				<stop offset="50%" stop-color="rgb(251 191 36)" />
+			  </linearGradient>
+			</defs>
+			<path fill="url(#grad1)" d="M20.388,10.918L32,12.118l-8.735,7.749L25.914,31.4l-9.893-6.088L6.127,31.4l2.695-11.533L0,12.118
+		  l11.547-1.2L16.026,0.6L20.388,10.918z"/>
+		  </svg>
+		  <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" stroke-width="1.5" stroke="currentColor" className="mx-auto h-5 w-5">
+			<defs>
+			  <linearGradient id="grad2">
+				<stop offset="50%" stop-color="rgb(251 191 36)" />
+				<stop offset="50%" stop-color="rgb(251 191 36)" />
+			  </linearGradient>
+			</defs>
+			<path fill="url(#grad2)" d="M20.388,10.918L32,12.118l-8.735,7.749L25.914,31.4l-9.893-6.088L6.127,31.4l2.695-11.533L0,12.118
+		  l11.547-1.2L16.026,0.6L20.388,10.918z"/>
+		  </svg>
+		  <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" stroke-width="1.5" stroke="currentColor" className="mx-auto h-5 w-5">
+			<defs>
+			  <linearGradient id="grad3">
+				<stop offset="50%" stop-color="rgb(251 191 36)" />
+				<stop offset="50%" stop-color="rgb(251 191 36)" />
+			  </linearGradient>
+			</defs>
+			<path fill="url(#grad3)" d="M20.388,10.918L32,12.118l-8.735,7.749L25.914,31.4l-9.893-6.088L6.127,31.4l2.695-11.533L0,12.118
+		  l11.547-1.2L16.026,0.6L20.388,10.918z"/>
+		  </svg>
+		  <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" stroke-width="1.5" stroke="currentColor" className="mx-auto h-5 w-5">
+			<defs>
+			  <linearGradient id="grad4">
+				<stop offset="50%" stop-color="rgb(251 191 36)" />
+				<stop offset="50%" stop-color="rgb(251 191 36)" />
+			  </linearGradient>
+			</defs>
+			<path fill="url(#grad4)" d="M20.388,10.918L32,12.118l-8.735,7.749L25.914,31.4l-9.893-6.088L6.127,31.4l2.695-11.533L0,12.118
+		  l11.547-1.2L16.026,0.6L20.388,10.918z"/>
+		  </svg>
+		  <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" stroke-width="1.5" stroke="currentColor" className="mx-auto h-5 w-5">
+			<defs>
+			  <linearGradient id="grad5">
+				<stop offset="50%" stop-color="rgb(251 191 36)" />
+				<stop offset="50%" stop-color="white" />
+			  </linearGradient>
+			</defs>
+			<path fill="url(#grad5)" d="M20.388,10.918L32,12.118l-8.735,7.749L25.914,31.4l-9.893-6.088L6.127,31.4l2.695-11.533L0,12.118
+		  l11.547-1.2L16.026,0.6L20.388,10.918z"/>
+		  </svg>
+
+
+	  </div>
+	  )
+		}
+
 	return (
-		<>
-		<div>{product.title}</div>
-
-		<div >
 		<div id="individualProduct">
 
+			{props.cart()}
 
-			<div className="Product-wrapper2">
-				<div className="Images">
-				<button className="leftButton" onClick={leftImg}>{leftArrow}</button>
+
+        {/* Image gallery */}
+        <div className="mx-auto max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
+		<div className="Images">
+				<button className="leftButton" onClick={leftImg}><ArrowSmLeftIcon /></button>
 					{product.images &&
 								<img
 									className="Image"
 									key={product.images[curImg].src}
 									src={product.images[curImg].src}
 									alt={`${product.title} product shot`}
-									width="250px"
-									height="250px"
+									width="350px"
+									height="350px"
 								/>
 						}
-						<button className="rightButton" onClick={rightImg}>{rightArrow}</button>
+
+						<button className="text-black" onClick={rightImg}><ArrowSmRightIcon /></button>
 				</div>
-				<div className="optionsWrapper">
-					<div>
-				<h3 className="Product__price">
-						${product.variants && product.variants[0].price}
-					</h3>
 
-						<label htmlFor={"prodOptions"}>Size</label><br />
+        </div>
+		<div className="flex flex-row justify-center space-x-1">
+		{product.images &&
+						product.images.map((image, i) => {
+							return (
+								<img
+									key={image.id + i}
+									src={image.src}
+									alt={`${product.title} product shot`}
+									width="75px"
+									height="75px"
+									onClick={(e) => setCurImg(i)}
+									className={classNames(
+										(curImg === i) === true  ? 'bg-white ring-2 ring-default shadow-md' : '',
+										'rounded-lg cursor-pointer'
+									  )}
+								/>
+							)
+						})}
+		</div>
+        {/* Product info */}
+        <div className="mx-auto max-w-2xl px-4 pt-0 pb-16 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-24">
+          <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
+		  <div className="mt-6">
+              <h3 className="sr-only">Reviews</h3>
+              <div className="flex items-center w-56">
+                <Reviews />
+                <p className="sr-only">{reviews.average} out of 5 stars</p>
+                <a href={reviews.href} className="ml-2 text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                  {reviews.totalCount} reviews
+                </a>
+              </div>
+            </div>
+            <h1 className="text-2xl font-normal whitespace-nowrap text-gray-900 sm:text-3xl">Earth & Elle Vegan Collagen Gummies -</h1>
+			<h2 className="text-gray-600 -mt-2 pt-0 text-xl font-normal">Non-GMO Biotin Gummies, Vitamin A, E, C - Plant Based Collagen Supplements for Healthier Hair, Skin, Nails - 60 Chews of Orange Flavored Gummies, Made in USA</h2>
+          </div>
 
-						<select
-							id="prodOptions"
-							name={size}
-							onChange={(e) => {
-								setSize(e.target.value)
-							}}
-						>
+          {/* Options */}
+          <div className="my-4 text-default lg:row-span-3 lg:mt-0">
+            <h2 className="sr-only">Product information</h2>
+			<p className="text-3xl tracking-tight">
+          <span className="line-through">$25.99</span>
+           <span className="">
+           &nbsp;&nbsp;&nbsp; ${product.variants && product.variants[0].price}
+          </span>
+        </p>
 
-							{product.variants &&
-								product.variants.map((item, i) => {
-									return (
-										<option
-											value={item.id.toString()}
-											key={item.title + i}
-										>{`${item.title}`}</option>
-									)
-								})}
-						</select>
+            {/* Reviews */}
 
-					</div>
-					<div>
-						<label className="qtyLabel">Quantity</label><br />
+
+              {/* Colors */}
+
+			  <div className="mt-8 flex mb-0 flex-row bg-white rounded-none items-center">
+						<label className="mr-2">Qty</label>
 						<input
-							className="quantity"
+							className="w-16 "
 							type="number"
 							min={1}
 							value={quantity}
@@ -162,30 +345,63 @@ useEffect(() => {
 
 
 					<button
-						className="prodBuy button"
-						onClick={(e) => changeSize(size, quantity)}
+						className="mt-5 flex w-full items-center justify-center rounded-md border border-transparent bg-default py-3 px-8 text-base font-medium text-white hover:text-gray-700 hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+						onClick={(e) => changeSize(e, size, quantity)}
 					>
-						<a href={`https://earthandelle.myshopify.com/cart/add?id=42980611948783&quantity=${quantity}`}>
-							buy now
-						</a>
+						Add to cart
 					</button>
 
-					</div>
-				<div className="Product__info">
+					<button
+						className="mt-3 flex w-full items-center justify-center rounded-md border border-transparent bg-amazon py-3 px-8 text-base font-medium text-black hover:text-gray-700 hover:bg-amazon focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+						onClick={(e) => changeSize(e, size, quantity)}
+					>
+						Buy with Amazon
+					</button>
+					<p className="text-sm text-gray-800">* save 15% when you buy through Amazon</p>
 
-					<ul className="Product__description">
+          </div>
+
+          <div className="py-10  ">
+            {/* Description and details */}
+            <div>
+              <h3 className="sr-only">Description</h3>
+
+              <ul className="space-y-6 ml-0">
 						{description &&
 							description.map((each, i) => {
-								return <li key={`line-description +${i}`}>{each}</li>
+								return <li key={`line-description +${i}`} className="text-base text-gray-900">{each}</li>
 							})}
 					</ul>
+            </div>
 
-				</div>
-			</div>
-		</div>
-		</div>
-		</>
-		)
+            <div className="mt-10">
+              <h3 className="text-sm font-medium text-gray-900">Highlights</h3>
+
+              <div className="mt-4">
+                <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
+                  {productInfo.highlights.map((highlight) => (
+                    <li key={highlight} className="text-gray-400">
+                      <span className="text-gray-600">{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-10">
+              <h2 className="text-sm font-medium text-gray-900">Details</h2>
+
+              <div className="mt-4 space-y-6">
+                <p className="text-sm text-gray-600">{productInfo.details}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+	)
+
 
 
 }

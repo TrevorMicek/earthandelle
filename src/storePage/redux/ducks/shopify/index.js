@@ -229,6 +229,7 @@ export function useShopify() {
 		addVariant,
 		fetchProducts,
 		fetchProduct,
+		client,
 		// fetchCollection,
 		createCheckout,
 		createShop,

@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import { Router } from "@reach/router"
+import React, { useState, useEffect } from "react"
+import { Router, useMatch } from "@reach/router"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
@@ -12,6 +12,9 @@ import CreateComponent from "../components/commonComps/createComponent"
 import Events from "../data/blogPage/Categories";
 import BlogSection from '../components/tailwindComps/BlogSection'
 const IndexPage = () => {
+
+
+
   /*
   const [eventPage, setEventPage] = useState('Basics')
 
@@ -40,6 +43,18 @@ const IndexPage = () => {
               </>
       }
   }*/
+  const BlogArticle = () => {
+    const [post, setPost] = useState([])
+    const id = useMatch("/blog/:blogId").blogId
+    console.log(id)
+    useEffect(() => {
+      setPost(id)
+      window.scrollTo(0,0)
+    }, [id])
+    return (
+      <div>{post}</div>
+    )
+  }
   return (
   <Layout title="Blog" text="Learn About Web Design, SEO, Ecommerce & More!">
     <SEO title="Blog" />
@@ -47,7 +62,7 @@ const IndexPage = () => {
 
       <Router className=" relative bg-white pt-4 -mb-8 overflow-hidden sm:pt-24 lg:pt-32" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
         <BlogSection path="/blog" />
-        <div path="/blog/:id" >blog article</div>
+        <BlogArticle path="/blog/:blogId" >blog article</BlogArticle>
       </Router>
   </Layout>
   )

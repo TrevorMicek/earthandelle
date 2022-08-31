@@ -6,8 +6,9 @@ import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ShoppingCartIcon } from '@heroicons/react/solid'
 import { Link } from "gatsby"
+import { useShopify } from '../../storePage/hooks'
 import emailjs from 'emailjs-com';
-
+import Cart from '../../storePage/storeComponents/Cart'
 
 import { ShoppingBagIcon } from '@heroicons/react/outline'
 
@@ -64,31 +65,61 @@ const navigation = {
   ],
 }
 
-export default function HeroComp() {
- const [header, setHeader] = useState(headerOne)
- const changeHeader = () =>{
-  if (header === headerOne) {
-    setHeader(headerTwo)
-  } else if (header === headerTwo) {
-    setHeader(headerOne)
-  }
-
- }
-useEffect(() => {
-  setTimeout(() => {
-    changeHeader()
-  }, 5000)
-}, [])
-useEffect(() => {
-  setTimeout(() => {
-    changeHeader()
-  }, 5000)
-}, [header])
+export default function HeroComp(props) {
 
 
+const CartComp = () => (
+    <Popover className="relative z-10 text-secondary">
+    {({ open }) => (
+      <>
+        <Popover.Button
+          className={`
+            ${open ? '' : 'text-opacity-90'}
+            group inline-flex items-center rounded-md bg-orange-700 px-3 py-2 text-base font-medium text-white hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
+        >
+
+
+        </Popover.Button>
+        <Transition
+          as={Fragment}
+          enter="transition ease-out duration-200"
+          enterFrom="opacity-0 translate-y-1"
+          enterTo="opacity-100 translate-y-0"
+          leave="transition ease-in duration-150"
+          leaveFrom="opacity-100 translate-y-0"
+          leaveTo="opacity-0 translate-y-1"
+        >
+          <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen -translate-x-1/2 transform px-4 sm:px-0 lg:max-w-3xl">
+            <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+              <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
+
+              </div>
+              <div className="bg-gray-50 p-4">
+                <a
+                  href="##"
+                  className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                >
+                  <span className="flex items-center">
+                    <span className="text-sm font-medium text-gray-900">
+                      Documentation
+                    </span>
+                  </span>
+                  <span className="block text-sm text-gray-500">
+                    Start integrating products and tools
+                  </span>
+                </a>
+              </div>
+            </div>
+          </Popover.Panel>
+        </Transition>
+      </>
+    )}
+
+  </Popover>
+)
  return (
 
-    <div className="relative overflow-hidden" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
+    <div className="relative overflow-hidden pb-20" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
 
       <Popover as="header" className="relative ">
         <div className="bg-default">
@@ -111,6 +142,7 @@ useEffect(() => {
               <div className="fixed top-16 w-full max-w-sm px-4">
 
     </div>
+    <Cart create={props.create} />
               <div className="w-1/12 relative right-2 z-10 cursor-pointer">
 
               <Link to="/store">
@@ -141,6 +173,7 @@ useEffect(() => {
             <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10" />
             </Link>
             </div>
+            <Cart create={props.create} />
 
               </div>
 
@@ -202,7 +235,7 @@ useEffect(() => {
       <main>
         <div className="pt-4 bg-white sm:pt-16 ">
 
-          <div className="mx-auto max-w-7xl ">
+          <div className="mx-auto  ">
             <div className="">
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center ">
                 <div className="">
@@ -242,7 +275,7 @@ useEffect(() => {
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
                     className="w-full mx-auto "
-                    src={header}
+                    src={headerOne}
                     alt="blue technical background image"
                     width="200px"
                     height="100px"
