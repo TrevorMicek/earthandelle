@@ -11,6 +11,9 @@ module.exports = {
           'light': 'rgb(237, 232, 226)',
           'button': 'rgb(220, 152, 109)',
           'amazon': 'rgba(255,164,28,255)'
+    },
+    screens: {
+      'med': '860px'
     }
     },
   },

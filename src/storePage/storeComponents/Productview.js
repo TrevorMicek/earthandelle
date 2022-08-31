@@ -261,7 +261,7 @@ export default (props) => {
 
 
         {/* Image gallery */}
-        <div className="mx-auto max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
+        <div className="mx-auto max-w-2xl sm:px-6 ">
 		<div className="Images">
 				<button className="leftButton" onClick={leftImg}><ArrowSmLeftIcon /></button>
 					{product.images &&
@@ -299,7 +299,7 @@ export default (props) => {
 						})}
 		</div>
         {/* Product info */}
-        <div className="mx-auto max-w-2xl px-4 pt-0 pb-16 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-24">
+        <div className="mx-auto max-w-2xl px-4 pt-0 pb-16 sm:px-6">
           <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
 		  <div className="mt-6">
               <h3 className="sr-only">Reviews</h3>
@@ -311,7 +311,7 @@ export default (props) => {
                 </a>
               </div>
             </div>
-            <h1 className="text-2xl font-normal whitespace-nowrap text-gray-900 sm:text-3xl">Earth & Elle Vegan Collagen Gummies -</h1>
+            <h1 className="text-2xl font-normal text-gray-900">Earth & Elle Vegan Collagen Gummies -</h1>
 			<h2 className="text-gray-600 -mt-2 pt-0 text-xl font-normal">Non-GMO Biotin Gummies, Vitamin A, E, C - Plant Based Collagen Supplements for Healthier Hair, Skin, Nails - 60 Chews of Orange Flavored Gummies, Made in USA</h2>
           </div>
 

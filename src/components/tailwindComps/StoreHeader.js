@@ -119,7 +119,7 @@ const CartComp = () => (
 )
  return (
 
-    <div className="relative overflow-hidden pb-20" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
+    <div className="relative overflow-hidden sm:-mt-24 sm:-pt-24 pb-10 lg:-pt-32 lg:-mt-32" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
 
       <Popover as="header" className="relative ">
         <div className="bg-default">
@@ -142,7 +142,10 @@ const CartComp = () => (
               <div className="fixed top-16 w-full max-w-sm px-4">
 
     </div>
-    <Cart create={props.create} />
+    <div className="flex z-30">
+            <Cart create={props.create} />
+            </div>
+
               <div className="w-1/12 relative right-2 z-10 cursor-pointer">
 
               <Link to="/store">
@@ -162,18 +165,21 @@ const CartComp = () => (
                 </div>
               </div>
 
-              <div className="hidden space-x-5 mt-7 md:flex md:absolute md:right-10">
+              <div className="hidden space-x-5 mt-7 md:flex md:mx-auto">
                 {navigation.main.map((item) => (
                   <Link to={item.href} key={item.name} className="text-base font-medium text-white hover:text-indigo-500">
                     {item.name}
                   </Link>
                 ))}
-                <div className=" w-1/12 relative z-10 cursor-pointer">
+                <div className=" w-1/12 relative -right-12 z-0 cursor-pointer med:-right-20 lg:-right-24">
                   <Link to="/store">
             <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10" />
             </Link>
             </div>
-            <Cart create={props.create} />
+
+
+
+
 
               </div>
 
@@ -233,7 +239,7 @@ const CartComp = () => (
       </Popover>
 
       <main>
-        <div className="pt-4 bg-white sm:pt-16 ">
+        <div className="pt-4 bg-white  ">
 
           <div className="mx-auto  ">
             <div className="">
