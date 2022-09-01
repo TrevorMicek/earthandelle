@@ -112,7 +112,7 @@ export default (props) => {
 	}
 
 	return (
-		<div id="cart" className="z-30 h-screen">
+		<div id="cart" className="z-30">
 
 			<div className={`Cart ${cartStatus ? "Cart--open" : ""}`}>
 				<div className="App__view-cart-wrapper2">
@@ -129,9 +129,7 @@ export default (props) => {
 
 
 
-
-
-			<div className="bg-white">
+			<div className="bg-white ">
 
       <div className="mx-auto max-w-2xl px-4    sm:px-6 lg:max-w-7xl lg:px-8">
 	  <button className="Cart__close" onClick={(e) => handleClose(e)}>
@@ -156,13 +154,13 @@ export default (props) => {
           {/* Order summary */}
           <section
             aria-labelledby="summary-heading"
-            className="-mt-4 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8"
+            className="-mt-4 rounded-lg bg-gray-50 px-4  sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8"
           >
-            <h2 id="summary-heading" className=" -mt-2 text-lg font-medium text-gray-900">
+            <h2 id="summary-heading" className=" -mt-4 mb-0 text-lg font-medium text-gray-900">
               Order summary
             </h2>
 
-            <dl className="">
+            <dl className="-mb-4">
               <div className="flex items-center justify-between">
                 <dt className="text-sm text-gray-600">Subtotal</dt>
                 <dd className="text-sm font-medium text-gray-900">$ {checkoutState.subtotalPrice}</dd>
@@ -193,10 +191,10 @@ export default (props) => {
               </div>
             </dl>
 
-            <div className="mt-6">
+            <div className="mt-4">
               <button
                 type="submit"
-                className="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+                className="w-full rounded-md border border-transparent bg-default py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-secondary hover:text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
 				onClick={(e) => openCheckout(e)}
               >
                 Checkout

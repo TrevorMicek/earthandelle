@@ -119,7 +119,7 @@ const CartComp = () => (
 )
  return (
 
-    <div className="relative overflow-hidden sm:-mt-24 sm:-pt-24 pb-10 lg:-pt-32 lg:-mt-32" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
+    <div className="relative  sm:-mt-24 sm:-pt-24 pb-10 lg:-pt-32 lg:-mt-32" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
 
       <Popover as="header" className="relative ">
         <div className="bg-default">
