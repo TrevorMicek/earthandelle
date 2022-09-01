@@ -20,7 +20,7 @@ import Logo from '../../images/newImages/Logo.png'
 const navigation = {
   main: [
     { name: 'Home', href: '/' },
-      { name: 'Store', href: '/store/products/Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3MTQ5ODMyNDgxMTE=' },
+      { name: 'Store', href: '/store' },
       { name: 'About', href: '/' },
       { name: 'Blog', href: '/blog' },
       { name: 'Contact', href: '/#contact' }
@@ -97,9 +97,9 @@ useEffect(() => {
             className="border-2 relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
             aria-label="Global"
           >
-            <div className="my-4 flex justify-center space-x-3">
+            <div className="my-4 mx-0 flex justify-center absolute space-x-3">
             {navigation.social.map((item) => (
-              <a key={item.name} href={item.href} className="text-accent hover:text-gray-500">
+              <a key={item.name} href={item.href} className="text-accent hover:secondary">
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
               </a>
@@ -114,7 +114,7 @@ useEffect(() => {
               <div className="w-1/12 relative right-2 z-10 cursor-pointer">
 
               <Link to="/store">
-            <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10 md:hidden" />
+            <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10 md:hidden hover:text-secondary" />
               </Link>
 
             </div>
@@ -130,17 +130,21 @@ useEffect(() => {
                 </div>
               </div>
 
-              <div className="hidden space-x-5 mt-7 md:flex md:absolute md:right-10">
+              <div className="hidden space-x-5 mt-7 left-0 md:flex md:mx-auto">
+
                 {navigation.main.map((item) => (
-                  <Link to={item.href} key={item.name} className="text-base font-medium text-white hover:text-indigo-500">
+                  <Link to={item.href} key={item.name} className="text-base font-medium text-white hover:text-indigo-500 med:text-lg">
                     {item.name}
                   </Link>
                 ))}
-                <div className=" w-1/12 relative z-10 cursor-pointer">
+
+
+              </div>
+              <div className=" hidden w-1/12 md:flex right-10 mt-7 md:absolute z-10 cursor-pointer">
                   <Link to="/store">
-            <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10" />
+            <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10 hover:text-secondary" />
             </Link>
-            </div>
+
 
               </div>
 

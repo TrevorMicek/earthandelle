@@ -21,7 +21,7 @@ import Logo from '../../images/newImages/Logo.png'
 const navigation = {
   main: [
     { name: 'Home', href: '/' },
-      { name: 'Store', href: '/store/products/Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3MTQ5ODMyNDgxMTE=' },
+      { name: 'Store', href: '/store' },
       { name: 'About', href: '/' },
       { name: 'Blog', href: '/blog' },
       { name: 'Contact', href: '/#contact' }
@@ -128,9 +128,9 @@ const CartComp = () => (
             className="border-2 relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
             aria-label="Global"
           >
-            <div className="my-4 flex justify-center space-x-3">
+            <div className="my-4 flex absolute justify-center space-x-3">
             {navigation.social.map((item) => (
-              <a key={item.name} href={item.href} className="text-accent hover:text-gray-500">
+              <a key={item.name} href={item.href} className="text-accent hover:text-secondary">
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
               </a>
@@ -146,10 +146,10 @@ const CartComp = () => (
             <Cart create={props.create} />
             </div>
 
-              <div className="w-1/12 relative right-2 z-10 cursor-pointer">
+              <div className="w-1/12 relative -right-1 z-10 cursor-pointer">
 
               <Link to="/store">
-            <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10 md:hidden" />
+            <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10 md:hidden hover:text-secondary" />
               </Link>
 
             </div>
@@ -165,18 +165,21 @@ const CartComp = () => (
                 </div>
               </div>
 
-              <div className="hidden space-x-5 mt-7 relative -left-10 md:flex md:mx-auto">
+              <div className="hidden space-x-5 mt-7 left-0 md:flex md:mx-auto">
 
                 {navigation.main.map((item) => (
-                  <Link to={item.href} key={item.name} className="text-base font-medium text-white hover:text-indigo-500">
+                  <Link to={item.href} key={item.name} className="text-base font-medium text-white hover:text-indigo-500 med:text-lg">
                     {item.name}
                   </Link>
                 ))}
-                <div className=" w-1/12 relative -right-20 z-0 cursor-pointer med:-right-24 lg:-right-32">
+
+
+              </div>
+              <div className=" hidden w-1/12 md:flex right-10 mt-7 md:absolute z-10 cursor-pointer">
                   <Link to="/store">
-            <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10" />
+            <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10 hover:text-secondary" />
             </Link>
-            </div>
+
 
 
 
@@ -198,7 +201,7 @@ const CartComp = () => (
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <Popover.Panel focus className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top md:hidden">
+          <Popover.Panel focus className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top md:hidden">
             <div className="rounded-lg bg-secondary shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div className="h-20 w-auto  pt-4 flex items-center justify-between">
                 <div className="px-0 pt-7 ">
