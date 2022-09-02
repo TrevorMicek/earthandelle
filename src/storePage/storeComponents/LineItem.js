@@ -36,7 +36,7 @@ export default (props) => {
 	return (
 		<>
 
-		<li role="list" className="flex -mt-3  divide-y divide-gray-200 border-t border-b border-gray-200">
+		<li role="list" className="flex -mt-3  sm:py-10   divide-y divide-gray-200 border-t border-b border-gray-200">
 		{checkoutState.lineItems &&
 				checkoutState.lineItems.map((lineItem, i) => {
 					return (
@@ -68,7 +68,7 @@ export default (props) => {
                       </div>
 
                       <div className="mt-4 sm:mt-0 sm:pr-9">
-					  <div className="flex flex-row">
+					  <div className="">
 										<button
 											className="Line-item__quantity-update"
 											onClick={(e) =>
