@@ -130,7 +130,7 @@ export default (props) => {
 
 
 			<div className="bg-white overflow-hidden">
-
+			<button className="Line-item__remove" onClick={(e) => deleteLineItem(checkoutState.lineItems[0].id, e)}>CLEAR CART</button>
       <div className="mx-auto max-w-2xl px-4    sm:px-6 lg:max-w-7xl lg:px-8">
 	  <button className="Cart__close" onClick={(e) => handleClose(e)}>
 					<ShoppingCartIcon
@@ -194,7 +194,7 @@ export default (props) => {
             <div className="">
               <button
                 type="submit"
-                className="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+                className="w-full rounded-md border border-transparent bg-default py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-secondary hover:text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
 				onClick={(e) => openCheckout(e)}
               >
                 Checkout
