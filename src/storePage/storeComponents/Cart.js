@@ -97,15 +97,9 @@ export default (props) => {
 		getCount()
 	}, [cartStatus, checkoutState])
 
-	function deleteLineItem(lineItemId, e) {
-		e.preventDefault()
-		const checkoutId = checkoutState.id
-		removeLineItem(checkoutId, lineItemId)
-	}
 
-	useEffect(() => {
-		props.create()
-	}, [checkoutState.id])
+
+
 	const clearCart = () => {
 		window.localStorage.clear()
 		props.create()
@@ -129,7 +123,7 @@ export default (props) => {
 
 
 
-			<div className="bg-white overflow-hidden">
+			<div className="bg-white ">
 
       <div className="mx-auto max-w-2xl px-4    sm:px-6 lg:max-w-7xl lg:px-8">
 	  <button className="Cart__close" onClick={(e) => handleClose(e)}>
@@ -154,7 +148,7 @@ export default (props) => {
           {/* Order summary */}
           <section
             aria-labelledby="summary-heading"
-            className="-mt-4 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8"
+            className="-mt-10 rounded-lg bg-gray-50 px-4 py-6 "
           >
             <h2 id="summary-heading" className=" -mt-2 text-lg font-medium text-gray-900">
               Order summary
