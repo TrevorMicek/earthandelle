@@ -148,7 +148,7 @@ export default (props) => {
           {/* Order summary */}
           <section
             aria-labelledby="summary-heading"
-            className="-mt-4 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8"
+            className="-mt-10 rounded-lg bg-gray-50 px-4 py-6 "
           >
             <h2 id="summary-heading" className=" -mt-2 text-lg font-medium text-gray-900">
               Order summary

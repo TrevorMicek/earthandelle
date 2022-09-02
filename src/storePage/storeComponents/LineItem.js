@@ -10,21 +10,21 @@ export default (props) => {
 
 	function decrementQuantity(lineItemId, lineItemQuantity, e) {
 		e.preventDefault()
-		const checkoutId = checkoutState && checkoutState.id
+		const checkoutId = checkoutState.id
 		const updatedQuantity = lineItemQuantity - 1
 		updateQuantity(lineItemId, updatedQuantity, checkoutId)
 	}
 
 	function incrementQuantity(lineItemId, lineItemQuantity, e) {
 		e.preventDefault()
-		const checkoutId = checkoutState && checkoutState.id
+		const checkoutId = checkoutState.id
 		const updatedQuantity = lineItemQuantity + 1
 		updateQuantity(lineItemId, updatedQuantity, checkoutId)
 	}
 
 	function deleteLineItem(lineItemId, e) {
 		e.preventDefault()
-		const checkoutId = checkoutState && checkoutState.id
+		const checkoutId = checkoutState.id
 		removeLineItem(checkoutId, lineItemId)
 	}
 	const XMarkIcon = () => (
@@ -36,7 +36,7 @@ export default (props) => {
 	return (
 		<>
 
-		<li role="list" className="flex -mt-3  sm:py-10   divide-y divide-gray-200 border-t border-b border-gray-200">
+		<li role="list" className="flex -mt-3  divide-y divide-gray-200 border-t border-b border-gray-200">
 		{checkoutState.lineItems &&
 				checkoutState.lineItems.map((lineItem, i) => {
 					return (
@@ -68,7 +68,7 @@ export default (props) => {
                       </div>
 
                       <div className="mt-4 sm:mt-0 sm:pr-9">
-					  <div className="">
+					  <div className="flex flex-row">
 										<button
 											className="Line-item__quantity-update"
 											onClick={(e) =>
