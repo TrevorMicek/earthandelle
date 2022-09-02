@@ -10,21 +10,21 @@ export default (props) => {
 
 	function decrementQuantity(lineItemId, lineItemQuantity, e) {
 		e.preventDefault()
-		const checkoutId = checkoutState.id
+		const checkoutId = checkoutState && checkoutState.id
 		const updatedQuantity = lineItemQuantity - 1
 		updateQuantity(lineItemId, updatedQuantity, checkoutId)
 	}
 
 	function incrementQuantity(lineItemId, lineItemQuantity, e) {
 		e.preventDefault()
-		const checkoutId = checkoutState.id
+		const checkoutId = checkoutState && checkoutState.id
 		const updatedQuantity = lineItemQuantity + 1
 		updateQuantity(lineItemId, updatedQuantity, checkoutId)
 	}
 
 	function deleteLineItem(lineItemId, e) {
 		e.preventDefault()
-		const checkoutId = checkoutState.id
+		const checkoutId = checkoutState && checkoutState.id
 		removeLineItem(checkoutId, lineItemId)
 	}
 	const XMarkIcon = () => (

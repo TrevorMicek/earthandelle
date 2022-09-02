@@ -97,15 +97,9 @@ export default (props) => {
 		getCount()
 	}, [cartStatus, checkoutState])
 
-	function deleteLineItem(lineItemId, e) {
-		e.preventDefault()
-		const checkoutId = checkoutState.id
-		removeLineItem(checkoutId, lineItemId)
-	}
 
-	useEffect(() => {
-		props.create()
-	}, [checkoutState.id])
+
+
 	const clearCart = () => {
 		window.localStorage.clear()
 		props.create()
@@ -154,9 +148,9 @@ export default (props) => {
           {/* Order summary */}
           <section
             aria-labelledby="summary-heading"
-            className="-mt-4 rounded-lg bg-gray-50 px-4  sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8"
+            className="-mt-4 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8"
           >
-            <h2 id="summary-heading" className=" -mt-4 mb-0 text-lg font-medium text-gray-900">
+            <h2 id="summary-heading" className=" -mt-2 text-lg font-medium text-gray-900">
               Order summary
             </h2>
 
@@ -191,10 +185,10 @@ export default (props) => {
               </div>
             </dl>
 
-            <div className="mt-4">
+            <div className="">
               <button
                 type="submit"
-                className="w-full rounded-md border border-transparent bg-default py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-secondary hover:text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+                className="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
 				onClick={(e) => openCheckout(e)}
               >
                 Checkout

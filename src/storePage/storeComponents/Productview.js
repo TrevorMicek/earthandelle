@@ -184,7 +184,26 @@ export default (props) => {
 
 
 	}
+/* details
+<div className="mt-4">
+                <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
+                  {productInfo.highlights.map((highlight) => (
+                    <li key={highlight} className="text-gray-400">
+                      <span className="text-gray-600">{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
 
+            <div className="mt-10">
+              <h2 className="text-sm font-medium text-gray-900">Details</h2>
+
+              <div className="mt-4 space-y-6">
+                <p className="text-sm text-gray-600">{productInfo.details}</p>
+              </div>
+            </div>
+*/
 	useEffect(() => {
 		fetchProduct('Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3MTQ5ODMyNDgxMTE=')
 		window.scrollTo(0,0)
@@ -380,24 +399,7 @@ export default (props) => {
             <div className="mt-10">
               <h3 className="text-sm font-medium text-gray-900">Highlights</h3>
 
-              <div className="mt-4">
-                <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
-                  {productInfo.highlights.map((highlight) => (
-                    <li key={highlight} className="text-gray-400">
-                      <span className="text-gray-600">{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
-            </div>
-
-            <div className="mt-10">
-              <h2 className="text-sm font-medium text-gray-900">Details</h2>
-
-              <div className="mt-4 space-y-6">
-                <p className="text-sm text-gray-600">{productInfo.details}</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
