@@ -58,6 +58,7 @@ export default (props) => {
 
 	function handleOpen(e) {
 		e.preventDefault()
+
 		openCart()
 	}
 
@@ -99,7 +100,10 @@ export default (props) => {
 
 
 
+	useEffect(() => {
 
+		props.create()
+	}, [checkoutState.id])
 	const clearCart = () => {
 		window.localStorage.clear()
 		props.create()
@@ -134,7 +138,7 @@ export default (props) => {
 					</button>
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Shopping Cart</h1>
 
-        <form className=" lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12 xl:gap-x-16">
+
           <section aria-labelledby="cart-heading" className="lg:col-span-7">
             <h2 id="cart-heading" className="sr-only">
               Items in your shopping cart
@@ -148,7 +152,7 @@ export default (props) => {
           {/* Order summary */}
           <section
             aria-labelledby="summary-heading"
-            className="-mt-10 rounded-lg bg-gray-50 px-4 py-6 "
+            className="-mt-4 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8"
           >
             <h2 id="summary-heading" className=" -mt-2 text-lg font-medium text-gray-900">
               Order summary
@@ -195,7 +199,7 @@ export default (props) => {
               </button>
             </div>
           </section>
-        </form>
+
       </div>
     </div>
 		</div>

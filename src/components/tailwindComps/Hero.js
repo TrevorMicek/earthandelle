@@ -231,7 +231,7 @@ useEffect(() => {
               </div>
               <div className="-mt-2 ">
                 <div className="mx-auto  cursor-pointer">
-                  <Link to="/store/products/Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3MTQ5ODMyNDgxMTE=">
+                  <Link to="/store">
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
                     className="w-full mx-auto "

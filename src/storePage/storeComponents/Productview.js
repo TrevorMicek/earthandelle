@@ -54,7 +54,7 @@ export default (props) => {
 		}
 	}
 	const rightImg = () => {
-		if (curImg < product.images.length - 1) {
+		if (curImg < product.images && product.images.length - 1) {
 		setCurImg(curImg + 1)
 		} else {
 			setCurImg(curImg - 1)
