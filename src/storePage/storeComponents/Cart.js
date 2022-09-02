@@ -58,7 +58,6 @@ export default (props) => {
 
 	function handleOpen(e) {
 		e.preventDefault()
-
 		openCart()
 	}
 
@@ -98,10 +97,13 @@ export default (props) => {
 		getCount()
 	}, [cartStatus, checkoutState])
 
-
+	function deleteLineItem(lineItemId, e) {
+		e.preventDefault()
+		const checkoutId = checkoutState.id
+		removeLineItem(checkoutId, lineItemId)
+	}
 
 	useEffect(() => {
-
 		props.create()
 	}, [checkoutState.id])
 	const clearCart = () => {
@@ -127,7 +129,7 @@ export default (props) => {
 
 
 
-			<div className="bg-white ">
+			<div className="bg-white overflow-hidden">
 
       <div className="mx-auto max-w-2xl px-4    sm:px-6 lg:max-w-7xl lg:px-8">
 	  <button className="Cart__close" onClick={(e) => handleClose(e)}>
@@ -138,7 +140,7 @@ export default (props) => {
 					</button>
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Shopping Cart</h1>
 
-
+        <form className=" lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12 xl:gap-x-16">
           <section aria-labelledby="cart-heading" className="lg:col-span-7">
             <h2 id="cart-heading" className="sr-only">
               Items in your shopping cart
@@ -199,7 +201,7 @@ export default (props) => {
               </button>
             </div>
           </section>
-
+        </form>
       </div>
     </div>
 		</div>

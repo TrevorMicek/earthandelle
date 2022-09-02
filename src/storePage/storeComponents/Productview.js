@@ -396,10 +396,7 @@ export default (props) => {
 					</ul>
             </div>
 
-            <div className="mt-10">
-              <h3 className="text-sm font-medium text-gray-900">Highlights</h3>
 
-              </div>
           </div>
         </div>
       </div>
