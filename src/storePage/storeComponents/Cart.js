@@ -97,7 +97,9 @@ export default (props) => {
 		getCount()
 	}, [cartStatus, checkoutState])
 
-
+	useEffect(() => {
+		props.create()
+	}, [checkoutState.id])
 
 
 	const clearCart = () => {
