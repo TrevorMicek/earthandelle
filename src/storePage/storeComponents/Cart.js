@@ -125,9 +125,9 @@ export default (props) => {
 
 
 
-			<div className="bg-white ">
+			<div className="bg-white h-fit ">
 
-      <div className="mx-auto max-w-2xl px-4    sm:px-6 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-2xl px-4   ">
 	  <button className="Cart__close" onClick={(e) => handleClose(e)}>
 					<ShoppingCartIcon
             className="text-default relative right-8 top-0
@@ -136,7 +136,7 @@ export default (props) => {
 					</button>
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Shopping Cart</h1>
 
-        <form className=" lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12 xl:gap-x-16">
+
           <section aria-labelledby="cart-heading" className="lg:col-span-7">
             <h2 id="cart-heading" className="sr-only">
               Items in your shopping cart
@@ -152,7 +152,7 @@ export default (props) => {
             aria-labelledby="summary-heading"
             className="-mt-10 rounded-lg bg-gray-50 px-4 pt-3 "
           >
-            <h2 id="summary-heading" className=" -mt-2 text-lg font-medium text-gray-900">
+            <h2 id="summary-heading" className=" pb-0 mb-0 -mt-2 text-lg font-medium text-gray-900">
               Order summary
             </h2>
 
@@ -197,7 +197,7 @@ export default (props) => {
               </button>
             </div>
           </section>
-        </form>
+
       </div>
     </div>
 		</div>

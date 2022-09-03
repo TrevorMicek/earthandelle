@@ -40,14 +40,14 @@ export default (props) => {
 		{checkoutState.lineItems &&
 				checkoutState.lineItems.map((lineItem, i) => {
 					return (
-						<div key={`${lineItem.title}` + i} className="flex py-6 sm:py-10">
+						<div key={`${lineItem.title}` + i} className="flex py-6">
 
                   <div className="flex-shrink-0">
 				  {lineItem.variant.image ? (
 									<img
 										src={lineItem.variant.image.src}
 										alt={`${lineItem.title} product shot`}
-										className="h-24 w-24 rounded-md object-cover object-center sm:h-48 sm:w-48"
+										className="h-24 w-24 rounded-md object-cover object-center"
 									/>
 								) : null}
 
