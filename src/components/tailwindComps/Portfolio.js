@@ -39,7 +39,9 @@ export default function Example() {
       <div className="relative bg-white pt-4 -mb-8 overflow-hidden sm:pt-24 lg:pt-32" style={{gridColumn:"span 7", gridRowStart:"second", gridRowEnd:"third"}}>
         <div className="mx-auto max-w-md sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
         <div className="text-center">
+          <Link to="/about">
         <img src={about} className="" />
+         </Link>
         </div>
 
         </div>
