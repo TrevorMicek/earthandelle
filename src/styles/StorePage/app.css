@@ -186,8 +186,8 @@ input, select {
 .Cart__close {
 
 	position: absolute;
-	right: 7vw;
-	top: 5vh;
+	right: 9vw;
+	bottom: 21vh;
 	font-size: 35px;
 	color: #999;
 	border: none;
