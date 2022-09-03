@@ -4,9 +4,8 @@ import React, { useState, useRef, useEffect } from 'react'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import { ShoppingCartIcon } from '@heroicons/react/solid'
+import { ChevronRightIcon } from '@heroicons/react/solid'
 import { Link } from "gatsby"
-import { useShopify } from '../../storePage/hooks'
 import emailjs from 'emailjs-com';
 import Cart from '../../storePage/storeComponents/Cart'
 
@@ -69,92 +68,54 @@ const navigation = {
 }
 
 export default function HeroComp(props) {
+ const [header, setHeader] = useState(headerOne)
+ const changeHeader = () =>{
+  if (header === headerOne) {
+    setHeader(headerTwo)
+  } else if (header === headerTwo) {
+    setHeader(headerOne)
+  }
 
+ }
+useEffect(() => {
+  setTimeout(() => {
+    changeHeader()
+  }, 5000)
+}, [])
+useEffect(() => {
+  setTimeout(() => {
+    changeHeader()
+  }, 5000)
+}, [header])
 
-const CartComp = () => (
-    <Popover className="relative z-10 text-secondary">
-    {({ open }) => (
-      <>
-        <Popover.Button
-          className={`
-            ${open ? '' : 'text-opacity-90'}
-            group inline-flex items-center rounded-md bg-orange-700 px-3 py-2 text-base font-medium text-white hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
-        >
-
-
-        </Popover.Button>
-        <Transition
-          as={Fragment}
-          enter="transition ease-out duration-200"
-          enterFrom="opacity-0 translate-y-1"
-          enterTo="opacity-100 translate-y-0"
-          leave="transition ease-in duration-150"
-          leaveFrom="opacity-100 translate-y-0"
-          leaveTo="opacity-0 translate-y-1"
-        >
-          <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen -translate-x-1/2 transform px-4 sm:px-0 lg:max-w-3xl">
-            <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-              <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
-
-              </div>
-              <div className="bg-gray-50 p-4">
-                <a
-                  href="##"
-                  className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                >
-                  <span className="flex items-center">
-                    <span className="text-sm font-medium text-gray-900">
-                      Documentation
-                    </span>
-                  </span>
-                  <span className="block text-sm text-gray-500">
-                    Start integrating products and tools
-                  </span>
-                </a>
-              </div>
-            </div>
-          </Popover.Panel>
-        </Transition>
-      </>
-    )}
-
-  </Popover>
-)
  return (
 
-    <div className="relative  sm:-mt-24 sm:-pt-24 pb-10 lg:-pt-32 lg:-mt-32" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
+    <div className="relative overflow-hidden pb-28" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
 
       <Popover as="header" className="relative ">
         <div className="bg-default">
 
           <nav
-            className="border-2 relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
+            className="relative mx-auto  items-center justify-start px-4 sm:px-6"
             aria-label="Global"
           >
-            <div className="my-4 flex absolute justify-center space-x-3">
+            <div className="absolute w-24 mt-7 space-x-3 flex">
             {navigation.social.map((item) => (
-              <a key={item.name} href={item.href} className="text-accent hover:text-secondary">
+              <a key={item.name} href={item.href} className="text-accent hover:secondary">
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
               </a>
             ))}
           </div>
-            <div className="flex pb-1 flex-1">
-
-              <div className="h-20 w-full flex items-center justify-end w-full md:w-auto">
-              <div className="fixed top-16 w-full max-w-sm px-4">
-
-    </div>
-    <div className="">
+            <div className="flex justify-center pb-1 flex-1">
+            <div className="">
             <Cart create={props.create} />
             </div>
-
-              <div className="w-1/12 relative -right-1 z-10 cursor-pointer">
-
+              <div className="h-20 w-full flex items-center justify-end w-full md:w-auto">
+              <div className="w-1/12 relative right-2 z-10 cursor-pointer">
               <Link to="/store">
-            <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10 md:hidden hover:text-secondary" />
+            <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10 md:hidden" />
               </Link>
-
             </div>
                 <a href="/">
                   <span className="sr-only">Workflow</span>
@@ -182,13 +143,7 @@ const CartComp = () => (
                   <Link to="/store">
             <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10 hover:text-secondary" />
             </Link>
-
-
-
-
-
-
-              </div>
+            </div>
 
             </div>
 
@@ -246,9 +201,8 @@ const CartComp = () => (
       </Popover>
 
       <main>
-        <div className="pt-4 bg-white  ">
-
-          <div className="mx-auto  ">
+        <div className="pt-4 bg-white sm:pt-16 ">
+          <div className="mx-auto max-w-7xl ">
             <div className="">
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center ">
                 <div className="">
@@ -263,7 +217,6 @@ const CartComp = () => (
 
 
                   <div className="">
-
                 <div className="mx-auto">
                   <Link to="/">
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
@@ -284,11 +237,11 @@ const CartComp = () => (
               </div>
               <div className="-mt-2 ">
                 <div className="mx-auto  cursor-pointer">
-                  <Link to="/store/products/Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3MTQ5ODMyNDgxMTE=">
+                  <Link to="/store">
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
                     className="w-full mx-auto "
-                    src={headerOne}
+                    src={header}
                     alt="blue technical background image"
                     width="200px"
                     height="100px"

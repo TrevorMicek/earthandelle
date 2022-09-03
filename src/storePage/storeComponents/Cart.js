@@ -115,7 +115,7 @@ export default (props) => {
 
 					<button className="App__view-cart" onClick={(e) => handleOpen(e)}>
 					<ShoppingCartIcon
-            className="text-accent relative z-30 right-7 top-7  mr-2 h-6 w-6 text-orange-300 transition duration-150 ease-in-out group-hover:text-opacity-80 md:-right-2 md:relative med:-right-6 hover:text-secondary"
+            className="text-accent relative z-0 right-8 top-7  mr-2 h-6 w-6 text-orange-300 transition duration-150 ease-in-out group-hover:text-opacity-80 md:-right-2 md:relative med:-right-6 hover:text-secondary"
             aria-hidden="true"
           />
 
@@ -125,9 +125,9 @@ export default (props) => {
 
 
 
-			<div className="bg-white h-fit ">
+			<div className="bg-white ">
 
-      <div className="mx-auto max-w-2xl px-4   ">
+      <div className="mx-auto max-w-2xl px-4    sm:px-6 lg:max-w-7xl lg:px-8">
 	  <button className="Cart__close" onClick={(e) => handleClose(e)}>
 					<ShoppingCartIcon
             className="text-default relative right-8 top-0
@@ -152,7 +152,7 @@ export default (props) => {
             aria-labelledby="summary-heading"
             className="-mt-10 rounded-lg bg-gray-50 px-4 pt-3 "
           >
-            <h2 id="summary-heading" className=" pb-0 mb-0 -mt-2 text-lg font-medium text-gray-900">
+            <h2 id="summary-heading" className=" -mt-2 text-lg font-medium text-gray-900">
               Order summary
             </h2>
 
