@@ -246,7 +246,7 @@ const CartComp = () => (
       </Popover>
 
       <main>
-        <div className="pt-4 bg-white  ">
+        <div className=" bg-white  ">
 
           <div className="mx-auto  ">
             <div className="">
