@@ -13,6 +13,7 @@ module.exports = {
           'amazon': 'rgba(255,164,28,255)'
     },
     screens: {
+      'xxs': '480px',
       'med': '860px'
     }
     },

@@ -1,98 +1,112 @@
+import React from "react"
 
-import React, { useState } from 'react'
-import { ChevronDoubleDownIcon } from '@heroicons/react/outline'
-import officeImg from '../../images/coding7.jpg'
-import metricsImg from'../../images/metric.png'
+
+const stats = [
+  { label: 'Founded', value: '2021' },
+  { label: 'Employees', value: '5' },
+  { label: 'Beta Users', value: '521' },
+  { label: 'Raised', value: '$25M' },
+]
 
 export default function Example() {
-  const [learnMore, setLearnMore] = useState(false)
-    return (
-      <div className="relative bg-white pr-4" style={{gridColumn:"span 7", gridRowStart:"second", gridRowEnd:"third"}}>
-        <div className="lg:absolute lg:inset-0 ">
-          <div className="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
-
-            <img
-              loading="lazy"
-              className="h-56 w-full object-cover lg:absolute lg:h-full"
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=567&q=80"
-              width="100px"
-              height="50px"
-              alt="team working together at office"
-            />
-
+  return (
+    <div className="relative bg-white" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
+    <div className="relative bg-white  ">
+      <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
+        <div className="relative sm:py-16 lg:py-0">
+          <div aria-hidden="true" className="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen">
+            <div className="absolute inset-y-0 right-1/2 w-full rounded-r-3xl bg-gray-50 lg:right-72" />
 
           </div>
-        </div>
-        <div className="relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2">
-          <div className="lg:col-start-2 lg:pl-8">
-            <div className="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
-              <h2 className="leading-6 text-base text-indigo-600 font-semibold tracking-wide uppercase">what we do</h2>
-              <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Page Builder vs Hand Coded
-              </h3>
-              <p className="mt-8 max-w-2xl text-lg text-gray-500">
-                Our main focus is small businesses that have a website they made with a page builder, yet are looking for something that isn't so slow, isn't so templated, & isn't so expensive.
-              </p>
-              <div className="mt-5 prose prose-indigo text-gray-900">
-                <p className="max-w-2xl text-gray-900">
-                  We are actively trying to bridge the gap between page built websites that are great for starting out, and websites you'd see at a mid-sized business.
-                  When you need something better there's only expensive options. This is where we excel & this is why we do what we do; to make fast, high quality websites that are affordable to small businesses like your clients.
-                </p>
-                <ul role="list text-gray-500">
-                  <li class="text-gray-600">Our websites always score two to three times as fast on page load times.</li>
-                  <li class="text-gray-600">Every website we make is uniquely hand coded to your liking & branding.</li>
-                  <li class="text-gray-600">Our prices are roughly half the cost of other designers & developers.</li>
-                </ul>
-                {
-                  learnMore ? <>
-                  <div className="flex flex-row justify-between text-lg cursor-pointer text-gray-900 border-b-2 border-solid border-gray-600 w-32 ml-4" onClick={()=>setLearnMore(false)}>Learn More...<div className="transform rotate-180 mb-2"><svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M15.707 4.293a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 011.414-1.414L10 8.586l4.293-4.293a1 1 0 011.414 0zm0 6a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L10 14.586l4.293-4.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg></div></div>
+          <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
+            {/* Testimonial card*/}
+            <div className="relative overflow-hidden rounded-2xl pt-64 pb-10 shadow-xl">
+              <img
+                className="absolute inset-0 h-full w-full object-cover"
+                src="https://images.unsplash.com/photo-1521510895919-46920266ddb3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&fp-x=0.5&fp-y=0.6&fp-z=3&width=1440&height=1440&sat=-100"
+                alt=""
+              />
+              <div className="absolute inset-0 bg-secondary mix-blend-multiply" />
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary opacity-90" />
+              <div className="relative px-8">
+                <div>
                   <img
-              className="h-65 w-full object-cover "
-              src={officeImg}
-              width="100px"
-              height="50px"
-              alt="picture of computer with code on it"
-            />
+                    className="h-12"
+                    src="https://tailwindui.com/img/logos/workcation.svg?color=white"
+                    alt="Workcation"
+                  />
+                </div>
+                <blockquote className="mt-8">
+                  <div className="relative text-lg font-medium text-white md:flex-grow">
+                    <svg
+                      className="absolute top-0 left-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-indigo-400"
+                      fill="currentColor"
+                      viewBox="0 0 32 32"
+                      aria-hidden="true"
+                    >
+                      <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                    </svg>
+                    <p className="relative">
+                      Tincidunt integer commodo, cursus etiam aliquam neque, et. Consectetur pretium in volutpat, diam.
+                      Montes, magna cursus nulla feugiat dignissim id lobortis amet.
+                    </p>
+                  </div>
 
-                <h3>How we make better websites</h3>
-                <p className="max-w-2xl">
-                  We achieve these three feats through our single page applications, which are known for having better user experience, faster pages and are great for bigger websites, like an online store. We also spend a lot of time creating new designs for each client, as well as our unique pricing model that makes our upfront costs very affordable for any client.
-                </p>
-                <p className="max-w-2xl">
-                  Each client is directed to <a href="https://html5up.net">This Site</a>. We don't use these templates but they're great for a starting design concept. We then ask for 3-5 websites they have found that they like. We then do competitor analysis to find commonality between your competitors.
-                  We then recreate the design you picked with many elements of the other websites including your current website so that we have a brand new, completely unique website.
-                </p>
-                <p className="max-w-2xl">
-                  We spend multiple hours per website optimizing it to have 95-100 scores according to google, meaning our websites out perform your competitors website's.
-                </p>
-                <a href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fcustomcode.netlify.app%2F">
-                <img
-              className="h-65 w-full object-cover "
-              src={metricsImg}
-              width="200px"
-              height="100px"
-              alt="google page speed metrics"
-            />
-            </a></> :  <div className="flex flex-row justify-between text-lg cursor-pointer text-gray-800 border-b-2 border-solid border-gray-600 w-32 ml-4" onClick={()=>setLearnMore(true)}>Learn More...<svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M15.707 4.293a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 011.414-1.414L10 8.586l4.293-4.293a1 1 0 011.414 0zm0 6a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L10 14.586l4.293-4.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg></div>
-
-                }
-            {/*
-                <h3>How we’re different</h3>
-                <p className="max-w-2xl">
-                  What makes Websites By Trevor truly unique, aside from the above, is that we genuinely care and have built an entire business model around helping small businesses access better websites. Our process is very unique and is always evolving to be even better for our clients.
-                </p>
-                <p className="max-w-2xl">
-                  Another reason we are unique is because we aren't just selling websites to small businesses. One of our main goals is to create a community where we can all connect and help each other out. We are actively looking for partnerships with business service companies that work directly with you in order to offer even more affordable packages and helpful knowledge.
-                </p>*/
-}
+                  <footer className="mt-4">
+                    <p className="text-base font-semibold text-indigo-200">Sarah Williams, CEO at Workcation</p>
+                  </footer>
+                </blockquote>
               </div>
             </div>
           </div>
         </div>
+
+        <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
+          {/* Content area */}
+          <div className="pt-12 sm:pt-16 lg:pt-20">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              On a mission to empower women
+            </h2>
+            <div className="mt-6 space-y-6 text-gray-500">
+              <p className="text-lg">
+                Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique
+                pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel
+                porttitor vitae ut. Amet vitae fames senectus vitae.
+              </p>
+              <p className="text-base leading-7">
+                Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget
+                pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna. Sollicitudin tristique
+                eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu
+                viverra donec ut volutpat donec laoreet quam urna.
+              </p>
+              <p className="text-base leading-7">
+                Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet
+                velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus
+                egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra.
+              </p>
+            </div>
+          </div>
+
+          {/* Stats section */}
+          <div className="mt-10">
+            <dl className="grid grid-cols-2 gap-x-4 gap-y-8">
+              {stats.map((stat) => (
+                <div key={stat.label} className="border-t-2 border-gray-100 pt-6">
+                  <dt className="text-base font-medium text-gray-500">{stat.label}</dt>
+                  <dd className="text-3xl font-bold tracking-tight text-gray-900">{stat.value}</dd>
+                </div>
+              ))}
+            </dl>
+            <div className="mt-10">
+              <a href="#" className="text-base font-medium text-indigo-600">
+                Learn more about how we're changing the world
+                <span aria-hidden="true"> &rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    )
-  }
+    </div>
+    </div>
+  )
+}

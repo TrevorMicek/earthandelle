@@ -20,7 +20,7 @@ const navigation = {
   main: [
     { name: 'Home', href: '/' },
       { name: 'Store', href: '/store' },
-      { name: 'About', href: '/' },
+      { name: 'About', href: '/about' },
       { name: 'Blog', href: '/blog' },
       { name: 'Contact', href: '/#contact' }
   ],
@@ -198,7 +198,7 @@ useEffect(() => {
       </Popover>
 
       <main>
-        <div className="pt-4 bg-white sm:pt-16 ">
+        <div className="pt-4 bg-white sm:pt-12 ">
           <div className="mx-auto max-w-7xl ">
             <div className="">
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center ">
