@@ -158,7 +158,16 @@ export default function FeatureSection() {
         EARTH & ELLE VEGAN COLLAGEN GUMMIES - NON-GMO BIOTON GUMMIES, VITAMIN A, E, C - PLANT BASED COLLAGEN SUPPLEMENTS FOR HEALTHIER HEAIR, SKIN, NAILS - 60 CHEWS OF ORANGE FLAVORED GUMMIES, MADE IN USA
         </p>
 
-     <Reviews />
+        <div className="mt-6 mx-auto flex justify-center">
+              <h3 className="sr-only">Reviews</h3>
+              <div className="flex items-center w-56">
+                <Reviews />
+                <p className="sr-only">4.5 out of 5 stars</p>
+                <a href="" className="ml-2 text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                  104 reviews
+                </a>
+              </div>
+            </div>
 
 
         <p className="mx-auto mt-3 text-center">

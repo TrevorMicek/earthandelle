@@ -38,10 +38,11 @@ export default function Example() {
     return (
       <div className="relative bg-white pt-4 -mb-8 overflow-hidden sm:pt-24 lg:pt-32" style={{gridColumn:"span 7", gridRowStart:"second", gridRowEnd:"third"}}>
         <div className="mx-auto max-w-md sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
-        <div className="text-center">
+        <div className="text-left bg-accent">
           <Link to="/about">
         <img src={about} className="" />
          </Link>
+         <p className=" px-6 py-5 text-gray-800">As someone who has experienced the transformational power of holistic supplements, I've made it my mission to help others tap into their most vibrant, confident, and healthy versions of themselves one active ingredient at a time.</p>
         </div>
 
         </div>
