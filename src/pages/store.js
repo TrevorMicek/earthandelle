@@ -110,7 +110,7 @@ return (
 
     <Layout title="Store" text="Our high quality, unique store example that's perfect for small businesses">
     <SEO title="Online Store" />
-    <div className=" relative bg-white -mb-8 overflow-hidden sm:pt-24 lg:pt-32" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second", marginTop: "-30px"}}>
+    <div className=" relative bg-white -mb-8 overflow-hidden" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second", marginTop: "-30px"}}>
 	<Provider store={store} >
         <Pages title={pageTitle} getTitle={getTitle} />
 	</Provider>
