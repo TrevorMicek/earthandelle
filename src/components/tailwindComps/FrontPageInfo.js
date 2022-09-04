@@ -29,12 +29,8 @@ export default function Example() {
               <div className="absolute inset-0 bg-secondary mix-blend-multiply" />
               <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary opacity-90" />
               <div className="relative px-8">
-                <div>
-                  <img
-                    className="h-12"
-                    src="https://tailwindui.com/img/logos/workcation.svg?color=white"
-                    alt="Workcation"
-                  />
+                <div className="text-xl text-white ml-10">
+                  Earth and Elle
                 </div>
                 <blockquote className="mt-8">
                   <div className="relative text-lg font-medium text-white md:flex-grow">
@@ -47,13 +43,12 @@ export default function Example() {
                       <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                     </svg>
                     <p className="relative">
-                      Tincidunt integer commodo, cursus etiam aliquam neque, et. Consectetur pretium in volutpat, diam.
-                      Montes, magna cursus nulla feugiat dignissim id lobortis amet.
+                    A dash of expertise, a sprinkle of lived experience, and copius amounts of passion.
                     </p>
                   </div>
 
                   <footer className="mt-4">
-                    <p className="text-base font-semibold text-indigo-200">Sarah Williams, CEO at Workcation</p>
+                    <p className="text-base font-semibold text-indigo-200">Paige Fohdderson, CEO at Earth and Elle</p>
                   </footer>
                 </blockquote>
               </div>
@@ -67,41 +62,32 @@ export default function Example() {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               On a mission to empower women
             </h2>
-            <div className="mt-6 space-y-6 text-gray-500">
+            <div className="mt-6 space-y-6 text-gray-800">
               <p className="text-lg">
-                Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique
-                pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel
-                porttitor vitae ut. Amet vitae fames senectus vitae.
+                <i>A dash of expertise, a sprinkle of lived experience, and copius amounts  of passion.</i>
+              </p>
+              <p className="text-lg">
+                Thank you for visiting Earth and Elle, the brand inspiring women to embrace their dream lifestyles (and yes, it is possible!)<br />
               </p>
               <p className="text-base leading-7">
-                Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget
-                pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna. Sollicitudin tristique
-                eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu
-                viverra donec ut volutpat donec laoreet quam urna.
+                As someone who has experienced the transformational power of holistic supplements, I've made it my mission to help others tap into their most vibrant, confident, and healthy versions of themselves  one active ingredient at a time.
+              </p>
+              <h3 style={{fontSize:"22px"}}>My Story</h3>
+              <p className="text-base leading-7">
+               Earth & Elle is so much more than a holistic supplement brand: it's an empowering solution for women like you - and it all began here: In my early 20s, I started suffering from <i><strong>chronic join</strong> pain</i> throughout my entire body. It became worse as time went by, with walking feeling like a near-impossible task and my reliance on prescription drugs growing with each doctor's visit.
               </p>
               <p className="text-base leading-7">
-                Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet
-                velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus
-                egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra.
+                By the time my 21st birthday came around, I weighted just 93 pounds at 5'3" - a turning point that made me decide enough was enough. My <i><strong>body deserved more</strong></i> than an endless cycle of medical check ups and the side effects of heavy duty medication! I started incorporating more natural food products and habits into my daily like, with each small change steadily improving my physical and mental health. Feeling encouraged to help others undergo a similar transformation, I became a qualified personal trainer and yoga teacher (though the story doesn't end here).
               </p>
-            </div>
-          </div>
-
-          {/* Stats section */}
-          <div className="mt-10">
-            <dl className="grid grid-cols-2 gap-x-4 gap-y-8">
-              {stats.map((stat) => (
-                <div key={stat.label} className="border-t-2 border-gray-100 pt-6">
-                  <dt className="text-base font-medium text-gray-500">{stat.label}</dt>
-                  <dd className="text-3xl font-bold tracking-tight text-gray-900">{stat.value}</dd>
-                </div>
-              ))}
-            </dl>
-            <div className="mt-10">
-              <a href="#" className="text-base font-medium text-indigo-600">
-                Learn more about how we're changing the world
-                <span aria-hidden="true"> &rarr;</span>
-              </a>
+              <p className="text-base leading-7">
+                A few years later, while running a personal training business and sharing my knowledge of naturopathic medicine, I was forced to deal with a <i><strong>highly stressful situation</strong></i> The circumstances led to <i>severe breakouts, damaged hair</i> (made worse by bleaching), and emerging insecurities. I was contantly worried and lost all confidence, refusing to leave the house without makeup caked on or hair extensions applied
+              </p>
+              <p className="text-base leading-7">
+                After some time of not feeling like myself, I opened up my laptop to research <i>alternative remedies</i>. As if I was back in my early 20s, I discovered holistic solutions that worked <i>wonders for my skin, hair, and overall self-esteem!</i> It ignited an inner desire to create something of my own to help others, and from here emerged Earth and Elle.
+              </p>
+              <p className="text-base leading-7">
+                At Earth & Elle, we offer both <strong>vegan and non-vegan products</strong> to suit your individual choices. Our entire range is packed with <strong>active ingredients</strong> that treat your body with the love and respect it deserves, for a life you feel proud of to call your own.
+              </p>
             </div>
           </div>
         </div>
