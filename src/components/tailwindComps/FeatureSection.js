@@ -136,7 +136,7 @@ export default function FeatureSection() {
 
     </div>
           <h2 className="mt-2 mb-7 relative font-serif z-10 text-lg tracking-wide font-thin text-gray-900 lg:mx-auto">
-            FEATURED COLLECTION
+            Supplements created by women <i>for</i> women
           </h2>
 
         </div>
