@@ -97,13 +97,7 @@ const IndexPage = () => {
       }
   }*/
   const BlogPost = (props) => {
-    const [post, setPost] = useState([])
-    const id = useMatch("/blog/:blogId").blogId
-    console.log(id)
-    useEffect(() => {
-      setPost(id)
-      window.scrollTo(0,0)
-    }, [id])
+
     return (
       <BlogArticle  />
     )
@@ -114,7 +108,7 @@ const IndexPage = () => {
 
 
 
-        <BlogPost path="/blog/:blogId">blog article</BlogPost>
+        <BlogPost path="/blog"  className=" relative bg-white pt-4 -mb-8 overflow-hidden sm:pt-24 lg:pt-32" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}} />
 
   </Layout>
   )
