@@ -428,5 +428,5 @@ export default function Example(props) {
     )
 
 
-    return (<><Benefits /></>)
+    return <Benefits />
   }
