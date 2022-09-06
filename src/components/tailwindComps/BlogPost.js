@@ -1,14 +1,6 @@
 import React from 'react'
 export default function Example(props) {
-    const post = () => {
 
-
-       const postArticle = props.posts.filter((post) => {
-            return props.blog === post.id
-
-       })
-      return postArticle
-    }
     const Benefits = () => {
 
     return (
