@@ -490,18 +490,6 @@ export default function Example(props) {
       </div>
     )
 
-    const Post = () => {
 
-        switch(true) {
-            case post()[0] && post()[0].id === 'benefits':
-                return <Benefits />
-            case post()[0] && post()[0].id === 'curepain':
-                return <KneePain />
-            case post()[0] && post()[0].id === 'benefitsforhair':
-                return <Hair />
-            default:
-              return <>default</>
-        }
-    }
     return (<><Benefits /></>)
   }
