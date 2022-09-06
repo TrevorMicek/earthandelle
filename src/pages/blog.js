@@ -114,7 +114,7 @@ const IndexPage = () => {
 
 
       <Router className=" relative bg-white pt-4 -mb-8 overflow-hidden sm:pt-24 lg:pt-32" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
-        <BlogSection path="/blog" post={posts} />
+
         <BlogPost path="/blog/:blogId" posts={posts}>blog article</BlogPost>
       </Router>
   </Layout>
