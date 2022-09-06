@@ -1,6 +1,14 @@
 import React from 'react'
 export default function Example(props) {
+    const post = () => {
 
+
+       const postArticle = props.posts.filter((post) => {
+            return props.blog === post.id
+
+       })
+      return postArticle
+    }
     const Benefits = () => {
 
     return (
@@ -104,12 +112,67 @@ export default function Example(props) {
             <p>
             It's time to get into the details!
             </p>
+            <ol role="list">
+            <li>
+                <h3 style={{fontSize:"22px"}}>Collagen Strengthens Joints</h3>
+                <p>To begin with, collagen plays quite an important role in strengthening your joints. As you know that your articular cartilage contains collagen which is a necessary component that keeps your joints flexible, allowing smooth movements. However, with age articular cartilage eventually depletes. This results in joint aches and pains because of the wear and tear caused by continuous rubbing of joints against each other. In addition, your collagen level is also being depleted, your joints suffer considerably.</p>
+                <p>In the case of women, these conditions are more prevalent, especially after menopause given that their collagen production depletes significantly. Therefore, <strong>collagen supplements for women</strong> improve articular cartilage, allowing mobility and comfort in joints.</p>
+            </li>
+            <li>
+                <h4 style={{fontSize:"22px"}}>Collagen Strengthens Bones</h4>
+                <p>In addition to keeping the joints healthy, collagen also helps in keeping the bones in good shape. Following a few years of menopause, a woman’s bone density gradually changes because of the decreased estrogen levels. Therefore women are more prone to bone-related issues. Consuming collagen positively impacts bone health.</p>
+                <p>Moreover, research indicates that athletic women who experienced knee pain during their practice sessions showed promising recovery results after consuming collagen for 12 weeks. Furthermore, daily consumption of type 1 collagen can help in making the bones denser as well as aid in the production of new bones.</p>
+            </li>
+            <li>
+                <h5 style={{fontSize:"22px"}}>Collagen Improves Skin Health</h5>
+                <p>Skin health is not a gender-restricted concern. But, women are more likely to experience skin-related issues because of the drastic decrease in their collagen levels, especially after menopause. The decreased collagen production results in the skin becoming dryer and thinner. <strong>Collagen supplements for menopause</strong>, overcome such conditions and enhances skin health, as it has moisturizing properties.</p>
+                <p>In addition to this, collagen is also beneficial for women during and after pregnancy. It is because a woman’s body undergoes hormonal changes during and after pregnancy. This softens their collagen fibers, causing the skin to become loose and, in most cases, causing stretch marks.</p>
+                <p>Moreover, it is also effective against UV-Induced photoaging of the skin. According to a study published in the <a href="https://pubmed.ncbi.nlm.nih.gov/29949889/">National Library of Medicine</a>, 64 women who had skin-related issues such as wrinkling, dehydration, and inelasticity took collagen peptides for 12 weeks. Consequently, they experienced considerable improvements.</p>
+            </li>
+            <li>
+                <h6 style={{fontSize:"22px"}}>Collagen Improves Hair Health</h6>
+                <p>Another benefit of consuming collagen-enriched supplements is that it helps women in enhancing their hair health along with improving hair texture. Hairs are primarily composed of keratin, a protein found in collagen. Since keratin production is associated with collagen, consuming collagen eventually helps in rebuilding hair as well as fighting against free radicals, resulting in improved scalp health.</p>
 
+            </li>
+            <li>
+                <h7 style={{fontSize:"22px"}}>Collagen Improves Nails Health</h7>
+                <p>Aside from the benefits collagen has on a woman’s hair, it has also shown positive results in maintaining nail health. Most women experience broken or chipped nails because of lower collagen levels. According to a study, women who consumed collagen supplies not only showed signs of healthier nails but also reported faster nail growth.</p>
+
+            </li>
+            <li>
+                <h8 style={{fontSize:"22px"}}>Collagen Improves Digestive Health</h8>
+                <p>Two of the noteworthy amino acids produced by collagen consumption are glutamine and glycine. Glutamine is quite effective when it comes to maintaining digestive health in women as it reduces inflammation of the intestinal wall. In addition to this, glycine is also quite effective when it comes to supporting the stomach lining in females.</p>
+
+            </li>
+            <li>
+                <h9 style={{fontSize:"22px"}}>Collagen Supplements May Improve Muscle Growth</h9>
+                <p>According to research, women who were undergoing premenopausal stage and did resistance training for 12 weeks consumed about 15 grams of collagen supplements per day. As a result, they showed significant improvements in their fat-free body mass. Besides this, they also experienced improvements in their leg strength and hand grip.</p>
+
+            </li>
+
+          </ol>
+          <h10 style={{fontSize: "26px", fontWeight:"bold"}}>Side Effects Associated With Collagen For Women</h10>
             <p>
             Although collagen supplements are well absorbed, it is always better to practice caution. It is possible to experience mild side effects such as bloating, heartburn, and a feeling of fullness when consuming collagen supplements. Below appended are a few of the side effects women could experience as a result of collagen consumption.
             </p>
 
+            <ol role="list">
+            <li>
+                <h11 style={{fontSize:"22px"}}>Common Food Allergies</h11>
+                <p>To begin with, it should be noted that collagen supplements are primarily made from animal sources, mostly from fish, beef, pork, and chicken skin. Therefore, if you are a vegan, or are allergic to such foods, you should avoid taking collagen supplements. For example, most people are allergic to marine food. So, on consuming collagen supplements, they may experience allergies.</p>
+            </li>
+            <li>
+                <h12 style={{fontSize:"22px"}}>Liver Fibrosis</h12>
+                <p>Another potential side effect consumption of collage could have is liver fibrosis. The condition primarily occurs as a result of excessive accumulation of proteins, and collagen is one of them. The condition could worsen and turn into cirrhosis or liver failure if not dealt with urgently.</p>
+            </li>
+            <li>
+                <h13 style={{fontSize:"22px"}}>Digestive System Related Issues</h13>
+                <p>Studies indicate that some women may experience mild problems in their digestive system after consuming collagen. Their stomach might become upset, along with experiencing an unpleasant taste in their mouth. This mostly occurs as a result of the additives that are included in the collagen supplements or the brand formula of a particular collagen supplement.</p>
+            </li>
 
+
+          </ol>
+          <h14 style={{fontSize:'24px', fontWeight:'bold'}}>Conclusion</h14>
             <p>
             <strong>Collagen benefits for women</strong>are numerous ranging from maintaining hair and nail health to strengthening their bones and joints. However, women might experience some side effects that include allergies, and an upset digestive system. Although these side effects are mild, it is always important to consult a physician before you decide to take collagen supplements.
             </p>
@@ -427,6 +490,18 @@ export default function Example(props) {
       </div>
     )
 
+    const Post = () => {
 
-    return <Benefits />
+        switch(true) {
+            case post()[0] && post()[0].id === 'benefits':
+                return <Benefits />
+            case post()[0] && post()[0].id === 'curepain':
+                return <KneePain />
+            case post()[0] && post()[0].id === 'benefitsforhair':
+                return <Hair />
+            default:
+              return <>default</>
+        }
+    }
+    return (<><Benefits /></>)
   }

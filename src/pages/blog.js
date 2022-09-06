@@ -97,9 +97,15 @@ const IndexPage = () => {
       }
   }*/
   const BlogPost = (props) => {
-
+    const [post, setPost] = useState([])
+    const id = useMatch("/blog/:blogId").blogId
+    console.log(id)
+    useEffect(() => {
+      setPost(id)
+      window.scrollTo(0,0)
+    }, [id])
     return (
-      <BlogArticle  />
+      <BlogArticle blog={post} posts={props.posts} />
     )
   }
   return (
@@ -107,9 +113,10 @@ const IndexPage = () => {
     <SEO title="Blog" />
 
 
-
-        <BlogPost path="/blog"  className=" relative bg-white pt-4 -mb-8 overflow-hidden sm:pt-24 lg:pt-32" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}} />
-
+      <Router className=" relative bg-white pt-4 -mb-8 overflow-hidden sm:pt-24 lg:pt-32" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
+        <BlogSection path="/blog" post={posts} />
+        <BlogPost path="/blog/:blogId" posts={posts}>blog article</BlogPost>
+      </Router>
   </Layout>
   )
   }
