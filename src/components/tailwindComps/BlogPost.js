@@ -109,23 +109,7 @@ export default function Example(props) {
             Although collagen supplements are well absorbed, it is always better to practice caution. It is possible to experience mild side effects such as bloating, heartburn, and a feeling of fullness when consuming collagen supplements. Below appended are a few of the side effects women could experience as a result of collagen consumption.
             </p>
 
-            <ol role="list">
-            <li>
-                <h11 style={{fontSize:"22px"}}>Common Food Allergies</h11>
-                <p>To begin with, it should be noted that collagen supplements are primarily made from animal sources, mostly from fish, beef, pork, and chicken skin. Therefore, if you are a vegan, or are allergic to such foods, you should avoid taking collagen supplements. For example, most people are allergic to marine food. So, on consuming collagen supplements, they may experience allergies.</p>
-            </li>
-            <li>
-                <h12 style={{fontSize:"22px"}}>Liver Fibrosis</h12>
-                <p>Another potential side effect consumption of collage could have is liver fibrosis. The condition primarily occurs as a result of excessive accumulation of proteins, and collagen is one of them. The condition could worsen and turn into cirrhosis or liver failure if not dealt with urgently.</p>
-            </li>
-            <li>
-                <h13 style={{fontSize:"22px"}}>Digestive System Related Issues</h13>
-                <p>Studies indicate that some women may experience mild problems in their digestive system after consuming collagen. Their stomach might become upset, along with experiencing an unpleasant taste in their mouth. This mostly occurs as a result of the additives that are included in the collagen supplements or the brand formula of a particular collagen supplement.</p>
-            </li>
 
-
-          </ol>
-          <h14 style={{fontSize:'24px', fontWeight:'bold'}}>Conclusion</h14>
             <p>
             <strong>Collagen benefits for women</strong>are numerous ranging from maintaining hair and nail health to strengthening their bones and joints. However, women might experience some side effects that include allergies, and an upset digestive system. Although these side effects are mild, it is always important to consult a physician before you decide to take collagen supplements.
             </p>
