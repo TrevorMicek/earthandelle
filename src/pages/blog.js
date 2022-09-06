@@ -7,6 +7,7 @@ import SEO from "../components/layout/seo"
 import BlogArticle from '../components/tailwindComps/BlogPost'
 import BlogSection from '../components/tailwindComps/BlogSection'
 const IndexPage = () => {
+  const [post, setPost] = useState([])
 
   const posts = [
     {
@@ -96,8 +97,7 @@ const IndexPage = () => {
               </>
       }
   }*/
-  const BlogPost = (props) => {
-    const [post, setPost] = useState([])
+  const BlogPost = () => {
     const id = useMatch("/blog/:blogId").blogId
     console.log(id)
     useEffect(() => {
@@ -105,7 +105,7 @@ const IndexPage = () => {
       window.scrollTo(0,0)
     }, [id])
     return (
-      <BlogArticle blog={post} posts={props.posts} />
+      <BlogArticle blog={post} posts={posts} />
     )
   }
   return (
