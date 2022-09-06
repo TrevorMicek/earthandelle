@@ -97,7 +97,13 @@ const IndexPage = () => {
       }
   }*/
   const BlogPost = (props) => {
-
+    const [post, setPost] = useState([])
+    const id = useMatch("/blog/:blogId").blogId
+    console.log(id)
+    useEffect(() => {
+      setPost(id)
+      window.scrollTo(0,0)
+    }, [id])
     return (
       <BlogArticle  />
     )
