@@ -113,10 +113,9 @@ const IndexPage = () => {
     <SEO title="Blog" />
 
 
-      <Router className=" relative bg-white pt-4 -mb-8 overflow-hidden sm:pt-24 lg:pt-32" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
 
         <BlogPost path="/blog/:blogId">blog article</BlogPost>
-      </Router>
+
   </Layout>
   )
   }
