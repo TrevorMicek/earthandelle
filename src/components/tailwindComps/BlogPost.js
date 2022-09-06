@@ -499,7 +499,9 @@ export default function Example(props) {
                 return <KneePain />
             case post()[0] && post()[0].id === 'benefitsforhair':
                 return <Hair />
+            default:
+              return <>default</>
         }
     }
-    return (<>{Post()}</>)
+    return (<><Benefits /></>)
   }
