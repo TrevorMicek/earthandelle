@@ -7,7 +7,7 @@ import StoreHeader from '../tailwindComps/StoreHeader'
 const Header = (props) => {
 
   const firstTitle = 'Store'
-  const secondaryTitles = ['Product', 'Pricing', 'About', 'Blog','Contact']
+  const secondaryTitles = ['Product', 'Pricing', 'About', 'Blog','Contact', '404']
 
 
   const getSecondaryTitle = (curTitle) => {
