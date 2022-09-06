@@ -503,5 +503,5 @@ export default function Example(props) {
               return <>default</>
         }
     }
-    return (<><Benefits /></>)
+    return <Post />
   }
