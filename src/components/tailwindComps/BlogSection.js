@@ -23,26 +23,7 @@ import { Router, useMatch } from '@reach/router'
                 <p className="mt-3 text-base text-gray-700">{post.description}</p>
               </a>
             </div>
-            <div className="mt-6 flex items-center">
-              <div className="flex-shrink-0">
-                <a href={post.author.href}>
-                  <span className="sr-only">{post.author.name}</span>
-                  <img className="h-10 w-10 rounded-full" src={post.author.imageUrl} alt="" />
-                </a>
-              </div>
-              <div className="ml-3">
-                <p className="text-sm font-medium text-gray-900">
-                  <a href={post.author.href} className="hover:underline">
-                    {post.author.name}
-                  </a>
-                </p>
-                <div className="flex space-x-1 text-sm text-gray-500">
-                  <time dateTime={post.datetime}>{post.date}</time>
-                  <span aria-hidden="true">&middot;</span>
-                  <span>{post.readingTime} read</span>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       ))}
