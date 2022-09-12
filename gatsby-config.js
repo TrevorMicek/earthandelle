@@ -12,6 +12,7 @@ module.exports = {
       },
     },
         'gatsby-plugin-postcss',
+        'gatsby-plugin-netlify',
         {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
