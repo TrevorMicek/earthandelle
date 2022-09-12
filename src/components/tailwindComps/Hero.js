@@ -11,6 +11,8 @@ import emailjs from 'emailjs-com';
 import { ShoppingBagIcon } from '@heroicons/react/outline'
 
 
+
+
 import headerOne from '../../images/newImages/header1.webp'
 
 import headerTwo from '../../images/newImages/header2.webp'
@@ -68,6 +70,9 @@ const navigation = {
 
 export default function HeroComp() {
  const [header, setHeader] = useState(headerOne)
+
+
+
  const changeHeader = () =>{
   if (header === headerOne) {
     setHeader(headerTwo)
@@ -157,6 +162,7 @@ useEffect(() => {
           leaveTo="opacity-0 scale-95"
         >
           <Popover.Panel focus className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top md:hidden">
+
             <div className="rounded-lg bg-secondary shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div className="h-20 w-auto  pt-4 flex items-center justify-between">
                 <div className="px-0 pt-7 ">
@@ -200,6 +206,7 @@ useEffect(() => {
       <main>
         <div className="pt-4 bg-white sm:pt-12 ">
           <div className="mx-auto max-w-7xl ">
+
             <div className="">
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center ">
                 <div className="">

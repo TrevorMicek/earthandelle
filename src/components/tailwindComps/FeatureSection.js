@@ -130,7 +130,7 @@ export default function FeatureSection() {
 
  <div className="text-center w-full">
     <div className="mb-8 h-12 bg-button flex flex-row space-x-1 justify-center items-center">
-    <p className="my-auto ml-4 w-72 text-left text-white">Enter to win a year supply of our vegan collgen boosting gummies ($240 value)
+    <p className="my-auto ml-4 w-72 text-left text-white">Enter to win a year supply of our vegan collagen boosting gummies ($240 value)
     </p>
     <button className="my-auto -ml-1 text-left bg-secondary text-gray-800 rounded-md py-1 px-1 text-sm">Enter Here</button>
 

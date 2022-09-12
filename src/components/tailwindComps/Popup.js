@@ -2,16 +2,22 @@ import React, {useRef, Fragment, useState, useEffect } from 'react'
 
 
 import { Dialog, Transition } from '@headlessui/react'
-import { CheckIcon } from '@heroicons/react/outline'
+import { CheckIcon, XIcon } from '@heroicons/react/outline'
 import emailjs from 'emailjs-com';
+
+import Confirmation from './Confirmation'
+import Logo from '../../images/newImages/Logo.png'
 export default function Example(props) {
   const [open, setOpen] = useState(true)
   const [prompt, setPrompt] = useState(true)
   const completeButtonRef = useRef(null)
+
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
+  const [sent, setSent] = useState(false)
   const form = useRef()
   const onSubmit = (e) => {
-    emailjs.sendForm('service_arikqvn', 'template_ht51ufi', e.target, 'user_kC0T8kmC4F1GOkt3Q06Q4')
+
        e.preventDefault()
        setPrompt(false)
        console.log('sent')
@@ -23,8 +29,12 @@ export default function Example(props) {
   }
   const confirm = () => {
         setOpen(false)
-       return  props.confirm()
+        setPrompt(false)
+       return  props.confirm
     }
+useEffect(() => {
+    console.log(prompt)
+}, [onSubmit])
 
   return (
 
@@ -59,12 +69,47 @@ export default function Example(props) {
 
 
             {
-              prompt && !props.prompt ? <div className=" relative  inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6">
+               <div className=" relative top-5 inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6">
+                <div className="w-full flex justify-end">
+                <XIcon width="25px" height="25px" onClick={confirm} />
+                </div>
             <form ref={form} onSubmit={onSubmit} className="sm:grid-cols-2 sm:gap-x-8">
-
+            <div className="h-20 w-auto  pt-0 flex items-center justify-center">
+            <div className="px-0 pt-0 ">
+                  <img
+                    className="h-24 w-auto"
+                    src={Logo}
+                    alt=""
+                    width="50px"
+                    height="50px"
+                  />
+                </div>
+                </div>
+                <h1 className=" text-center text-2xl mt-10 mb-1 font-bold">
+                    Giveaway
+                </h1>
+                <h2 className="text-center text-3xl font-normal">
+                Win a year supply of our vegan collagen boosting gummies ($240 value)
+                </h2>
 
 
 <div className="mt-6 sm:col-span-2">
+  <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+
+  </label>
+  <div className="mt-1">
+    <input
+      id="name"
+      name="name"
+      type="name"
+      autoComplete="name"
+      value={name}
+      onChange={handleChange}
+      key='name'
+      placeholder="name"
+      className="py-3 px-4 mb-2 block w-full border-2 border-default shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+    />
+  </div>
   <label htmlFor="email" className="block text-sm font-medium text-gray-700">
 
   </label>
@@ -77,8 +122,8 @@ export default function Example(props) {
       value={email}
       onChange={handleChange}
       key='name'
-      placeholder="Enter email..."
-      className="py-3 px-4 mb-6 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+      placeholder="email"
+      className="py-3 px-4 mb-4 block w-full border-2 border-default shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
     />
   </div>
 </div>
@@ -95,49 +140,15 @@ export default function Example(props) {
 <div className="sm:col-span-2">
   <button
     type="submit"
-
-    className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+    onClick={confirm}
+    className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-default hover:bg-secondary hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
   >
-    Start free package
+    Enter giveaway
   </button>
 </div>
-<div className="ml-3">
-    <p className="mt-2 text-sm text-gray-700 sm:mt-4">
-            Start your free one page website, no credit card necessary. By providing your email, you agree to
-            our{' '}
-            <a href="#" className="font-medium text-white">
-              terms of service
-            </a>
-            .
-          </p>
-    </div>
+
 </form>
-            </div> : <div className="relative bottom-32 inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6">
-            <div>
-            <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
-              <CheckIcon className="h-6 w-6 text-green-600" aria-hidden="true" />
             </div>
-            <div className="mt-3 text-center sm:mt-5">
-              <Dialog.Title as="h3" className="text-lg leading-6 font-medium text-gray-900">
-                {props.message[0]}
-              </Dialog.Title>
-              <div className="mt-2">
-                <p className="text-sm text-gray-500">
-                 {props.message[1]}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="mt-5 sm:mt-6">
-            <button
-              type="button"
-              className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
-              onClick={props.confirm}
-            >
-              Go back to main page
-            </button>
-          </div>
-        </div>
             }
 
           </Transition.Child>
