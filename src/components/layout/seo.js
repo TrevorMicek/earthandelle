@@ -69,7 +69,16 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    > <script type="text/javascript">
+      {`
+      (function(m, o, n, t, e, r, _){
+              m['__GetResponseAnalyticsObject'] = e;m[e] = m[e] || function() {(m[e].q = m[e].q || []).push(arguments)};
+              r = o.createElement(n);_ = o.getElementsByTagName(n)[0];r.async = 1;r.src = t;r.setAttribute('crossorigin', 'use-credentials');_.parentNode .insertBefore(r, _);
+          })(window, document, 'script', 'https://ga.getresponse.com/script/87108c91-6b45-43b7-8920-5ab3a31aa637/ga.js', 'GrTracking');
+
+        `}
+      </script>
+      </Helmet>
   )
 }
 

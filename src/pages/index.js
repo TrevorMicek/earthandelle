@@ -8,6 +8,7 @@ import About from '../components/tailwindComps/Portfolio'
 import FAQ from '../components/tailwindComps/FAQs'
 import Contact from '../components/tailwindComps/Contact'
 import Gradient from '../components/commonComps/Gradient'
+
 const IndexPage = () => {
 
   return (

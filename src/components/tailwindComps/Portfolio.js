@@ -42,7 +42,7 @@ export default function Example() {
           <Link to="/about">
         <img src={about} className="" />
          </Link>
-         <p className=" px-6 py-5 text-gray-800">As someone who has experienced the transformational power of holistic supplements, I've made it my mission to help others tap into their most vibrant, confident, and healthy versions of themselves one active ingredient at a time.</p>
+
         </div>
 
         </div>

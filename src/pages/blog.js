@@ -6,6 +6,11 @@ import SEO from "../components/layout/seo"
 
 import BlogArticle from '../components/tailwindComps/BlogPost'
 import BlogSection from '../components/tailwindComps/BlogSection'
+import back from '../images/blog/back.jpg'
+import lady from '../images/blog/lady.jpg'
+import lookingDown from '../images/blog/lookingDown.jpg'
+import workout from '../images/blog/workout.jpg'
+import hair from '../images/blog/hair.jpg'
 const IndexPage = () => {
   const [post, setPost] = useState([])
 
@@ -20,7 +25,7 @@ const IndexPage = () => {
       date: 'Mar 16, 2020',
       datetime: '2020-03-16',
       imageUrl:
-        'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+        lady,
       readingTime: '6 min',
       author: {
         name: 'Roel Aufderehar',
@@ -39,7 +44,7 @@ const IndexPage = () => {
       date: 'Mar 10, 2020',
       datetime: '2020-03-10',
       imageUrl:
-        'https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+      workout,
       readingTime: '4 min',
       author: {
         name: 'Brenna Goyette',
@@ -58,7 +63,7 @@ const IndexPage = () => {
       date: 'Feb 12, 2020',
       datetime: '2020-02-12',
       imageUrl:
-        'https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+        hair,
       readingTime: '11 min',
       author: {
         name: 'Daniela Metz',

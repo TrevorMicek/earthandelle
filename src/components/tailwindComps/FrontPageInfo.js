@@ -1,6 +1,7 @@
 import React from "react"
 
-
+import aboutPic from '../../images/aboutPic2.jpg'
+import pondering from '../../images/pondering.jpg'
 const stats = [
   { label: 'Founded', value: '2021' },
   { label: 'Employees', value: '5' },
@@ -20,15 +21,15 @@ export default function Example() {
           </div>
           <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
             {/* Testimonial card*/}
-            <div className="relative overflow-hidden rounded-2xl pt-64 pb-10 shadow-xl">
+            <div className="relative overflow-hidden  rounded-2xl pt-64 pb-10 shadow-xl">
               <img
-                className="absolute inset-0 h-full w-full object-cover"
-                src="https://images.unsplash.com/photo-1521510895919-46920266ddb3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&fp-x=0.5&fp-y=0.6&fp-z=3&width=1440&height=1440&sat=-100"
+                className="absolute inset-0 -pt-3 h-full w-full object-cover"
+                src={aboutPic}
                 alt=""
               />
               <div className="absolute inset-0 bg-secondary mix-blend-multiply" />
               <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary opacity-90" />
-              <div className="relative px-8">
+              <div className="relative px-8  ">
                 <div className="text-xl text-white ml-10">
                   Earth and Elle
                 </div>
@@ -72,6 +73,7 @@ export default function Example() {
               <p className="text-base leading-7">
                 As someone who has experienced the transformational power of holistic supplements, I've made it my mission to help others tap into their most vibrant, confident, and healthy versions of themselves  one active ingredient at a time.
               </p>
+              <img src={pondering} alt='' className="rounded-md" />
               <h3 style={{fontSize:"22px"}}>My Story</h3>
               <p className="text-base leading-7">
                Earth & Elle is so much more than a holistic supplement brand: it's an empowering solution for women like you - and it all began here: In my early 20s, I started suffering from <i><strong>chronic join</strong> pain</i> throughout my entire body. It became worse as time went by, with walking feeling like a near-impossible task and my reliance on prescription drugs growing with each doctor's visit.

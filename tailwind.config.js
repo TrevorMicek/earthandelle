@@ -12,6 +12,9 @@ module.exports = {
           'button': 'rgb(220, 152, 109)',
           'amazon': 'rgba(255,164,28,255)'
     },
+    height: {
+      '100': '34rem'
+    },
     screens: {
       'xxs': '480px',
       'med': '860px'
