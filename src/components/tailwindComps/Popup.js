@@ -24,7 +24,17 @@ export default function Example(props) {
   }
   const handleChange = (e) => {
 
+    switch(e.target.name) {
+        case 'email':
+
             setEmail(e.target.value)
+            break;
+        case 'name':
+
+            setName(e.target.value)
+            break;
+
+      }
 
   }
   const confirm = () => {
@@ -73,7 +83,7 @@ useEffect(() => {
                 <div className="w-full flex justify-end">
                 <XIcon width="25px" height="25px" onClick={confirm} />
                 </div>
-            <form ref={form}  method="post" action="https://app.getresponse.com/add_subscriber.html" className="sm:grid-cols-2 sm:gap-x-8">
+            <form ref={form} onSubmit={onSubmit} action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post" className="sm:grid-cols-2 sm:gap-x-8">
             <div className="h-20 w-auto  pt-0 flex items-center justify-center">
             <div className="px-0 pt-0 ">
                   <img
@@ -140,6 +150,7 @@ useEffect(() => {
 <div className="sm:col-span-2">
   <button
     type="submit"
+    onClick={confirm}
     className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-default hover:bg-secondary hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
   >
     Enter giveaway
