@@ -49,7 +49,7 @@ export default function Example() {
                   </div>
 
                   <footer className="mt-4">
-                    <p className="text-base font-semibold text-indigo-200">Paige Fohdderson, CEO at Earth and Elle</p>
+                    <p className="text-base font-semibold text-indigo-200">Paige Feddersohn, CEO at Earth and Elle</p>
                   </footer>
                 </blockquote>
               </div>
