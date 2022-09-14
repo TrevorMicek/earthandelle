@@ -114,24 +114,20 @@ export default function Example(props) {
 </form>
             </div> : <div className="relative bottom-32 inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6">
             <div>
-            <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
-              <CheckIcon className="h-6 w-6 text-green-600" aria-hidden="true" />
+            <div className="mx-auto flex items-center text-white justify-center h-12 w-12 rounded-full bg-default">
+              <CheckIcon className="h-6 w-6 text-white" aria-hidden="true" />
             </div>
             <div className="mt-3 text-center sm:mt-5">
               <Dialog.Title as="h3" className="text-lg leading-6 font-medium text-gray-900">
                 {props.message[0]}
               </Dialog.Title>
-              <div className="mt-2">
-                <p className="text-sm text-gray-500">
-                 {props.message[1]}
-                </p>
-              </div>
+
             </div>
           </div>
           <div className="mt-5 sm:mt-6">
             <button
               type="button"
-              className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
+              className="inline-flex text-gray-800 justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-secondary text-base font-medium hover:bg-default hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
               onClick={props.confirm}
             >
               Go back to main page

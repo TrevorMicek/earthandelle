@@ -88,13 +88,14 @@ const onSubmit = (e) => {
           break;
 
       default:
+        console.log('test form')
          /* setURL() */
          setConfirm(true)
          emailjs.sendForm('service_arikqvn', 'template_ht51ufi', e.target, 'user_kC0T8kmC4F1GOkt3Q06Q4')
          e.preventDefault()
   }
 }
-const confirmMessage = ['Thanks for reaching out to Websites By Trevor!', 'We will respond ASAP']
+const confirmMessage = ['Thanks for reaching out to Earth & Elle!', 'We will respond ASAP']
 
   return (
     <div id="contact" className="bg-white py-16 -mb-24 -mt-8 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24" style={{gridColumn:"span 7", gridRowStart:"fourth", gridRowEnd:"fifth"}}>
@@ -145,9 +146,7 @@ const confirmMessage = ['Thanks for reaching out to Websites By Trevor!', 'We wi
         </svg>
         <div className="text-center">
           <h2 className="text-2xl font-normal tracking-tight text-gray-900 sm:text-4xl">Questions, Comments, Concerns?</h2>
-          <p className="mt-4 text-md leading-6 text-gray-500">
-            We will get back to you by the end of the day!
-          </p>
+
         </div>
         <div className="mt-12">
         {confirm ? <Confirm prompt="false" message={confirmMessage} confirm={() =>setConfirm(false)} /> : null}
