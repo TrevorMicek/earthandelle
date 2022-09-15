@@ -143,7 +143,7 @@ export default (props) => {
             </h2>
 			<ul className="">
 				{
-					checkoutState.lineItems && checkoutState.lineItems[0]  ? <LineItem /> : <div className="h-32 w-80"> <p>your cart is empty!</p> <button className="bg-secondary rounded-md py-1 px-2 text-black hover:bg-default hover:text-white" onClick={(e) => handleClose(e)}><span className="text-base">keep shopping</span></button></div>
+					checkoutState.lineItems && checkoutState.lineItems[0]  ? <LineItem /> : <div className="h-32"> <p>your cart is empty!</p> <button className="bg-secondary rounded-md py-1 px-2 text-black hover:bg-default hover:text-white" onClick={(e) => handleClose(e)}><span className="text-base">keep shopping</span></button></div>
 				}
 
 							</ul>
