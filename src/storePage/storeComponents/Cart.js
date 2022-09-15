@@ -127,10 +127,10 @@ export default (props) => {
 
 			<div className="bg-white   absolute ">
 
-      <div className="mx-auto  px-4 mt-6 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-2xl px-4 mt-6 sm:px-6 lg:max-w-7xl lg:px-8">
 	  <button className="Cart__close" onClick={(e) => handleClose(e)}>
 					<ShoppingCartIcon
-            className="text-default relative right-10 top-0
+            className="text-default absolute right-10 top-0
               ml-2 mr-2 h-6 w-6 text-orange-300 transition duration-150 ease-in-out group-hover:text-opacity-80"
             aria-hidden="true" />
 					</button>
@@ -142,7 +142,10 @@ export default (props) => {
               Items in your shopping cart
             </h2>
 			<ul className="">
-								<LineItem />
+				{
+					checkoutState.lineItems && checkoutState.lineItems[0]  ? <LineItem /> : <div className="h-32 w-80"> <p>your cart is empty!</p> <button className="bg-secondary rounded-md py-1 px-2 text-black hover:bg-default hover:text-white" onClick={(e) => handleClose(e)}><span className="text-base">keep shopping</span></button></div>
+				}
+
 							</ul>
 
           </section>
@@ -156,8 +159,8 @@ export default (props) => {
               Order summary
             </h2>
 
-            <dl className="-mb-4">
-              <div className="flex items-center justify-between">
+            <dl className="-mb-4 ">
+              <div className="flex items-center justify-between w-60">
                 <dt className="text-sm text-gray-600">Subtotal</dt>
                 <dd className="text-sm font-medium text-gray-900">$ {checkoutState.subtotalPrice}</dd>
               </div>
