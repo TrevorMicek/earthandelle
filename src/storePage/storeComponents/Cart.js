@@ -127,7 +127,7 @@ export default (props) => {
 
 			<div className="bg-white ">
 
-      <div className="mx-auto max-w-2xl px-4    sm:px-6 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-2xl px-4 relative top-0  sm:px-6 lg:max-w-7xl lg:px-8">
 	  <button className="Cart__close" onClick={(e) => handleClose(e)}>
 					<ShoppingCartIcon
             className="text-default relative right-8 top-0

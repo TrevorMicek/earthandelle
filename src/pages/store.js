@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react"
 import { Link } from 'gatsby'
 import { Router, Redirect } from '@reach/router'
+import { Helmet } from "react-helmet"
 import Products from "../storePage/storeComponents/Products"
 import ProductView from "../storePage/storeComponents/Productview"
 import Cart from '../storePage/storeComponents/Cart'
@@ -110,6 +111,9 @@ return (
 
     <Layout title="Store" text="Our high quality, unique store example that's perfect for small businesses">
     <SEO title="Online Store" />
+    <Helmet>
+<script src="https://fast-tags.deliverr.com/web/main.js"></script>
+</Helmet>
     <div className=" relative bg-white -mb-8 overflow-hidden" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second", marginTop: "-30px"}}>
 	<Provider store={store} >
         <Pages title={pageTitle} getTitle={getTitle} />

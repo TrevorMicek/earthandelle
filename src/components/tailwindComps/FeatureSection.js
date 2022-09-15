@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import { CodeIcon, TagIcon, ArrowRightIcon,TerminalIcon, UploadIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
 import { Link } from 'gatsby'
+import Popup from '../tailwindComps/Popup'
 import Product from '../../images/newImages/product.webp'
 import img from '../../images/movingCurve.jpg'
 const benefits = [
@@ -24,7 +25,7 @@ const benefits = [
     icon: TagIcon,
   }
 ]
-const Reviews = () => {
+const Reviews = (props) => {
 
 
   return (
@@ -123,7 +124,10 @@ const features = [
         </div>
 */
 const metricsImg = require('../../images/metrics.png')
-export default function FeatureSection() {
+export default function FeatureSection(props) {
+  const [confirm, setConfirm] = useState(false)
+
+
 
   return (
     <div className=" pb-10 pt-9 -mb-8 -mt-20 relative overflow-hidden bg-white" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
@@ -132,8 +136,11 @@ export default function FeatureSection() {
     <div className="mb-8 h-12 bg-button flex flex-row space-x-1 justify-center items-center">
     <p className="my-auto ml-4 w-72 text-left text-white">Enter to win a year supply of our vegan collagen boosting gummies ($240 value)
     </p>
-    <button className="my-auto -ml-1 text-left bg-secondary text-gray-800 rounded-md py-1 px-1 text-sm">Enter Here</button>
-
+    <button
+      className="my-auto -ml-1 text-left bg-secondary text-gray-800 rounded-md py-1 px-1 text-sm"
+      onClick={() => setConfirm(true)}
+      >Enter Here</button>
+    {confirm ? <Popup prompt={true} isConfirm={confirm} message={props.message} confirm={() =>setConfirm(false)} /> : null}
     </div>
           <h2 className="mt-2 mb-7 relative font-serif z-10 text-lg tracking-wide font-thin text-gray-900 lg:mx-auto">
             Supplements created by women <i>for</i> women

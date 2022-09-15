@@ -17,7 +17,7 @@ import Confirm from '../components/tailwindComps/Confirmation'
 import Popup from '../components/tailwindComps/Popup'
 
 const IndexPage = () => {
-  const [confirm, setConfirm] = useState(true)
+  const [confirm, setConfirm] = useState(false)
   const [email, setEmail] = useState('')
   const form = useRef()
   const onSubmit = (e) => {
@@ -30,13 +30,22 @@ const IndexPage = () => {
             setEmail(e.target.value)
 
   }
-  const confirmMessage = ['Thanks for choosing Websites By Trevor!', ' We will reach out ASAP to start collaborating on your new free site']
+  useEffect(() => {
+    setConfirm(true)
+  }, [])
+  const isSet = () => {
+    setConfirm(true)
+    console.log(confirm)
+  }
+  const confirmMessage = ['Thanks for choosing Earth & Elle!', ' We will reach out ASAP to start collaborating on your new free site']
 
   return (
   <Layout title="Small Business Web Design & Development" pageLayout={{gridTemplateRows: "[top-gutter] auto [top-padding] auto [first] auto [second] auto [third] auto [fourth] auto [fifth] auto [sixth] auto [seventh] auto"}}>
     <SEO title="Home" />
-    {confirm ? <Popup prompt={true} message={confirmMessage} confirm={() =>setConfirm(false)} /> : null}
-    <Supplment />
+
+    {confirm ? <Popup prompt={true} isConfirm={confirm} message={confirmMessage} confirm={() =>setConfirm(false)} /> : null}
+
+    <Supplment  prompt={true} message={confirmMessage} />
     <About />
 
     <Contact />

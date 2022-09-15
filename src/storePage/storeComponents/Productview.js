@@ -348,7 +348,8 @@ export default (props) => {
 
 
               {/* Colors */}
-
+			  <deliverr-tag-extended></deliverr-tag-extended>
+			  <deliverr data-component="BadgeWithCountdown"></deliverr>
 			  <div className="mt-8 flex mb-0 flex-row bg-white rounded-none items-center">
 						<label className="mr-2">Qty</label>
 						<input

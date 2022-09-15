@@ -8,7 +8,7 @@ import emailjs from 'emailjs-com';
 import Confirmation from './Confirmation'
 import Logo from '../../images/newImages/Logo.png'
 export default function Example(props) {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
   const [prompt, setPrompt] = useState(true)
   const completeButtonRef = useRef(null)
 
@@ -22,6 +22,10 @@ export default function Example(props) {
        setPrompt(false)
        console.log('sent')
   }
+  useEffect(() => {
+    setOpen(true)
+
+  }, [])
   const handleChange = (e) => {
 
     switch(e.target.name) {
@@ -37,14 +41,15 @@ export default function Example(props) {
       }
 
   }
+
   const confirm = () => {
         setOpen(false)
         setPrompt(false)
        return  props.confirm
     }
 useEffect(() => {
-    console.log(prompt)
-}, [onSubmit])
+  return props.confirm
+}, [props.isConfirm])
 
   return (
 
