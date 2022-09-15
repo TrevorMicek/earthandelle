@@ -108,7 +108,7 @@ export default (props) => {
 	}
 
 	return (
-		<div id="cart" className="relative right-0 z-30">
+		<div id="cart" className="absolute pt-0 mt-0 right-0 z-30">
 
 			<div className={`Cart ${cartStatus ? "Cart--open" : ""}`}>
 				<div className="App__view-cart-wrapper2">
@@ -127,7 +127,7 @@ export default (props) => {
 
 			<div className="bg-white ">
 
-      <div className="mx-auto max-w-2xl px-4 mt-6 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-2xl px-4  sm:px-6 lg:max-w-7xl lg:px-8">
 	  <button className="Cart__close" onClick={(e) => handleClose(e)}>
 					<ShoppingCartIcon
             className="text-default absolute right-20 top-0
