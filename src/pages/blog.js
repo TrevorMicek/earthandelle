@@ -115,7 +115,7 @@ const IndexPage = () => {
   }
   return (
   <Layout title="Blog" text="Learn About Web Design, SEO, Ecommerce & More!">
-    <SEO title="Blog" />
+    <SEO title="Blog" description="Welcome to our blog! Where we show the powers and wonders of collagen supplements" />
 
 
       <Router className=" relative bg-white pt-4 -mb-8 overflow-hidden sm:pt-24 lg:pt-32" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>

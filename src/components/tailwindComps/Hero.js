@@ -169,7 +169,7 @@ useEffect(() => {
                   <img
                     className="h-28 w-auto"
                     src={Logo}
-                    alt=""
+                    alt="earth and elle logo"
                     width="50px"
                     height="50px"
                   />
@@ -227,7 +227,7 @@ useEffect(() => {
                   <img
                     className="w-44 mx-auto sm:w-56"
                     src={Logo}
-                    alt="blue technical background image"
+                    alt="earth and elle logo big and centered"
                     width="175px"
                     height="100px"
                   />
@@ -246,7 +246,7 @@ useEffect(() => {
                   <img
                     className="w-full mx-auto "
                     src={header}
-                    alt="blue technical background image"
+                    alt="header image of supplements and woman"
                     width="200px"
                     height="100px"
                   />

@@ -110,7 +110,7 @@ const Store = () => {
 return (
 
     <Layout title="Store" text="Our high quality, unique store example that's perfect for small businesses">
-    <SEO title="Online Store" />
+    <SEO title="Online Store" description="Welcome to our store! Supplements by women for women. Empowering collagen supplments that do wonders for your skin, hair, and health." />
     <Helmet>
 <script src="https://fast-tags.deliverr.com/web/main.js"></script>
 </Helmet>

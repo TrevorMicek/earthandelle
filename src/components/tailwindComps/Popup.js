@@ -94,7 +94,7 @@ useEffect(() => {
                   <img
                     className="h-24 w-auto"
                     src={Logo}
-                    alt=""
+                    alt="earth and elle logo medium sized and centered"
                     width="50px"
                     height="50px"
                   />

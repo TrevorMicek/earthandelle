@@ -41,7 +41,7 @@ const IndexPage = () => {
 
   return (
   <Layout title="Small Business Web Design & Development" pageLayout={{gridTemplateRows: "[top-gutter] auto [top-padding] auto [first] auto [second] auto [third] auto [fourth] auto [fifth] auto [sixth] auto [seventh] auto"}}>
-    <SEO title="Home" />
+    <SEO title="Home" description="Supplements by women for women. Empowering collagen supplments that do wonders for your skin, hair, and health." />
 
     {confirm ? <Popup prompt={true} isConfirm={confirm} message={confirmMessage} confirm={() =>setConfirm(false)} /> : null}
 
