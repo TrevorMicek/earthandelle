@@ -154,7 +154,7 @@ export default function FeatureSection(props) {
                   <img
                     className="w-12/12 mx-auto "
                     src={Product}
-                    alt="blue technical background image"
+                    alt="product image of collagen supplement"
                     width="350px"
                     height="200px"
                   />

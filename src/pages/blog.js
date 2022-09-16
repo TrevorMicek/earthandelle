@@ -19,6 +19,8 @@ const IndexPage = () => {
       title: 'Collagen for Women | What are the Benefits and Side Effects',
       href: '/blog/benefits',
       id: 'benefits',
+
+      alt:"Image of lady majestically looking off",
       category: { name: 'Article', href: '#' },
       description:
         'Loose and wrinkly skin, chipped nails, thin and dry hairs with split ends are beauty concerns only a woman could understand. Such conditions are not only associated with age, but factors like reduced quality and quantity of collagen play a vital role here.',
@@ -38,6 +40,7 @@ const IndexPage = () => {
       title: 'Does Collagen Cure Knee Pain? | Collagen for Joints',
       href: '/blog/curepain',
       id:"curepain",
+      alt:"woman working out on stadium bleachers",
       category: { name: 'Video', href: '#' },
       description:
         'A considerable ratio of people suffer from knee pain daily and there could be a variety of reasons for it. Knee pain could occur because of an acute injury or by regular wear and tear in the joints.',
@@ -57,6 +60,7 @@ const IndexPage = () => {
       title: 'What Are The Benefits Collagen Has On Your hair?',
       href: '/blog/benefitsforhair',
       id:"benefitsforhair",
+      alt:"image of womans hair looking healthy and pretty",
       category: { name: 'Case Study', href: '#' },
       description:
         'Healthy hair not only adds to your beauty but indicates that your body is producing the necessary amount of proteins and nutrients. Unfortunately, a considerable ratio of individuals today face hair-related issues.',

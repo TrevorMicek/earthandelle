@@ -40,7 +40,7 @@ export default function Example() {
         <div className="mx-auto max-w-md sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
         <div className="text-left bg-accent">
           <Link to="/about">
-        <img src={about} className="" />
+        <img src={about} alt="image of two smiling customers showing their collagen supplements" className="" />
          </Link>
 
         </div>
