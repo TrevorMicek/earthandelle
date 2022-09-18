@@ -5,7 +5,7 @@ const CreateComponent = (props) => {
        {Object.entries(props.data).map(([key, value]) => {
          return <props.component {...value} key={key} />
        })}
-       
+
       </>
     )
    }
