@@ -338,7 +338,6 @@ export default (props) => {
           <div className="my-4 text-default lg:row-span-3 lg:mt-0">
             <h2 className="sr-only">Product information</h2>
 			<p className="text-3xl tracking-tight">
-          <span className="line-through">$25.99</span>
            <span className="">
            &nbsp;&nbsp;&nbsp; ${product.variants && product.variants[0].price}
           </span>
@@ -348,8 +347,7 @@ export default (props) => {
 
 
               {/* Colors */}
-			  <deliverr-tag-extended></deliverr-tag-extended>
-			  <deliverr data-component="BadgeWithCountdown"></deliverr>
+
 			  <div className="mt-8 flex mb-0 flex-row bg-white rounded-none items-center">
 						<label className="mr-2">Qty</label>
 						<input
@@ -362,8 +360,10 @@ export default (props) => {
 							}}
 						></input>
 					</div>
-
-
+					<div className="w-full h-24">
+					<deliverr data-component="BadgeWithCountdown"></deliverr>
+					<deliverr  data-component="Badge" data-productId="{{product.id}}"></deliverr>
+					</div>
 					<button
 						className="mt-5 flex w-full items-center justify-center rounded-md border border-transparent bg-default py-3 px-8 text-base font-medium text-white hover:text-gray-700 hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
 						onClick={(e) => changeSize(e, size, quantity)}

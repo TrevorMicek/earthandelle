@@ -46,7 +46,7 @@ const Layout = ({children, title, text, pageLayout}) => {
        <div class="grid">
         {title ? <Header title={title} text={text} /> : <></>}
 
-        <Helmet>
+
         <Script id="refersion">{`! function(e, n, t, i, o, c, s, a) {
     e.TrackingSystemObject = "r", (s = n.createElement(t)).async = 1, s.src = "https://cdn.refersion.com/refersion.js", s.onload = function() {
         r.pubKey = "pub_0582c4592b7ea5275889", r.settings.fp_off = 1;
@@ -55,7 +55,7 @@ const Layout = ({children, title, text, pageLayout}) => {
         })
     }, (a = n.getElementsByTagName(t)[0]).parentNode.insertBefore(s, a)
 }(window, document, "script");`}</Script>
-        </Helmet>
+
 
         <main style={pageLayout}  class="main">{children}</main>
         <Footer />
