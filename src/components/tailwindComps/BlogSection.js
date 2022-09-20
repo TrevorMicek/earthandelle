@@ -9,7 +9,7 @@ import { Router, useMatch } from '@reach/router'
       {post.map((post) => (
         <div key={post.title} className="bg-secondary flex flex-col rounded-lg shadow-lg overflow-hidden">
           <div className="flex-shrink-0">
-            <img alt={post.alt} className="h-100  w-full object-cover" src={post.imageUrl} width="400px" height="300px" />
+            <img alt={post.alt} className="h-100  w-full object-contain sm:object-contain" src={post.imageUrl} width="400px" height="300px" />
           </div>
           <div className=" bg-white pb-6  flex flex-col justify-between">
             <div className="flex-1 bg-secondary ">
@@ -42,7 +42,7 @@ import { Router, useMatch } from '@reach/router'
 
 
 
-          <div className="mt-12 mx-auto lg:max-w-no w-full">
+          <div className="mt-12 mx-auto w-10/12">
           <Posts  />
           </div>
         </div>
