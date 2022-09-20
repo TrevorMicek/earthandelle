@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { Router, useMatch } from '@reach/router'
 /* This example requires Tailwind CSS v2.0+ */
 
 

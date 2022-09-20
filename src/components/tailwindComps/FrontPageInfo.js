@@ -1,7 +1,7 @@
 import React from "react"
 
-import aboutPic from '../../images/aboutPic2.jpg'
-import pondering from '../../images/pondering.jpg'
+import aboutPic from '../../images/newImages/aboutPic2.jpg'
+import pondering from '../../images/newImages/pondering.jpg'
 const stats = [
   { label: 'Founded', value: '2021' },
   { label: 'Employees', value: '5' },

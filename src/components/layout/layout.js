@@ -10,12 +10,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet";
 import { Script } from "gatsby";
-import NavBar from "./NavBar";
 import Header from "./Header";
 import Footer from "../tailwindComps/Footer";
-import HeroComp from "../tailwindComps/Hero";
-
-import createComponent from '../commonComps/createCart'
 import "./layoutGrid.css"
 import "./layout.css"
 const Layout = ({children, title, text, pageLayout}) => {

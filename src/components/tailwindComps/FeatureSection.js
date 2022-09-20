@@ -4,27 +4,7 @@ import { CodeIcon, TagIcon, ArrowRightIcon,TerminalIcon, UploadIcon, LightningBo
 import { Link } from 'gatsby'
 import Popup from '../tailwindComps/Popup'
 import Product from '../../images/newImages/product.webp'
-import img from '../../images/movingCurve.jpg'
-const benefits = [
-  {
-    name: '100% Hand Coded',
-    description:
-    "All of our sites are made from scratch using our own code. This allows us full control over the design and functionality, leading to more traffic and conversions.",
-    icon: CodeIcon,
-  },
-  {
-    name: 'Performance',
-    description:
-      "The #1 reason visitors will leave a website is if it's slow to load. Our sites are lightning fast, accessible and SEO friendly to rank higher on Google and provide a better user experience.",
-    icon: LightningBoltIcon,
-  },
-  {
-    name: 'Subscription Pricing',
-    description:
-      "We use a unique subscription pricing model, so you enjoy no upfront costs, affordable packages and no hidden fees.",
-    icon: TagIcon,
-  }
-]
+
 const Reviews = (props) => {
 
 
@@ -123,7 +103,6 @@ const features = [
           </dl>
         </div>
 */
-const metricsImg = require('../../images/metrics.png')
 export default function FeatureSection(props) {
   const [confirm, setConfirm] = useState(false)
 

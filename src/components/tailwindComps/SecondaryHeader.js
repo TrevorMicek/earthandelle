@@ -4,9 +4,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import { ChevronRightIcon } from '@heroicons/react/solid'
 import { Link } from "gatsby"
-import emailjs from 'emailjs-com';
 
 import { ShoppingBagIcon } from '@heroicons/react/outline'
 

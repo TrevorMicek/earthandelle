@@ -2,10 +2,8 @@ import React, {useRef, Fragment, useState, useEffect } from 'react'
 
 
 import { Dialog, Transition } from '@headlessui/react'
-import { CheckIcon, XIcon } from '@heroicons/react/outline'
-import emailjs from 'emailjs-com';
+import {  XIcon } from '@heroicons/react/outline'
 
-import Confirmation from './Confirmation'
 import Logo from '../../images/newImages/Logo.png'
 export default function Example(props) {
   const [open, setOpen] = useState(false)

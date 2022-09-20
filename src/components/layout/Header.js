@@ -3,7 +3,6 @@ import React from 'react';
 
 import MainHeader from '../tailwindComps/Hero'
 import SecondaryHeader from '../tailwindComps/SecondaryHeader'
-import StoreHeader from '../tailwindComps/StoreHeader'
 const Header = (props) => {
 
   const firstTitle = 'Store'

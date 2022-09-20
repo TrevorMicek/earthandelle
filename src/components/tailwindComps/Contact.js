@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { Switch } from '@headlessui/react'
 import emailjs from 'emailjs-com';
 
 import Confirm from './Confirmation'
