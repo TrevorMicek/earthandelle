@@ -52,7 +52,7 @@ const navigation = {
       },
       {
         name: 'LinkedIn',
-        href: 'https://www.linkedin.com/xoearthandelle?lang=en',
+        href: 'hhttps://www.linkedin.com/company/earth-and-elle/?viewAsMember=true',
         icon: (props) => (
           <svg width="48px" height="48px" fill="currentColor" {...props} viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
 

@@ -67,7 +67,7 @@ const navigation = {
     },
     {
       name: 'LinkedIn',
-      href: 'https://www.linkedin.com/xoearthandelle?lang=en',
+      href: 'https://www.linkedin.com/company/earth-and-elle/?viewAsMember=true',
       icon: (props) => (
         <svg width="48px" height="48px" fill="currentColor" {...props} viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
 
@@ -132,6 +132,10 @@ useEffect(() => {
             ))}
           </div>
             <div className="flex justify-center pb-1 flex-1">
+
+
+
+
 
               <div className="h-20 w-full flex items-center justify-end w-full md:w-auto">
               <div className="w-1/12 relative right-2 z-10 cursor-pointer">
