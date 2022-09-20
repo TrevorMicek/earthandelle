@@ -4,12 +4,13 @@ import React, { useState, useRef, useEffect } from 'react'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import { ShoppingCartIcon } from '@heroicons/react/solid'
+import { ChevronRightIcon } from '@heroicons/react/solid'
 import { Link } from "gatsby"
 import emailjs from 'emailjs-com';
 
-
 import { ShoppingBagIcon } from '@heroicons/react/outline'
+
+
 
 
 import headerOne from '../../images/newImages/header1.webp'
@@ -66,7 +67,7 @@ const navigation = {
     },
     {
       name: 'LinkedIn',
-      href: 'https://www.linkedin.com/xoearthandelle?lang=en',
+      href: 'https://www.linkedin.com/company/earth-and-elle/?viewAsMember=true',
       icon: (props) => (
         <svg width="48px" height="48px" fill="currentColor" {...props} viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
 
@@ -91,6 +92,9 @@ const navigation = {
 
 export default function HeroComp() {
  const [header, setHeader] = useState(headerOne)
+
+
+
  const changeHeader = () =>{
   if (header === headerOne) {
     setHeader(headerTwo)
@@ -110,7 +114,6 @@ useEffect(() => {
   }, 5000)
 }, [header])
 
-
  return (
 
     <div className="relative overflow-hidden" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
@@ -119,10 +122,10 @@ useEffect(() => {
         <div className="bg-default">
 
           <nav
-            className="border-2 relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
+            className="relative  mx-auto  items-center justify-start px-4 sm:px-6"
             aria-label="Global"
           >
-            <div className="my-4 mx-0 flex justify-center absolute space-x-3">
+            <div className="my-4 mt-7 mx-0 flex justify-center absolute space-x-3">
             {navigation.social.map((item) => (
               <a key={item.name} href={item.href} className="text-accent hover:text-secondary">
                 <span className="sr-only">{item.name}</span>
@@ -130,18 +133,17 @@ useEffect(() => {
               </a>
             ))}
           </div>
-            <div className="flex pb-1 flex-1">
+            <div className="flex justify-center pb-1 flex-1">
+
+
+
+
 
               <div className="h-20 w-full flex items-center justify-end w-full md:w-auto">
-              <div className="fixed top-16 w-full max-w-sm px-4">
-
-    </div>
               <div className="w-1/12 relative right-2 z-10 cursor-pointer">
-
               <Link to="/store">
-            <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10 md:hidden hover:text-secondary" />
+            <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10 md:hidden" />
               </Link>
-
             </div>
                 <a href="/">
                   <span className="sr-only">Workflow</span>
@@ -169,9 +171,7 @@ useEffect(() => {
                   <Link to="/store">
             <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10 hover:text-secondary" />
             </Link>
-
-
-              </div>
+            </div>
 
             </div>
 
@@ -188,13 +188,14 @@ useEffect(() => {
           leaveTo="opacity-0 scale-95"
         >
           <Popover.Panel focus className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top md:hidden">
+
             <div className="rounded-lg bg-secondary shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div className="h-20 w-auto  pt-4 flex items-center justify-between">
                 <div className="px-0 pt-7 ">
                   <img
                     className="h-28 w-auto"
                     src={Logo}
-                    alt="Earth and Elle logo"
+                    alt="earth and elle logo"
                     width="50px"
                     height="50px"
                   />
@@ -229,9 +230,9 @@ useEffect(() => {
       </Popover>
 
       <main>
-        <div className="pt-4 bg-white sm:pt-16 ">
-
+        <div className="pt-4 bg-white sm:pt-12 ">
           <div className="mx-auto max-w-7xl ">
+
             <div className="">
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center ">
                 <div className="">
@@ -246,7 +247,6 @@ useEffect(() => {
 
 
                   <div className="">
-
                 <div className="mx-auto">
                   <Link to="/">
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
@@ -267,7 +267,7 @@ useEffect(() => {
               </div>
               <div className="-mt-2 ">
                 <div className="mx-auto  cursor-pointer">
-                  <Link to="/store/products/Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3MTQ5ODMyNDgxMTE=">
+                  <Link to="/store">
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
                     className="w-full mx-auto "
