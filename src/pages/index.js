@@ -42,7 +42,24 @@ const IndexPage = () => {
   return (
   <Layout title="Small Business Web Design & Development" pageLayout={{gridTemplateRows: "[top-gutter] auto [top-padding] auto [first] auto [second] auto [third] auto [fourth] auto [fifth] auto [sixth] auto [seventh] auto"}}>
     <SEO title="Home" description="Supplements by women for women. Empowering collagen supplments that do wonders for your skin, hair, and health." />
-
+    <Helmet>
+        <Script id="refersion">{`function(e, n, t, i, o, c, s, a) {
+    e.TrackingSystemObject = "r", (s = n.createElement(t)).async = 1, s.src = "https://cdn.refersion.com/refersion.js", s.onload = function() {
+        r.pubKey = "your_pub_key", r.settings.fp_off = 1;
+        r.initializeXDLS().then(() => {
+            r.launchDefault()
+        })
+    }, (a = n.getElementsByTagName(t)[0]).parentNode.insertBefore(s, a)
+}(window, document, "script");`}</Script>
+        </Helmet>
+        <Script id="refersion">{`function(e, n, t, i, o, c, s, a) {
+    e.TrackingSystemObject = "r", (s = n.createElement(t)).async = 1, s.src = "https://cdn.refersion.com/refersion.js", s.onload = function() {
+        r.pubKey = "your_pub_key", r.settings.fp_off = 1;
+        r.initializeXDLS().then(() => {
+            r.launchDefault()
+        })
+    }, (a = n.getElementsByTagName(t)[0]).parentNode.insertBefore(s, a)
+}(window, document, "script");`}</Script>
     {confirm ? <Popup prompt={true} isConfirm={confirm} message={confirmMessage} confirm={() =>setConfirm(false)} /> : null}
 
     <Supplment  prompt={true} message={confirmMessage} />

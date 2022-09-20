@@ -60,6 +60,14 @@ const Layout = ({children, title, text, pageLayout}) => {
     }, (a = n.getElementsByTagName(t)[0]).parentNode.insertBefore(s, a)
 }(window, document, "script");`}</Script>
         </Helmet>
+        <Script id="refersion">{`function(e, n, t, i, o, c, s, a) {
+    e.TrackingSystemObject = "r", (s = n.createElement(t)).async = 1, s.src = "https://cdn.refersion.com/refersion.js", s.onload = function() {
+        r.pubKey = "your_pub_key", r.settings.fp_off = 1;
+        r.initializeXDLS().then(() => {
+            r.launchDefault()
+        })
+    }, (a = n.getElementsByTagName(t)[0]).parentNode.insertBefore(s, a)
+}(window, document, "script");`}</Script>
         <main style={pageLayout}  class="main">{children}</main>
         <Footer />
        </div>
