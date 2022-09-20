@@ -112,7 +112,18 @@ return (
 
     <Layout title="Store" text="Our high quality, unique store example that's perfect for small businesses">
     <SEO title="Online Store" description="Welcome to our store! Supplements by women for women. Empowering collagen supplments that do wonders for your skin, hair, and health." />
-    <Script id="checkout">{` function SendTrackingToRefersion(checkout_token) {
+
+    <Helmet>
+<script src="https://fast-tags.deliverr.com/web/main.js"></script>
+<Script id="refersion">{`! function(e, n, t, i, o, c, s, a) {
+    e.TrackingSystemObject = "r", (s = n.createElement(t)).async = 1, s.src = "https://cdn.refersion.com/refersion.js", s.onload = function() {
+        r.pubKey = "pub_0582c4592b7ea5275889", r.settings.fp_off = 1;
+        r.initializeXDLS().then(() => {
+            r.launchDefault()
+        })
+    }, (a = n.getElementsByTagName(t)[0]).parentNode.insertBefore(s, a)
+}(window, document, "script");`}</Script>
+<Script id="checkout">{` function SendTrackingToRefersion(checkout_token) {
             const rfsn = {
                 cart: checkout_token,
                 id: localStorage.getItem("rfsn_v4_id"),
@@ -122,8 +133,6 @@ return (
             };
             r.sendCheckoutEvent(rfsn.cart, rfsn.id, rfsn.url, rfsn.aid, rfsn.cs);
         }`}</Script>
-    <Helmet>
-<script src="https://fast-tags.deliverr.com/web/main.js"></script>
 </Helmet>
     <div className=" relative bg-white -mb-8 overflow-hidden" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second", marginTop: "-30px"}}>
 	<Provider store={store} >
