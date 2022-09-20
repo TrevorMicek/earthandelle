@@ -146,7 +146,7 @@ const confirmMessage = ['Thanks for reaching out to Earth & Elle!', 'We will res
         </svg>
         <div className="text-center">
           <h2 className="text-2xl font-normal tracking-tight text-gray-900 sm:text-4xl">Questions, Comments, Concerns?</h2>
-
+          <p>Want to contact us directly? Email us <a href="mailto:hello@earthandelle.com" className="underline cursor-pointer">Here</a></p>
         </div>
         <div className="mt-12">
         {confirm ? <Confirm prompt="false" message={confirmMessage} confirm={() =>setConfirm(false)} /> : null}

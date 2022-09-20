@@ -23,22 +23,49 @@ const defaultQ = [
 ]
 const faqs = [
   {
-  question: "Why should I have a website?",
-  answer: "Not everyone needs a website, and not everyone needs a fast website, but if you want to have a solid online presence, social media isn't enough. Our websites allow your business to offer your services or products to your clients. Meaning you can make money directly from your site.",
+  question: "Are your products cruelty free?",
+  answer: "Yes! We love animals and you can rest easy knowing that none of our products have been tested on animals.",
   open: true
   },
 
   {
-    question: "How to make my site faster NOW?",
-    answer:
-      "There are some straightforward ways to boost performance on your site today. The main things being; image optimization, lazy loading styles, images & scripts, limiting number of scripts(plugins), ",
+    question: "Are your products vegan?",
+    answer: "Yes! All of our products are 100% vegan.",
   },
 
   {
-    question: "What's the cost of a website?",
+    question: "What is your customer guarantee?",
     answer:
-      "hand coded website's are minimum $3,000 for a basic site, for a not so good site you can get one for under a thousand but that's only suggested if you're on a tight budget and I would personally suggest waiting till you can afford a good website. Our website's start at $140/month for service businesses and $255/month for ecommerce.",
+      `We offer a happiness guarantee. If for some reason you are not 100% happy with any of our products, feel free to reach out to us ${<a href="mailto:hello@earthandelle.com" className="underline cursor-pointer">Here</a>}. We will send you a label so you can return the products to us. Once we receive your return we will issue you a refund.`,
   },
+  {
+    question: "Where do your products ship from?",
+    answer: "Our products ship from right here in the United States.",
+
+    },
+
+    {
+      question: "How long does shipping take?",
+      answer:
+        "Usually 2 - 7 business days. ",
+    },
+
+    {
+      question: "Is Earth & Elle women-owned?",
+      answer:
+        "Yes we are! Earth & Elle is 100% women-owned.",
+    },
+    {
+      question: "Does Earth & Elle have an ambassador program?",
+      answer: `We do! Feel free to reach out to us ${<a href="mailto:hello@earthandelle.com" className="underline cursor-pointer">Here</a>} if you are interested in becoming a brand ambassador or affiliate partner.`,
+
+      },
+
+      {
+        question: "I am pregnant or breast feeding, can I take your products?",
+        answer:
+          "Please contact your health care professional.",
+      }
 
 ]
 

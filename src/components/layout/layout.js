@@ -9,7 +9,7 @@ import React, {useState} from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet";
-
+import { Script } from "gatsby";
 import NavBar from "./NavBar";
 import Header from "./Header";
 import Footer from "../tailwindComps/Footer";
@@ -50,7 +50,16 @@ const Layout = ({children, title, text, pageLayout}) => {
        <div class="grid">
         {title ? <Header title={title} text={text} /> : <></>}
 
-
+        <Helmet>
+        <Script id="refersion">{`function(e, n, t, i, o, c, s, a) {
+    e.TrackingSystemObject = "r", (s = n.createElement(t)).async = 1, s.src = "https://cdn.refersion.com/refersion.js", s.onload = function() {
+        r.pubKey = "your_pub_key", r.settings.fp_off = 1;
+        r.initializeXDLS().then(() => {
+            r.launchDefault()
+        })
+    }, (a = n.getElementsByTagName(t)[0]).parentNode.insertBefore(s, a)
+}(window, document, "script");`}</Script>
+        </Helmet>
         <main style={pageLayout}  class="main">{children}</main>
         <Footer />
        </div>

@@ -47,7 +47,7 @@ const IndexPage = () => {
 
     <Supplment  prompt={true} message={confirmMessage} />
     <About />
-
+    <FAQ />
     <Contact />
 
   </Layout>

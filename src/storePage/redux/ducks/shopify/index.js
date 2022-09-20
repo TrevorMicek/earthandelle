@@ -98,8 +98,22 @@ function getProduct(id) {
 
 // Creates initial checkout state from Shopify
 function checkout() {
+	function SendTrackingToRefersion(checkout_token) {
+		const rfsn = {
+			cart: checkout_token,
+			id: localStorage.getItem("rfsn_v4_id"),
+			url: window.location.href,
+			aid: localStorage.getItem("rfsn_v4_aid"),
+			cs: localStorage.getItem("rfsn_v4_cs")
+		};
+		return `r.sendCheckoutEvent(rfsn.cart, rfsn.id, rfsn.url, rfsn.aid, rfsn.cs);`
+	}
 	return (dispatch) => {
 		client.checkout.create().then((resp) => {
+			const checkoutUrl = resp.webUrl.split('/');
+	const token = checkoutUrl[checkoutUrl.length -1].split('?');
+	const checkout_token = token[0];
+    SendTrackingToRefersion(checkout_token);
 			dispatch({
 				type: CHECKOUT_FOUND,
 				payload: resp,

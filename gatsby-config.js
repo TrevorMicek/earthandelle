@@ -14,7 +14,20 @@ module.exports = {
         'gatsby-plugin-postcss',
         'gatsby-plugin-netlify',
         {
+          resolve: 'gatsby-source-trustpilot',
+          options: {
+              apiKey: 'YOUR_TRUSTPILOT_API_KEY',
+              secretKey: 'YOUR_TRUSTPILOT_SECRET_KEY',
+              username: 'YOUR_TRUSTPILOT_USERNAME',
+              password: 'YOUR_TRUSTPILOT_PASSWORD',
+              domains: [
+                  'trustpilot.co.uk' // An array of website URLs to pull the reviews for
+              ]
+          }
+      },
+        {
       resolve: `gatsby-plugin-google-gtag`,
+
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [

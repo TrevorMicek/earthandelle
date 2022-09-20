@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from "react"
 import { Link } from 'gatsby'
 import { Router, Redirect } from '@reach/router'
 import { Helmet } from "react-helmet"
+import { Script } from 'gatsby'
 import Products from "../storePage/storeComponents/Products"
 import ProductView from "../storePage/storeComponents/Productview"
 import Cart from '../storePage/storeComponents/Cart'
@@ -111,6 +112,16 @@ return (
 
     <Layout title="Store" text="Our high quality, unique store example that's perfect for small businesses">
     <SEO title="Online Store" description="Welcome to our store! Supplements by women for women. Empowering collagen supplments that do wonders for your skin, hair, and health." />
+    <Script id="checkout">{` function SendTrackingToRefersion(checkout_token) {
+            const rfsn = {
+                cart: checkout_token,
+                id: localStorage.getItem("rfsn_v4_id"),
+                url: window.location.href,
+                aid: localStorage.getItem("rfsn_v4_aid"),
+                cs: localStorage.getItem("rfsn_v4_cs")
+            };
+            r.sendCheckoutEvent(rfsn.cart, rfsn.id, rfsn.url, rfsn.aid, rfsn.cs);
+        }`}</Script>
     <Helmet>
 <script src="https://fast-tags.deliverr.com/web/main.js"></script>
 </Helmet>
