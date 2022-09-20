@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
 import { Helmet } from "react-helmet"
-
+import { Script } from "gatsby"
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ChevronRightIcon } from '@heroicons/react/solid'
 import { Link } from "gatsby"
@@ -52,14 +52,7 @@ const IndexPage = () => {
     }, (a = n.getElementsByTagName(t)[0]).parentNode.insertBefore(s, a)
 }(window, document, "script");`}</Script>
         </Helmet>
-        <Script id="refersion">{`function(e, n, t, i, o, c, s, a) {
-    e.TrackingSystemObject = "r", (s = n.createElement(t)).async = 1, s.src = "https://cdn.refersion.com/refersion.js", s.onload = function() {
-        r.pubKey = "your_pub_key", r.settings.fp_off = 1;
-        r.initializeXDLS().then(() => {
-            r.launchDefault()
-        })
-    }, (a = n.getElementsByTagName(t)[0]).parentNode.insertBefore(s, a)
-}(window, document, "script");`}</Script>
+
     {confirm ? <Popup prompt={true} isConfirm={confirm} message={confirmMessage} confirm={() =>setConfirm(false)} /> : null}
 
     <Supplment  prompt={true} message={confirmMessage} />
