@@ -13,7 +13,10 @@ module.exports = {
     },
         'gatsby-plugin-postcss',
         'gatsby-plugin-netlify',
+        {
+          resolve: 'gatsby-source-trustpilot',
 
+      },
         {
       resolve: `gatsby-plugin-google-gtag`,
 
