@@ -8,7 +8,8 @@ const navigation = {
       { name: 'Store', href: '/store' },
       { name: 'About', href: '/about' },
       { name: 'Blog', href: '/blog' },
-      { name: 'Contact', href: '/contact' }
+      { name: 'Contact', href: '/contact' },
+      { name: 'Privacy Policy', href: '/policy' }
     ],
     social: [
       {
