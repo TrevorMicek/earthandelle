@@ -14,7 +14,7 @@ import { ShoppingBagIcon } from '@heroicons/react/outline'
 import headerOne from '../../images/newImages/header1.webp'
 
 import headerTwo from '../../images/newImages/header2.webp'
-import Logo from '../../images/newImages/Logo.png'
+import Logo from '../../images/newImages/LogoNew.png'
 
 const navigation = {
   main: [

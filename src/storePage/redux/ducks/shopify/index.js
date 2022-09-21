@@ -106,7 +106,7 @@ function checkout() {
 			aid: localStorage.getItem("rfsn_v4_aid"),
 			cs: localStorage.getItem("rfsn_v4_cs")
 		};
-		return `r.sendCheckoutEvent(rfsn.cart, rfsn.id, rfsn.url, rfsn.aid, rfsn.cs);`
+		return rfsn.sendCheckoutEvent(rfsn.cart, rfsn.id, rfsn.url, rfsn.aid, rfsn.cs);
 	}
 	return (dispatch) => {
 		client.checkout.create().then((resp) => {

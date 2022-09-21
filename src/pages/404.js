@@ -5,13 +5,7 @@ import SEO from "../components/layout/seo"
 import * as queryString from "query-string";
 import { Redirect } from "@reach/router";
 const NotFoundPage = ({ location }) => {
-  console.log(location.pathname === '/wp-content/uploads/2021/10/Vegan-Collagen-Body-Boost.pdf.pdf.pdf'); // inspect location for yourself
 
-    // query-string parses the parameters that are contained in the location object
-    const { parameter1, parameter2 } = queryString.parse(location.search);
-
-    console.log(parameter1);
-    console.log(parameter2);
 
     return (
   <Layout title="404">
