@@ -13,7 +13,9 @@ const IndexPage = () => {
   const [confirm, setConfirm] = useState(false)
 
   useEffect(() => {
+   setTimeout(() => {
     setConfirm(true)
+   }, 10000)
   }, [])
 
   const confirmMessage = ['Thanks for choosing Earth & Elle!', ' We will reach out ASAP to start collaborating on your new free site']

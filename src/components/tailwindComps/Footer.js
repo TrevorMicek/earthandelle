@@ -87,7 +87,7 @@ const navigation = {
             ))}
           </nav>
           <div className="bg-secondary py-3 mx-0">
-            <img src={logo} width="200px" height="150px" className=" pt-3 mx-auto" />
+            <img src={logo} alt="earth and elle logo" width="200px" height="150px" className=" pt-3 mx-auto" />
           <div className="mt-8 flex justify-center space-x-6">
             {navigation.social.map((item) => (
               <a key={item.name} href={item.href} className="text-default hover:text-accent">

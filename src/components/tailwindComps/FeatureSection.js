@@ -157,7 +157,7 @@ export default function FeatureSection(props) {
 
 
         <p className="mx-auto mt-3 text-center">
-           <span className="text-gray-400">
+           <span className="text-gray-800">
            &nbsp;&nbsp;&nbsp; $17.49 USD
           </span>
         </p>

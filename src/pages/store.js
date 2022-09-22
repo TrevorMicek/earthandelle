@@ -26,13 +26,14 @@ import * as reducers from "../storePage/redux/ducks"
 const App = () => {
     const Pages = (props) => {
      const {
+        checkoutState,
 		createShop,
 		createCheckout,
 		fetchProducts,
         addVariant
 		// fetchCollection,
 	} = useShopify()
-
+    {console.log(checkoutState)}
     const [cart, setCart] = useState([])
     const [cartAmount, setCartAmount] = useState(0)
     const [linkUrl, setLinkUrl] = useState('/')
@@ -97,6 +98,7 @@ const App = () => {
     )
 }
 const Store = () => {
+
     const initialTitle = 'Custom Ecommerce'
     const [pageTitle, setPageTitle] = useState(initialTitle)
     const getTitle = (title) =>{

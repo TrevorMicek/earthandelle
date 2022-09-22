@@ -26,6 +26,8 @@ export default function Example() {
                 className="absolute inset-0 -pt-3 h-full w-full object-cover"
                 src={aboutPic}
                 alt="image of owner at a beach"
+                width="300px"
+                height="300px"
               />
               <div className="absolute inset-0 bg-secondary mix-blend-multiply" />
               <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary opacity-90" />
@@ -73,7 +75,7 @@ export default function Example() {
               <p className="text-base leading-7">
                 As someone who has experienced the transformational power of holistic supplements, I've made it my mission to help others tap into their most vibrant, confident, and healthy versions of themselves  one active ingredient at a time.
               </p>
-              <img src={pondering} alt='another beach image of the owner pondering at sunset' className="rounded-md" />
+              <img src={pondering} width="300px" height="200px" alt='another beach image of the owner pondering at sunset' className="rounded-md w-full h-full" />
               <h3 style={{fontSize:"22px"}}>My Story</h3>
               <p className="text-base leading-7">
                Earth & Elle is so much more than a holistic supplement brand: it's an empowering solution for women like you - and it all began here: In my early 20s, I started suffering from <i><strong>chronic join</strong> pain</i> throughout my entire body. It became worse as time went by, with walking feeling like a near-impossible task and my reliance on prescription drugs growing with each doctor's visit.

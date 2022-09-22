@@ -3,7 +3,7 @@ import { Router, useMatch } from "@reach/router"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
-
+import Popup from '../components/tailwindComps/Popup'
 import BlogArticle from '../components/tailwindComps/BlogPost'
 import BlogSection from '../components/tailwindComps/BlogSection'
 import back from '../images/blog/back.jpg'
@@ -13,6 +13,15 @@ import workout from '../images/blog/workout.jpg'
 import hair from '../images/blog/hair.jpg'
 const IndexPage = () => {
   const [post, setPost] = useState([])
+  const [confirm, setConfirm] = useState(false)
+
+  useEffect(() => {
+   setTimeout(() => {
+    setConfirm(true)
+   }, 10000)
+  }, [])
+
+  const confirmMessage = ['Thanks for choosing Earth & Elle!', ' We will reach out ASAP to start collaborating on your new free site']
 
   const posts = [
     {
@@ -120,7 +129,7 @@ const IndexPage = () => {
   return (
   <Layout title="Blog" text="Learn About Web Design, SEO, Ecommerce & More!">
     <SEO title="Blog" description="Welcome to our blog! Where we show the powers and wonders of collagen supplements" />
-
+    {confirm ? <Popup prompt={true} isConfirm={confirm} message={confirmMessage} confirm={() =>setConfirm(false)} /> : null}
 
       <Router className=" relative bg-white pt-4 -mb-8 overflow-hidden sm:pt-24 lg:pt-32" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
         <BlogSection path="/blog" post={posts} />
