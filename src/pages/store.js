@@ -24,16 +24,16 @@ import thunk from "redux-thunk"
 import * as reducers from "../storePage/redux/ducks"
 
 const App = () => {
+
     const Pages = (props) => {
-     const {
-        checkoutState,
-		createShop,
-		createCheckout,
-		fetchProducts,
-        addVariant
-		// fetchCollection,
-	} = useShopify()
-    {console.log(checkoutState)}
+    const {
+            checkoutState,
+            createShop,
+            createCheckout,
+            fetchProducts,
+            addVariant
+            // fetchCollection,
+        } = useShopify()
     const [cart, setCart] = useState([])
     const [cartAmount, setCartAmount] = useState(0)
     const [linkUrl, setLinkUrl] = useState('/')
@@ -85,10 +85,21 @@ const App = () => {
     const HeaderWrapper = () => (
         <StoreHeader create={createCart} />
     )
+
+
 //<Products path="/store" cart={CartWrapper} title={props.title} getTitle={props.getTitle} homeButton={MainHomeButton}  />
     return (
         <>
-
+<Script id="checkout">{` function SendTrackingToRefersion(checkout_token) {
+            const rfsn = {
+                cart: checkoutState.id && checkoutState.id.split('/')[4].split('?')[0],
+                id: localStorage.getItem("rfsn_v4_id"),
+                url: window.location.href,
+                aid: localStorage.getItem("rfsn_v4_aid"),
+                cs: localStorage.getItem("rfsn_v4_cs")
+            };
+            r.sendCheckoutEvent(rfsn.cart, rfsn.id, rfsn.url, rfsn.aid, rfsn.cs);
+        }`}</Script>
         <Router>
 
 			<ProductView path='/store' cart={HeaderWrapper} title={props.getTitle} homeButton={ContinueShopping} button={getUrl} />
@@ -106,6 +117,7 @@ const Store = () => {
          setPageTitle(title)
 
     }
+
    //const composeEnhancers = window.__REDUX__DEVTOOLS__EXTENSION__COMPOSE__ || compose;
     const rootReducer = combineReducers(reducers);
     const enhancer = compose(applyMiddleware(thunk));
@@ -118,16 +130,7 @@ return (
 
 <Script src="https://fast-tags.deliverr.com/web/main.js"></Script>
 
-<Script id="checkout">{` function SendTrackingToRefersion(checkout_token) {
-            const rfsn = {
-                cart: checkout_token,
-                id: localStorage.getItem("rfsn_v4_id"),
-                url: window.location.href,
-                aid: localStorage.getItem("rfsn_v4_aid"),
-                cs: localStorage.getItem("rfsn_v4_cs")
-            };
-            r.sendCheckoutEvent(rfsn.cart, rfsn.id, rfsn.url, rfsn.aid, rfsn.cs);
-        }`}</Script>
+
 
     <div className=" relative bg-white -mb-8 overflow-hidden" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second", marginTop: "-30px"}}>
 	<Provider store={store} >

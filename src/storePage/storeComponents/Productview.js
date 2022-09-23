@@ -126,7 +126,7 @@ export default (props) => {
 	}
 	function changeSize(e, sizeId, quantity) {
 		window.scrollTo(0,0)
-
+		console.log(checkoutId, checkoutState.id)
 		if (sizeId === "") {
 			sizeId = defaultSize
 			const lineItemsToAdd = [
