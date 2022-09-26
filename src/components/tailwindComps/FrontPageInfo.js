@@ -90,7 +90,7 @@ export default function Example() {
                 After some time of not feeling like myself, I opened up my laptop to research <i>alternative remedies</i>. As if I was back in my early 20s, I discovered holistic solutions that worked <i>wonders for my skin, hair, and overall self-esteem!</i> It ignited an inner desire to create something of my own to help others, and from here emerged Earth and Elle.
               </p>
               <p className="text-base leading-7">
-                At Earth & Elle, we offer both <strong>vegan and non-vegan products</strong> to suit your individual choices. Our entire range is packed with <strong>active ingredients</strong> that treat your body with the love and respect it deserves, for a life you feel proud of to call your own.
+                At Earth & Elle, we offer <strong>vegan products</strong> to suit your individual choices. Our entire range is packed with <strong>active ingredients</strong> that treat your body with the love and respect it deserves, for a life you feel proud of to call your own.
               </p>
             </div>
           </div>
