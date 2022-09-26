@@ -38,7 +38,7 @@ export default (props) => {
 </svg>
 
 	  )
-
+const id = useMatch("/store/products/:productId").productId
 	const defaultSize = product.variants && product.variants[0].id.toString()
 	const [size, setSize] = useState("")
 	const [quantity, setQuantity] = useState(1)
@@ -205,7 +205,7 @@ export default (props) => {
             </div>
 */
 	useEffect(() => {
-		fetchProduct('Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3MTQ5ODMyNDgxMTE=')
+		fetchProduct(id)
 		window.scrollTo(0,0)
 	}, [])
 

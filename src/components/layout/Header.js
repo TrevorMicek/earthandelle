@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+import StoreHeader from '../tailwindComps/StoreHeader'
 import MainHeader from '../tailwindComps/Hero'
 import SecondaryHeader from '../tailwindComps/SecondaryHeader'
 const Header = (props) => {

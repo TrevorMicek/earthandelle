@@ -165,7 +165,7 @@ export default function FeatureSection(props) {
         <div className="text-center mt-8 ">
 
         <button className="py-3 px-4 mx-auto rounded-md  text-white font-xs bg-button">
-        <Link to="/store">
+        <Link to="store/products/Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3MTQ5ODMyNDgxMTE=">
           <div className="flex flex-row space-x-4 justify-center items-center">
           <p className="my-auto">Shop Now</p>
           <ArrowRightIcon width="20px" height="20px" />

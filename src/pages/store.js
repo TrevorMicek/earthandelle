@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { Router, Redirect } from '@reach/router'
 import { Helmet } from "react-helmet"
 import { Script } from 'gatsby'
-import Products from "../storePage/storeComponents/Products"
+import Product from "../storePage/storeComponents/Product"
 import ProductView from "../storePage/storeComponents/Productview"
 import Cart from '../storePage/storeComponents/Cart'
 import createComponent from '../components/commonComps/createCart'
@@ -102,7 +102,8 @@ const App = () => {
         }`}</Script>
         <Router>
 
-			<ProductView path='/store' cart={HeaderWrapper} title={props.getTitle} homeButton={ContinueShopping} button={getUrl} />
+            <Product path="/store" cart={HeaderWrapper} title={props.title} getTitle={props.getTitle} homeButton={MainHomeButton}  />
+			<ProductView path='/store/products/:productId' cart={HeaderWrapper} title={props.getTitle} homeButton={ContinueShopping} button={getUrl} />
 
         </Router>
         </>
