@@ -90,16 +90,7 @@ const App = () => {
 //<Products path="/store" cart={CartWrapper} title={props.title} getTitle={props.getTitle} homeButton={MainHomeButton}  />
     return (
         <>
-<Script id="checkout">{` function SendTrackingToRefersion(checkout_token) {
-            const rfsn = {
-                cart: checkoutState.id && checkoutState.id.split('/')[4].split('?')[0],
-                id: localStorage.getItem("rfsn_v4_id"),
-                url: window.location.href,
-                aid: localStorage.getItem("rfsn_v4_aid"),
-                cs: localStorage.getItem("rfsn_v4_cs")
-            };
-            r.sendCheckoutEvent(rfsn.cart, rfsn.id, rfsn.url, rfsn.aid, rfsn.cs);
-        }`}</Script>
+
         <Router>
 
             <Product path="/store" cart={HeaderWrapper} title={props.title} getTitle={props.getTitle} homeButton={MainHomeButton}  />

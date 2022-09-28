@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import LineItem from "./LineItem"
 import { useShopify } from "../hooks"
-
+import { Script } from "gatsby"
 import { MdShoppingCart, MdRemoveShoppingCart } from "react-icons/md"
 import { CheckIcon, ClockIcon, QuestionMarkCircleIcon } from '@heroicons/react/solid'
 import { ShoppingCartIcon} from "@heroicons/react/outline"
@@ -109,7 +109,16 @@ export default (props) => {
 
 	return (
 		<div id="cart" className="absolute w-screen right-0 z-30">
-
+			<Script id="checkout">{` function SendTrackingToRefersion(checkout_token) {
+            const rfsn = {
+                cart: checkoutState.id && checkoutState.id.split('/')[4].split('?')[0],
+                id: localStorage.getItem("rfsn_v4_id"),
+                url: window.location.href,
+                aid: localStorage.getItem("rfsn_v4_aid"),
+                cs: localStorage.getItem("rfsn_v4_cs")
+            };
+            r.sendCheckoutEvent(rfsn.cart, rfsn.id, rfsn.url, rfsn.aid, rfsn.cs);
+        }`}</Script>
 			<div className={`Cart ${cartStatus ? "Cart--open" : ""}`}>
 				<div className="App__view-cart-wrapper2">
 
