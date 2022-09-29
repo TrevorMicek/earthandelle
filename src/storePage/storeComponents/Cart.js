@@ -117,6 +117,7 @@ export default (props) => {
                 aid: localStorage.getItem("rfsn_v4_aid"),
                 cs: localStorage.getItem("rfsn_v4_cs")
             };
+			console.log(rfsn)
             r.sendCheckoutEvent(rfsn.cart, rfsn.id, rfsn.url, rfsn.aid, rfsn.cs);
         }`}</Script>
 			<div className={`Cart ${cartStatus ? "Cart--open" : ""}`}>

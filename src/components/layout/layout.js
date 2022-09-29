@@ -48,10 +48,10 @@ const Layout = ({children, title, text, pageLayout}) => {
 
 
         <Script id="refersion">{`! function(e, n, t, i, o, c, s, a) {
-    e.TrackingSystemObject = "r", (s = n.createElement(t)).async = 1, s.src = "https://cdn.refersion.com/refersion.js", s.onload = function() {
-        r.pubKey = "pub_0582c4592b7ea5275889", r.settings.fp_off = 1;
-        r.initializeXDLS().then(() => {
-            r.launchDefault()
+    e.TrackingSystemObject = "rfsn", (s = n.createElement(t)).async = 1, s.src = "https://cdn.refersion.com/refersion.js", s.onload = function() {
+        rfsn.pubKey = "pub_0582c4592b7ea5275889", rfsn.settings.fp_off = 1;
+        rfsn.initializeXDLS().then(() => {
+            rfsn.launchDefault()
         })
     }, (a = n.getElementsByTagName(t)[0]).parentNode.insertBefore(s, a)
 }(window, document, "script");`}</Script>

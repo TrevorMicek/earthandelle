@@ -126,7 +126,7 @@ const id = useMatch("/store/products/:productId").productId
 	}
 	function changeSize(e, sizeId, quantity) {
 		window.scrollTo(0,0)
-		console.log(checkoutId, checkoutState.id)
+		//console.log(checkoutId, checkoutState.id)
 		if (sizeId === "") {
 			sizeId = defaultSize
 			const lineItemsToAdd = [
@@ -140,7 +140,7 @@ const id = useMatch("/store/products/:productId").productId
 				add: lineItemsToAdd,
 				onRefresh: lineItemsOnRefresh
 			}
-			console.log(storage)
+			//console.log(storage)
 			addVariant(storage.id, storage.add)
 			const oldItems = JSON.parse(window.localStorage.getItem('cart')) || []
 			oldItems.push(storage)
