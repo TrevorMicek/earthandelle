@@ -109,7 +109,7 @@ export default (props) => {
 
 	return (
 		<div id="cart" className="absolute w-screen right-0 z-30">
-			<Script id="refersion">
+			<Script id="cart">
 			{`function SendTrackingToRefersion(checkout_token) {
             const rfsn = {
                 cart: checkoutState.id && checkoutState.id.split('/')[4].split('?')[0],

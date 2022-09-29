@@ -57,6 +57,7 @@ const Layout = ({children, title, text, pageLayout}) => {
 }(window, document, "script");`}</Script>
 
 
+
         <main style={pageLayout}  class="main">{children}</main>
         <Footer />
        </div>
