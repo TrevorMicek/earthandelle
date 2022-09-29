@@ -109,7 +109,8 @@ export default (props) => {
 
 	return (
 		<div id="cart" className="absolute w-screen right-0 z-30">
-			<Script id="checkout">{` function SendTrackingToRefersion(checkout_token) {
+			<Script id="refersion">
+			{`function SendTrackingToRefersion(checkout_token) {
             const rfsn = {
                 cart: checkoutState.id && checkoutState.id.split('/')[4].split('?')[0],
                 id: localStorage.getItem("rfsn_v4_id"),
@@ -118,8 +119,9 @@ export default (props) => {
                 cs: localStorage.getItem("rfsn_v4_cs")
             };
 			console.log(rfsn)
-            r.sendCheckoutEvent(rfsn.cart, rfsn.id, rfsn.url, rfsn.aid, rfsn.cs);
-        }`}</Script>
+            rfsn.sendCheckoutEvent(rfsn.cart, rfsn.id, rfsn.url, rfsn.aid, rfsn.cs);
+        }`}
+		</Script>
 			<div className={`Cart ${cartStatus ? "Cart--open" : ""}`}>
 				<div className="App__view-cart-wrapper2">
 
