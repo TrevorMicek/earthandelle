@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux"
 import Client from "shopify-buy"
-
-
+import { Script } from "gatsby"
+import React from "react"
 const client = Client.buildClient({
 storefrontAccessToken: "f0848ae76f9d6458407ebb56979d271a",
 domain: "earthandelle.myshopify.com",
@@ -98,6 +98,7 @@ function getProduct(id) {
 
 // Creates initial checkout state from Shopify
 function checkout() {
+
 	/*
 	function SendTrackingToRefersion(checkout_token) {
 		const rfsn = {
@@ -111,16 +112,21 @@ function checkout() {
 	}
 	*/
 	return (dispatch) => {
-		client.checkout.create().then((resp) => {
+		client.checkout.create().then((checkout) => {
 			/*
 			const checkoutUrl = resp.webUrl.split('/');
 	const token = checkoutUrl[checkoutUrl.length -1].split('?');
 	const checkout_token = token[0];
     SendTrackingToRefersion(checkout_token);
 	*/
+
+	const checkoutUrl = checkout.webUrl.split('/');
+	const token = checkoutUrl[checkoutUrl.length -1].split('?');
+	const checkout_token = token[0];
+    SendTrackingToRefersion(checkout_token);
 			dispatch({
 				type: CHECKOUT_FOUND,
-				payload: resp,
+				payload: checkout,
 			})
 		})
 	}

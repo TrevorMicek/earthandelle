@@ -109,19 +109,24 @@ export default (props) => {
 
 	return (
 		<div id="cart" className="absolute w-screen right-0 z-30">
-			<Script id="cart">
-			{`function SendTrackingToRefersion(checkout_token) {
-            const rfsn = {
-                cart: checkoutState.id && checkoutState.id.split('/')[4].split('?')[0],
-                id: localStorage.getItem("rfsn_v4_id"),
-                url: window.location.href,
-                aid: localStorage.getItem("rfsn_v4_aid"),
-                cs: localStorage.getItem("rfsn_v4_cs")
-            };
-			console.log(rfsn)
-            rfsn.sendCheckoutEvent(rfsn.cart, rfsn.id, rfsn.url, rfsn.aid, rfsn.cs);
-        }`}
-		</Script>
+
+<Script id="send">
+				{`function SendTrackingToRefersion(checkout_token) {
+					const rfsn = {
+						cart: checkout_token,
+						id: localStorage.getItem("rfsn_v4_id"),
+						url: window.location.href,
+						aid: localStorage.getItem("rfsn_v4_aid"),
+						cs: localStorage.getItem("rfsn_v4_cs")
+					};
+					console.log(rfsn)
+					rfsn.sendCheckoutEvent(rfsn.cart, rfsn.id, rfsn.url, rfsn.aid, rfsn.cs);
+				}
+
+				`}
+
+				</Script>
+
 			<div className={`Cart ${cartStatus ? "Cart--open" : ""}`}>
 				<div className="App__view-cart-wrapper2">
 

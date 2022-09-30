@@ -361,8 +361,9 @@ const id = useMatch("/store/products/:productId").productId
 						></input>
 					</div>
 					<div className="w-full">
-					<deliverr data-component="BadgeWithCountdown"></deliverr>
-					<deliverr  data-component="Badge" data-productId="42980611948783"></deliverr>
+
+					<deliverr data-component="BadgeWithCountdown" data-productId="42980611948783"></deliverr>
+
 					</div>
 					<button
 						className="mt-5 flex w-full items-center justify-center rounded-md border border-transparent bg-default py-3 px-8 text-base font-medium text-white hover:text-gray-700 hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
