@@ -120,10 +120,7 @@ function checkout() {
     SendTrackingToRefersion(checkout_token);
 	*/
 
-	const checkoutUrl = checkout.webUrl.split('/');
-	const token = checkoutUrl[checkoutUrl.length -1].split('?');
-	const checkout_token = token[0];
-    SendTrackingToRefersion(checkout_token);
+
 			dispatch({
 				type: CHECKOUT_FOUND,
 				payload: checkout,

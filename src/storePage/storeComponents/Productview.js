@@ -371,7 +371,7 @@ const id = useMatch("/store/products/:productId").productId
 					>
 						Add to cart
 					</button>
-					<a href="https://www.amazon.com/gp/aws/cart/add.html?maas=maas_adg_556B4B30975C2FA9446DAC731948BD12_afap_abs&ref_=aa_maas&tag=maas&ASIN.1=B09JVHN443&Quantity.1=1">
+					<a href="https://www.amazon.com/VEGAN-COLLAGEN-GUMMIES-BIOTIN-SUPPLEMENT/dp/B09JVHN443?maas=maas_adg_28D9FCB6C50F09BE6A7D76E57471D21B_afap_abs&ref_=aa_maas&tag=maas">
 					<button
 						className="mt-3 flex w-full items-center justify-center rounded-md border border-transparent bg-amazon py-3 px-8 text-base font-medium text-black hover:text-gray-700 hover:bg-amazon focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
 
