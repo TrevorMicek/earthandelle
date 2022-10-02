@@ -6,7 +6,7 @@ import { MdShoppingCart, MdRemoveShoppingCart } from "react-icons/md"
 import { CheckIcon, ClockIcon, QuestionMarkCircleIcon } from '@heroicons/react/solid'
 import { ShoppingCartIcon} from "@heroicons/react/outline"
 export default (props) => {
-	const [loaded, setLoaded] = useState(false)
+	const [loaded, setLoaded] = useState([])
 	const {
 		cartStatus,
 		closeCart,
@@ -69,7 +69,7 @@ export default (props) => {
 
 	function openCheckout(e) {
 		e.preventDefault()
-		setLoaded(true)
+
 		// window.open(checkoutState.webUrl) // opens checkout in a new window
 		window.location.replace(checkoutState.webUrl) // opens checkout in same window
 	}
@@ -113,7 +113,7 @@ export default (props) => {
 	return (
 		<div id="cart" className="absolute w-screen right-0 z-30">
 
-{loaded && <Script id="send">
+<Script id="send">
 				{`function SendTrackingToRefersion(checkout_token) {
 					const rfsn = {
 						cart: checkout_token,
@@ -122,17 +122,14 @@ export default (props) => {
 						aid: localStorage.getItem("rfsn_v4_aid"),
 						cs: localStorage.getItem("rfsn_v4_cs")
 					};
-					console.log(rfsn.sendCheckoutEvent)
+					console.log(r)
 					r.sendCheckoutEvent(rfsn.cart, rfsn.id, rfsn.url, rfsn.aid, rfsn.cs);
 				}
-				const checkoutUrl = checkoutState.webUrl.split('/');
-	const token = checkoutUrl[checkoutUrl.length -1].split('?');
-	const checkout_token = token[0];
-    SendTrackingToRefersion(checkout_token);
+
 
 				`}
 
-				</Script>}
+				</Script>
 
 			<div className={`Cart ${cartStatus ? "Cart--open" : ""}`}>
 				<div className="App__view-cart-wrapper2">
