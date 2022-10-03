@@ -12,6 +12,7 @@ export default (props) => {
 		closeCart,
 		openCart,
 		checkoutState,
+		createCheckout,
 		setCount,
 		removeLineItem
 	} = useShopify()
@@ -60,6 +61,7 @@ export default (props) => {
 	function handleOpen(e) {
 		e.preventDefault()
 		openCart()
+
 	}
 
 	function handleClose(e) {

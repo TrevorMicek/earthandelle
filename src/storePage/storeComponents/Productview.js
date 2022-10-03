@@ -144,6 +144,14 @@ const id = useMatch("/store/products/:productId").productId
 			addVariant(storage.id, storage.add)
 			const oldItems = JSON.parse(window.localStorage.getItem('cart')) || []
 			oldItems.push(storage)
+
+
+
+
+	const checkout_token = checkoutState.id.split('/')[4].split('?')[0]
+    window.SendTrackingToRefersion(checkout_token);
+			console.log(checkout_token)
+
 			window.localStorage.setItem('cart', JSON.stringify(oldItems))
 			openCart()
 		} else {
@@ -154,7 +162,7 @@ const id = useMatch("/store/products/:productId").productId
 
 
 			const checkoutId = checkoutState.id
-
+			console.log(checkoutId)
 			addVariant(checkoutId, lineItemsToAdd)
 
 
@@ -165,12 +173,7 @@ const id = useMatch("/store/products/:productId").productId
 
 	}
 
-	useEffect(() => {
-		createCheckout()
-		props.button('../../')
 
-		// fetchCollection()
-	}, [])
 	function classNames(...classes) {
 		return classes.filter(Boolean).join(' ')
 	  }

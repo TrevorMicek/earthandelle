@@ -119,11 +119,8 @@ function checkout() {
 	const checkout_token = token[0];
     SendTrackingToRefersion(checkout_token);
 	*/
-	const checkoutUrl = checkout.webUrl.split('/');
-	const token = checkoutUrl[checkoutUrl.length -1].split('?');
-	const checkout_token = token[0];
-    window.SendTrackingToRefersion(checkout_token);
 
+			//5c6380ab00ab69ae8b876433573d6c24
 			dispatch({
 				type: CHECKOUT_FOUND,
 				payload: checkout,
