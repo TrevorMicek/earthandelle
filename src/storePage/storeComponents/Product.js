@@ -325,7 +325,7 @@ const Reviews = () => {
 						<div className="flex items-center">
 						<Reviews />
 						</div>
-						<p className="mt-1 text-sm text-gray-500">95 reviews</p>
+						<p className="mt-1 text-sm text-gray-500">104 reviews</p>
 					  </div>
 					  <p className="mt-4 text-base font-medium text-gray-900">{product.variants[0].price}</p>
 					  <button

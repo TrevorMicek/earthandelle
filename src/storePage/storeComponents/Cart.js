@@ -12,7 +12,6 @@ export default (props) => {
 		closeCart,
 		openCart,
 		checkoutState,
-		createCheckout,
 		setCount,
 		removeLineItem
 	} = useShopify()
@@ -61,7 +60,6 @@ export default (props) => {
 	function handleOpen(e) {
 		e.preventDefault()
 		openCart()
-
 	}
 
 	function handleClose(e) {
@@ -138,7 +136,7 @@ export default (props) => {
 
 					<button className="App__view-cart" onClick={(e) => handleOpen(e)}>
 					<ShoppingCartIcon
-            className="text-accent absolute z-0 right-3 top-7  mr-2 h-6 w-6 text-orange-300 transition duration-150 ease-in-out group-hover:text-opacity-80 xxs:-right-2 sm:-right-2 md:-mr-12 med:-mr-20 hover:text-secondary"
+            className="text-white absolute z-0 right-3 top-7  mr-2 h-6 w-6 text-orange-300 transition duration-150 ease-in-out group-hover:text-opacity-80 xxs:-right-2 sm:-right-2 md:-mr-12 med:-mr-20 hover:text-secondary"
             aria-hidden="true"
           />
 
@@ -183,7 +181,7 @@ export default (props) => {
             </h2>
 
             <dl className="-mb-4 ">
-              <div className="flex items-center justify-between w-60">
+              <div className="flex items-center justify-between w-full">
                 <dt className="text-sm text-gray-600">Subtotal</dt>
                 <dd className="text-sm font-medium text-gray-900">$ {checkoutState.subtotalPrice}</dd>
               </div>

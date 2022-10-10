@@ -11,6 +11,7 @@ import lady from '../images/blog/lady.jpg'
 import lookingDown from '../images/blog/lookingDown.jpg'
 import workout from '../images/blog/workout.jpg'
 import hair from '../images/blog/hair.jpg'
+import bestresults from '../images/blog/bestresults.jpg'
 const IndexPage = () => {
   const [post, setPost] = useState([])
   const [confirm, setConfirm] = useState(false)
@@ -77,6 +78,26 @@ const IndexPage = () => {
       datetime: '2020-02-12',
       imageUrl:
         hair,
+      readingTime: '11 min',
+      author: {
+        name: 'Daniela Metz',
+        href: '#',
+        imageUrl:
+          'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      },
+    },
+    {
+      title: 'How To Use Collagen Supplements For The Best Results?',
+      href: '/blog/bestresults',
+      id:"bestresults",
+      alt:"image of womans hair looking healthy and pretty",
+      category: { name: 'Case Study', href: '#' },
+      description:
+        'Healthy hair not only adds to your beauty but indicates that your body is producing the necessary amount of proteins and nutrients. Unfortunately, a considerable ratio of individuals today face hair-related issues.',
+      date: 'Feb 12, 2020',
+      datetime: '2020-02-12',
+      imageUrl:
+        bestresults,
       readingTime: '11 min',
       author: {
         name: 'Daniela Metz',

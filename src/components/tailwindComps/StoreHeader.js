@@ -123,7 +123,7 @@ useEffect(() => {
           >
             <div className="absolute w-24 mt-7 space-x-3 flex">
             {navigation.social.map((item) => (
-              <a key={item.name} href={item.href} className="text-accent hover:text-secondary">
+              <a key={item.name} href={item.href} className="text-white hover:text-secondary">
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
               </a>
@@ -136,7 +136,7 @@ useEffect(() => {
               <div className="h-20 w-full flex items-center justify-end w-full md:w-auto">
               <div className="w-1/12 relative right-2 z-10 cursor-pointer">
               <Link to="/store">
-            <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10 md:hidden" />
+            <ShoppingBagIcon width="20px" height="20px" className="text-white w-6 h-6 relative z-10 md:hidden hover:text-secondary" />
               </Link>
             </div>
                 <a href="/">
@@ -146,7 +146,7 @@ useEffect(() => {
                 <div className="flex items-center md:hidden">
                   <Popover.Button className="relative inline-flex items-center rounded-md justify-center text-gray-100 hover:bg-secondary hover:text-default focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
-                    <MenuIcon className="min-h-7 min-w-7 h-11 w-11 p-2 rounded-md text-accent bg-default hover:bg-secondary hover:text-default hover:b" aria-hidden="true" />
+                    <MenuIcon className="min-h-7 min-w-7 h-11 w-11 p-2 rounded-md text-white bg-default hover:bg-secondary hover:text-default hover:b" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
@@ -163,7 +163,7 @@ useEffect(() => {
               </div>
               <div className=" hidden w-1/12 md:flex right-10 mt-7 md:absolute z-10 cursor-pointer">
                   <Link to="/store">
-            <ShoppingBagIcon width="20px" height="20px" className="text-accent w-6 h-6 relative z-10 hover:text-secondary" />
+            <ShoppingBagIcon width="20px" height="20px" className="text-white w-6 h-6 relative z-10 hover:text-secondary" />
             </Link>
             </div>
 

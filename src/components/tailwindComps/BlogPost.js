@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import CreateComponent from '../commonComps/createComponent'
+import bestResults from '../../data/blog/bestresults'
 export default function Example(props) {
     const post = () => {
 
@@ -493,6 +495,43 @@ export default function Example(props) {
       )
       }
 
+      const BlogSection = (props) => {
+
+      return (
+        <>
+        <h1 className="mx-1">
+                <span className="block text-center text-lg font-semibold text-default">Introducing</span>
+                <span className="mt-2 block text-center text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+                {post()[0].title}
+                </span>
+              </h1>
+        {
+          props.text && props.text.map((data, i) => (
+            <>
+
+
+            {
+              data.numTitle !== '' ?
+              <ol roll="list">
+                <li>
+                  <div className="flex items-end space-x-2 text-base font-bold"><span>{data.numTitle}</span><p  style={{fontSize:'22px', fontWeight:'bold'}} >{data.title}</p></div>
+                  <p>{data.text}</p>
+                </li>
+              </ol> :
+              <div className='text-lg px-5'>
+              <p style={{fontSize:'24px', fontWeight:'bold'}}>
+          {data.title}
+        </p>
+        <p >{data.text}</p>
+        </div>
+            }
+        </>
+          ))
+        }
+        </>
+      )
+      }
+
     const Post = () => {
 
         switch(true) {
@@ -502,6 +541,9 @@ export default function Example(props) {
                 return <KneePain />
             case post()[0] && post()[0].id === 'benefitsforhair':
                 return <Hair />
+            case post()[0] && post()[0].id === 'bestresults':
+              console.log('here')
+              return <CreateComponent component={BlogSection} data={bestResults} />
             default:
               return <>default</>
         }

@@ -97,7 +97,7 @@ function getProduct(id) {
 // }
 
 // Creates initial checkout state from Shopify
-function checkout() {
+function checkout(url) {
 
 	/*
 	function SendTrackingToRefersion(checkout_token) {
@@ -111,16 +111,10 @@ function checkout() {
 		return r.sendCheckoutEvent(rfsn.cart, rfsn.id, rfsn.url, rfsn.aid, rfsn.cs)
 	}
 	*/
+
 	return (dispatch) => {
 		client.checkout.create().then((checkout) => {
-			/*
-			const checkoutUrl = resp.webUrl.split('/');
-	const token = checkoutUrl[checkoutUrl.length -1].split('?');
-	const checkout_token = token[0];
-    SendTrackingToRefersion(checkout_token);
-	*/
 
-			//5c6380ab00ab69ae8b876433573d6c24
 			dispatch({
 				type: CHECKOUT_FOUND,
 				payload: checkout,

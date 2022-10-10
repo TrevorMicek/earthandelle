@@ -140,7 +140,7 @@ useEffect(() => {
               <div className="h-20 w-full flex items-center justify-end w-full md:w-auto">
               <div className="w-1/12 relative right-2 z-10 cursor-pointer">
               <Link to="/store">
-            <ShoppingBagIcon width="20px" height="20px" className="text-white w-6 h-6 relative z-10 md:hidden" />
+            <ShoppingBagIcon width="20px" height="20px" className="text-white w-6 h-6 relative z-10 md:hidden hover:text-secondary" />
               </Link>
             </div>
                 <a href="/">

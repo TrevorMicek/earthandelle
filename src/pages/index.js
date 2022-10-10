@@ -25,6 +25,9 @@ const IndexPage = () => {
     <SEO title="Home" description="Supplements by women for women. Empowering collagen supplments that do wonders for your skin, hair, and health." />
 
 
+
+
+
     {confirm ? <Popup prompt={true} isConfirm={confirm} message={confirmMessage} confirm={() =>setConfirm(false)} /> : null}
 
     <Supplment  prompt={true} message={confirmMessage} />
