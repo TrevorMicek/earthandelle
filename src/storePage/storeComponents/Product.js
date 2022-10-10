@@ -308,7 +308,7 @@ const Reviews = () => {
 			  <div className=" border-l border-gray-200">
 				{productItem.map(() => (
 				  <div key={product.id} className="group relative  border-r border-b border-gray-200 ">
-					<div className="mx-auto rounded-lg overflow-hidden bg-gray-200 aspect-w-1 aspect-h-1 group-hover:opacity-75">
+					<div className=" flex justify-center mx-auto max-w-2xl sm:px-6 ">
 					{image ? (
 								<img src={image.src} width="350px" height="350px" alt={`${product.title} product shot`} />
 							) : null}
