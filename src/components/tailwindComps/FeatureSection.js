@@ -112,8 +112,8 @@ export default function FeatureSection(props) {
     <div className=" pb-10 pt-9 -mb-8 -mt-20 relative overflow-hidden bg-white" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
 
  <div className="text-center w-full">
-    <div className="mb-8 h-12 bg-button flex flex-row space-x-1 justify-center items-center">
-    <p className="my-auto ml-4 w-72 text-left text-white">Enter to win a year supply of our vegan collagen boosting gummies ($240 value)
+    <div className="mb-8 bg-button flex flex-row space-x-1 justify-center items-center">
+    <p className="my-auto ml-4 w-72 text-left text-white">Enter to win a year supply of our vegan collagen boosting gummies<br /> ($240 value)
     </p>
     <button
       className="my-auto -ml-1 text-left bg-secondary text-gray-800 rounded-md py-1 px-1 text-sm"

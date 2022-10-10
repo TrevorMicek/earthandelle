@@ -301,7 +301,7 @@ const Reviews = () => {
 					const image = product.images[0]
 					return (
 
-						<div className="bg-white">
+						<div className="bg-white max-w-2xl mx-auto">
 			<div className="mx-auto overflow-hidden ">
 			  <h2 className="sr-only">Products</h2>
 
@@ -310,7 +310,7 @@ const Reviews = () => {
 				  <div key={product.id} className="group relative  border-r border-b border-gray-200 ">
 					<div className="mx-auto rounded-lg overflow-hidden bg-gray-200 aspect-w-1 aspect-h-1 group-hover:opacity-75">
 					{image ? (
-								<img src={image.src} alt={`${product.title} product shot`} />
+								<img src={image.src} width="350px" height="350px" alt={`${product.title} product shot`} />
 							) : null}
 					</div>
 					<div className="pt-10 pb-4 text-center">
