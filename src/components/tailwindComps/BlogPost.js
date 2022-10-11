@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import CreateComponent from '../commonComps/createComponent'
 import bestResults from '../../data/blog/bestresults'
+import guide from '../../data/blog/guide'
 export default function Example(props) {
     const post = () => {
 
@@ -520,7 +521,7 @@ export default function Example(props) {
               </ol> :
               <div className='text-lg px-5'>
               <p style={{fontSize:'24px', fontWeight:'bold'}}>
-          {data.title}
+          {data.subTitle ? <div className="text-base text-bold">{data.subTitle}</div> : data.title}
         </p>
         <p >{data.text}</p>
         </div>
@@ -542,8 +543,11 @@ export default function Example(props) {
             case post()[0] && post()[0].id === 'benefitsforhair':
                 return <Hair />
             case post()[0] && post()[0].id === 'bestresults':
-              console.log('here')
+
               return <CreateComponent component={BlogSection} data={bestResults} />
+              case post()[0] && post()[0].id === 'guide':
+
+              return <CreateComponent component={BlogSection} data={guide} />
             default:
               return <>default</>
         }
