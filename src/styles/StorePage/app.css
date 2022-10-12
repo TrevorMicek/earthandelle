@@ -2,6 +2,34 @@
  * ============================== */
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap");
 
+.App__view-cart-wrapper {
+
+}
+
+.App__view-cart-wrapper2 {
+	position: relative;
+
+	bottom: 0vh;
+	right: 24vw;
+
+	display: flex;
+	justify-content: flex-end;
+
+
+}
+
+.App__view-cart {
+
+	font-size: 45px;
+	border: none;
+	background: none;
+	cursor: pointer;
+	color: #161616;
+}
+
+
+
+
 /* CART
   * ============================== */
 .Cart {
@@ -256,5 +284,4 @@
 .Line-item__remove:hover {
 	opacity: 1;
 	cursor: pointer;
-
 }

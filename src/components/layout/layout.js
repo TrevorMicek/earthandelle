@@ -47,7 +47,7 @@ const Layout = ({children, title, text, pageLayout}) => {
         {title ? <Header title={title} text={text} /> : <></>}
 
 
-        <Script id="refersion">{`! function(e, n, t, i, o, c, s, a) {
+        <Script defer id="refersion">{`! function(e, n, t, i, o, c, s, a) {
     e.TrackingSystemObject = "r", (s = n.createElement(t)).async = 1, s.src = "https://cdn.refersion.com/refersion.js", s.onload = function() {
         r.pubKey = "pub_0582c4592b7ea5275889", r.settings.fp_off = 1;
         r.initializeXDLS().then(() => {

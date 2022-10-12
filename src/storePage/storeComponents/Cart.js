@@ -113,7 +113,7 @@ export default (props) => {
 	return (
 		<div id="cart" className="absolute w-screen right-0 z-30">
 
-<Script id="send">
+<Script defer id="send">
 				{`function SendTrackingToRefersion(checkout_token) {
 					const rfsn = {
 						cart: checkout_token,
