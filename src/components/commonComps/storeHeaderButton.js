@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
-const cartImg = require('../../images/cartButton.png')
+const cartImg = require('../../images/cartButton.webp')
 const Button = (props) => {
 
     return (

@@ -6,13 +6,14 @@ import SEO from "../components/layout/seo"
 import Popup from '../components/tailwindComps/Popup'
 import BlogArticle from '../components/tailwindComps/BlogPost'
 import BlogSection from '../components/tailwindComps/BlogSection'
-import back from '../images/blog/back.jpg'
-import lady from '../images/blog/lady.jpg'
-import lookingDown from '../images/blog/lookingDown.jpg'
-import workout from '../images/blog/workout.jpg'
-import hair from '../images/blog/hair.jpg'
-import bestresults from '../images/blog/bestresults.jpg'
-import guide from '../images/blog/guide.jpg'
+
+import back from '../images/blog/back.webp'
+import lady from '../images/blog/lady.webp'
+import lookingDown from '../images/blog/lookingDown.webp'
+import workout from '../images/blog/workout.webp'
+import hair from '../images/blog/hair.webp'
+import bestresults from '../images/blog/bestresults.webp'
+import guide from '../images/blog/guide.webp'
 const IndexPage = () => {
   const [post, setPost] = useState([])
   const [confirm, setConfirm] = useState(false)

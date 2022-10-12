@@ -14,7 +14,7 @@ import { ShoppingBagIcon } from '@heroicons/react/outline'
 import headerOne from '../../images/newImages/header1.webp'
 
 import headerTwo from '../../images/newImages/header2.webp'
-import Logo from '../../images/newImages/Logo.png'
+import Logo from '../../images/newImages/Logo.webp'
 
 const navigation = {
   main: [
@@ -140,7 +140,7 @@ useEffect(() => {
               <div className="h-20 w-full flex items-center justify-end w-full md:w-auto">
               <div className="w-1/12 relative right-2 z-10 cursor-pointer">
               <Link to="/store">
-            <ShoppingBagIcon width="20px" height="20px" className="text-white w-6 h-6 relative z-10 md:hidden hover:text-secondary" />
+            <ShoppingBagIcon alt="shopping bag" width="20px" height="20px" className="text-white w-6 h-6 relative z-10 md:hidden hover:text-secondary" />
               </Link>
             </div>
                 <a href="/">
@@ -167,7 +167,7 @@ useEffect(() => {
               </div>
               <div className=" hidden w-1/12 md:flex right-10 mt-7 md:absolute z-10 cursor-pointer">
                   <Link to="/store">
-            <ShoppingBagIcon width="20px" height="20px" className="text-white w-6 h-6 relative z-10 hover:text-secondary" />
+            <ShoppingBagIcon alt="shopping bag" width="20px" height="20px" className="text-white w-6 h-6 relative z-10 hover:text-secondary" />
             </Link>
             </div>
 

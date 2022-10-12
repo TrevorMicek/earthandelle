@@ -4,7 +4,7 @@ import React, {useRef, Fragment, useState, useEffect } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import {  XIcon } from '@heroicons/react/outline'
 
-import Logo from '../../images/newImages/Logo.png'
+import Logo from '../../images/newImages/Logo.webp'
 export default function Example(props) {
   const [open, setOpen] = useState(false)
   const [prompt, setPrompt] = useState(true)

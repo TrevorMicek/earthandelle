@@ -1,6 +1,6 @@
 import React from 'react'
 
-import logo from '../../images/newImages/Logo.png'
+import logo from '../../images/newImages/Logo.webp'
 
 const navigation = {
     main: [
