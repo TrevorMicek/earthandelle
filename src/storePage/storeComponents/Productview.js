@@ -371,7 +371,7 @@ const id = useMatch("/store/products/:productId").productId
 					</div>
 					<div className="w-full">
 
-					<deliverr data-component="BadgeWithCountdown" data-productId="42980611948783"></deliverr>
+					<deliverr defer data-component="BadgeWithCountdown" data-productId="42980611948783"></deliverr>
 
 					</div>
 					<button
