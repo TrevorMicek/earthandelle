@@ -28,6 +28,7 @@
     "gatsby-plugin-postcss": "^5.2.0",
     "gatsby-plugin-react-helmet": "^3.10.0",
     "gatsby-plugin-sharp": "^4.7.0",
+    "gatsby-plugin-sitemap": "^5.24.0",
     "gatsby-source-filesystem": "^2.11.1",
     "gatsby-source-trustpilot": "^0.0.46",
     "gatsby-transformer-sharp": "^2.12.1",

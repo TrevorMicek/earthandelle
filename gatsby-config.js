@@ -3,8 +3,10 @@ module.exports = {
     title: `Earth & Elle`,
     description: `Empowering Supplements`,
     author: 'Trevor Micek',
+    siteUrl: `https://www.earthandelle.com`,
   },
   plugins: [
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
